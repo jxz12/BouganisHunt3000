@@ -1,0 +1,84 @@
+-- Copyright (C) 1991-2012 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+
+-- Quartus II generated Memory Initialization File (.mif)
+
+WIDTH=1;
+DEPTH=1024;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=UNS;
+
+CONTENT BEGIN
+	[0..171]  :   1;
+	[172..173]  :   0;
+	[174..203]  :   1;
+	[204..205]  :   0;
+	[206..225]  :   1;
+	[226..227]  :   0;
+	[228..235]  :   1;
+	[236..237]  :   0;
+	[238..239]  :   1;
+	[240..241]  :   0;
+	[242..249]  :   1;
+	[250..251]  :   0;
+	[252..253]  :   1;
+	[254..255]  :   0;
+	[256..257]  :   1;
+	[258..259]  :   0;
+	[260..267]  :   1;
+	[268..269]  :   0;
+	[270..271]  :   1;
+	[272..273]  :   0;
+	[274..281]  :   1;
+	[282..283]  :   0;
+	[284..285]  :   1;
+	[286..287]  :   0;
+	[288..289]  :   1;
+	[290..297]  :   0;
+	[298..299]  :   1;
+	[300..301]  :   0;
+	[302..303]  :   1;
+	[304..305]  :   0;
+	[306..307]  :   1;
+	[308..309]  :   0;
+	[310..311]  :   1;
+	[312..315]  :   0;
+	[316..317]  :   1;
+	[318..319]  :   0;
+	[320..321]  :   1;
+	[322..329]  :   0;
+	[330..331]  :   1;
+	[332..333]  :   0;
+	[334..335]  :   1;
+	[336..337]  :   0;
+	[338..339]  :   1;
+	[340..341]  :   0;
+	[342..343]  :   1;
+	[344..347]  :   0;
+	[348..349]  :   1;
+	[350..361]  :   0;
+	[362..363]  :   1;
+	[364..369]  :   0;
+	[370..371]  :   1;
+	[372..373]  :   0;
+	[374..375]  :   1;
+	[376..393]  :   0;
+	[394..395]  :   1;
+	[396..401]  :   0;
+	[402..403]  :   1;
+	[404..405]  :   0;
+	[406..407]  :   1;
+	[408..1023]  :   0;
+END;

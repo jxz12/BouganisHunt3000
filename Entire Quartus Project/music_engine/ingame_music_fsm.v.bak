@@ -1,0 +1,98 @@
+module ingame_music_fsm (clk, , score, out);
+	input clk;
+	input[9:0] score;
+	output[4:0] out;
+
+reg[24:0] counter;
+wire[9:0] score;
+reg[24:0] clkDivider = 12000000 - (score * 25000);
+
+always @(posedge clk) begin
+clkDivider <= 12000000 - score * 100000
+	
+	if(counter == clkDivider)
+		counter <= 1;
+	else counter <= counter + 1;
+end
+
+reg[5:0] state;
+
+always @(posedge clk)
+	if(counter == 1)
+		state <= state + 1;
+
+reg[4:0] out;
+
+always @(state)
+	case(state)
+		0: out = 12;
+		1: out = 25;
+		2: out = 7;
+		3: out = 25;
+		4: out = 12;
+		5: out = 25;
+		6: out = 7;
+		7: out = 25;
+		8: out = 12;
+		9: out = 25;
+		10: out = 7;
+		11: out = 25;
+		12: out = 12;
+		13: out = 7;
+		14: out = 9;
+		15: out = 11;
+		
+		16: out = 17;
+		17: out = 25;
+		18: out = 12;
+		19: out = 25;
+		20: out = 17;
+		21: out = 25;
+		22: out = 12;
+		23: out = 25;
+		24: out = 17;
+		25: out = 25;
+		26: out = 12;
+		27: out = 25;
+		28: out = 17;
+		29: out = 12;
+		30: out = 14;
+		31: out = 16;
+		
+		32: out = 12;
+		33: out = 25;
+		34: out = 7;
+		35: out = 25;
+		36: out = 12;
+		37: out = 25;
+		38: out = 7;
+		39: out = 25;
+		40: out = 12;
+		41: out = 25;
+		42: out = 7;
+		43: out = 25;
+		44: out = 12;
+		45: out = 7;
+		46: out = 9;
+		47: out = 11;
+		
+		48: out = 19;
+		49: out = 25;
+		50: out = 14;
+		51: out = 25;
+		52: out = 17;
+		53: out = 25;
+		54: out = 12;
+		55: out = 25;
+		56: out = 12;
+		57: out = 7;
+		58: out = 9;
+		59: out = 11;
+		60: out = 12;
+		61: out = 12;
+		62: out = 25;
+		63: out = 25;
+		default: out = 25;
+	endcase
+
+endmodule

@@ -1,0 +1,433 @@
+Classic Timing Analyzer report for M
+Mon Mar 18 16:00:09 2013
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'clk'
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                      ;
++------------------------------+-------+---------------+----------------------------------+--------------------------------------+--------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                 ; To                                   ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+--------------------------------------+--------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 5.615 ns                         ; SongSelect0                          ; g00_audio_interface:inst4|LRDATA[49] ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 10.330 ns                        ; g00_audio_interface:inst4|AUD_DACDAT ; DACDAT                               ; clk        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -1.131 ns                        ; SongSelect0                          ; g00_audio_interface:inst4|LRDATA[49] ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 128.97 MHz ( period = 7.754 ns ) ; FSM_Indiana_Jones:inst|state[0]      ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                      ;                                      ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+--------------------------------------+--------------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                                                                                     ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------------+--------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                                ; To                                   ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------------+--------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 128.97 MHz ( period = 7.754 ns )                    ; FSM_Indiana_Jones:inst|state[0]     ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.552 ns                ;
+; N/A                                     ; 129.68 MHz ( period = 7.711 ns )                    ; FSM_Call_Me_Maybe:inst5|state[6]    ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.502 ns                ;
+; N/A                                     ; 129.87 MHz ( period = 7.700 ns )                    ; FSM_Call_Me_Maybe:inst5|state[0]    ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.491 ns                ;
+; N/A                                     ; 130.40 MHz ( period = 7.669 ns )                    ; FSM_Call_Me_Maybe:inst5|state[4]    ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.460 ns                ;
+; N/A                                     ; 131.01 MHz ( period = 7.633 ns )                    ; FSM_Hallelujah:inst6|state[5]       ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.422 ns                ;
+; N/A                                     ; 131.18 MHz ( period = 7.623 ns )                    ; FSM_Indiana_Jones:inst|state[3]     ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.420 ns                ;
+; N/A                                     ; 131.82 MHz ( period = 7.586 ns )                    ; FSM_Hallelujah:inst6|state[6]       ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.375 ns                ;
+; N/A                                     ; 131.94 MHz ( period = 7.579 ns )                    ; FSM_Indiana_Jones:inst|state[2]     ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.376 ns                ;
+; N/A                                     ; 132.12 MHz ( period = 7.569 ns )                    ; FSM_Hallelujah:inst6|state[1]       ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.358 ns                ;
+; N/A                                     ; 132.36 MHz ( period = 7.555 ns )                    ; FSM_Indiana_Jones:inst|state[1]     ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.352 ns                ;
+; N/A                                     ; 132.38 MHz ( period = 7.554 ns )                    ; FSM_Call_Me_Maybe:inst5|state[5]    ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.345 ns                ;
+; N/A                                     ; 133.37 MHz ( period = 7.498 ns )                    ; FSM_Indiana_Jones:inst|state[4]     ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.295 ns                ;
+; N/A                                     ; 133.89 MHz ( period = 7.469 ns )                    ; FSM_Hallelujah:inst6|state[4]       ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.258 ns                ;
+; N/A                                     ; 133.92 MHz ( period = 7.467 ns )                    ; FSM_Hallelujah:inst6|state[3]       ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.256 ns                ;
+; N/A                                     ; 134.28 MHz ( period = 7.447 ns )                    ; FSM_Hallelujah:inst6|state[0]       ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.237 ns                ;
+; N/A                                     ; 134.59 MHz ( period = 7.430 ns )                    ; FSM_Hallelujah:inst6|state[2]       ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.219 ns                ;
+; N/A                                     ; 135.23 MHz ( period = 7.395 ns )                    ; FSM_Call_Me_Maybe:inst5|state[2]    ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.186 ns                ;
+; N/A                                     ; 135.61 MHz ( period = 7.374 ns )                    ; FSM_Star_Wars:inst8|state[4]        ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.163 ns                ;
+; N/A                                     ; 136.80 MHz ( period = 7.310 ns )                    ; FSM_Star_Wars:inst8|state[5]        ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.099 ns                ;
+; N/A                                     ; 137.65 MHz ( period = 7.265 ns )                    ; FSM_Star_Wars:inst8|state[1]        ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.054 ns                ;
+; N/A                                     ; 137.85 MHz ( period = 7.254 ns )                    ; FSM_Star_Wars:inst8|state[3]        ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 7.043 ns                ;
+; N/A                                     ; 138.83 MHz ( period = 7.203 ns )                    ; FSM_Star_Wars:inst8|state[6]        ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 6.992 ns                ;
+; N/A                                     ; 139.04 MHz ( period = 7.192 ns )                    ; FSM_Star_Wars:inst8|state[2]        ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 6.981 ns                ;
+; N/A                                     ; 139.55 MHz ( period = 7.166 ns )                    ; FSM_Call_Me_Maybe:inst5|state[1]    ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 6.957 ns                ;
+; N/A                                     ; 139.63 MHz ( period = 7.162 ns )                    ; FSM_Star_Wars:inst8|state[0]        ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 6.952 ns                ;
+; N/A                                     ; 139.96 MHz ( period = 7.145 ns )                    ; FSM_Yesterday:inst11|state[4]       ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 6.932 ns                ;
+; N/A                                     ; 140.51 MHz ( period = 7.117 ns )                    ; FSM_Indiana_Jones:inst|state[6]     ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 6.914 ns                ;
+; N/A                                     ; 140.73 MHz ( period = 7.106 ns )                    ; FSM_Yesterday:inst11|state[5]       ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 6.893 ns                ;
+; N/A                                     ; 141.48 MHz ( period = 7.068 ns )                    ; FSM_Yesterday:inst11|state[2]       ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 6.855 ns                ;
+; N/A                                     ; 142.25 MHz ( period = 7.030 ns )                    ; FSM_Indiana_Jones:inst|state[5]     ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 6.827 ns                ;
+; N/A                                     ; 142.86 MHz ( period = 7.000 ns )                    ; FSM_Yesterday:inst11|state[1]       ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 6.787 ns                ;
+; N/A                                     ; 144.22 MHz ( period = 6.934 ns )                    ; FSM_Yesterday:inst11|state[3]       ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 6.721 ns                ;
+; N/A                                     ; 146.86 MHz ( period = 6.809 ns )                    ; FSM_Yesterday:inst11|state[0]       ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 6.596 ns                ;
+; N/A                                     ; 149.77 MHz ( period = 6.677 ns )                    ; FSM_Call_Me_Maybe:inst5|state[3]    ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 6.468 ns                ;
+; N/A                                     ; 153.56 MHz ( period = 6.512 ns )                    ; FSM_Yesterday:inst11|state[6]       ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 6.299 ns                ;
+; N/A                                     ; 168.44 MHz ( period = 5.937 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Call_Me_Maybe:inst5|state[1]     ; clk        ; clk      ; None                        ; None                      ; 5.723 ns                ;
+; N/A                                     ; 168.44 MHz ( period = 5.937 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Call_Me_Maybe:inst5|state[2]     ; clk        ; clk      ; None                        ; None                      ; 5.723 ns                ;
+; N/A                                     ; 168.44 MHz ( period = 5.937 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Call_Me_Maybe:inst5|state[5]     ; clk        ; clk      ; None                        ; None                      ; 5.723 ns                ;
+; N/A                                     ; 168.44 MHz ( period = 5.937 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Call_Me_Maybe:inst5|state[4]     ; clk        ; clk      ; None                        ; None                      ; 5.723 ns                ;
+; N/A                                     ; 168.44 MHz ( period = 5.937 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Call_Me_Maybe:inst5|state[3]     ; clk        ; clk      ; None                        ; None                      ; 5.723 ns                ;
+; N/A                                     ; 168.44 MHz ( period = 5.937 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Call_Me_Maybe:inst5|state[6]     ; clk        ; clk      ; None                        ; None                      ; 5.723 ns                ;
+; N/A                                     ; 171.61 MHz ( period = 5.827 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Call_Me_Maybe:inst5|state[1]     ; clk        ; clk      ; None                        ; None                      ; 5.613 ns                ;
+; N/A                                     ; 171.61 MHz ( period = 5.827 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Call_Me_Maybe:inst5|state[2]     ; clk        ; clk      ; None                        ; None                      ; 5.613 ns                ;
+; N/A                                     ; 171.61 MHz ( period = 5.827 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Call_Me_Maybe:inst5|state[5]     ; clk        ; clk      ; None                        ; None                      ; 5.613 ns                ;
+; N/A                                     ; 171.61 MHz ( period = 5.827 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Call_Me_Maybe:inst5|state[4]     ; clk        ; clk      ; None                        ; None                      ; 5.613 ns                ;
+; N/A                                     ; 171.61 MHz ( period = 5.827 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Call_Me_Maybe:inst5|state[3]     ; clk        ; clk      ; None                        ; None                      ; 5.613 ns                ;
+; N/A                                     ; 171.61 MHz ( period = 5.827 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Call_Me_Maybe:inst5|state[6]     ; clk        ; clk      ; None                        ; None                      ; 5.613 ns                ;
+; N/A                                     ; 174.86 MHz ( period = 5.719 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Call_Me_Maybe:inst5|state[1]     ; clk        ; clk      ; None                        ; None                      ; 5.505 ns                ;
+; N/A                                     ; 174.86 MHz ( period = 5.719 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Call_Me_Maybe:inst5|state[2]     ; clk        ; clk      ; None                        ; None                      ; 5.505 ns                ;
+; N/A                                     ; 174.86 MHz ( period = 5.719 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Call_Me_Maybe:inst5|state[5]     ; clk        ; clk      ; None                        ; None                      ; 5.505 ns                ;
+; N/A                                     ; 174.86 MHz ( period = 5.719 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Call_Me_Maybe:inst5|state[4]     ; clk        ; clk      ; None                        ; None                      ; 5.505 ns                ;
+; N/A                                     ; 174.86 MHz ( period = 5.719 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Call_Me_Maybe:inst5|state[3]     ; clk        ; clk      ; None                        ; None                      ; 5.505 ns                ;
+; N/A                                     ; 174.86 MHz ( period = 5.719 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Call_Me_Maybe:inst5|state[6]     ; clk        ; clk      ; None                        ; None                      ; 5.505 ns                ;
+; N/A                                     ; 180.90 MHz ( period = 5.528 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Call_Me_Maybe:inst5|state[0]     ; clk        ; clk      ; None                        ; None                      ; 5.314 ns                ;
+; N/A                                     ; 181.46 MHz ( period = 5.511 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Yesterday:inst11|state[4]        ; clk        ; clk      ; None                        ; None                      ; 5.301 ns                ;
+; N/A                                     ; 181.46 MHz ( period = 5.511 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Yesterday:inst11|state[3]        ; clk        ; clk      ; None                        ; None                      ; 5.301 ns                ;
+; N/A                                     ; 181.46 MHz ( period = 5.511 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Yesterday:inst11|state[2]        ; clk        ; clk      ; None                        ; None                      ; 5.301 ns                ;
+; N/A                                     ; 181.46 MHz ( period = 5.511 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Yesterday:inst11|state[1]        ; clk        ; clk      ; None                        ; None                      ; 5.301 ns                ;
+; N/A                                     ; 181.46 MHz ( period = 5.511 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Yesterday:inst11|state[5]        ; clk        ; clk      ; None                        ; None                      ; 5.301 ns                ;
+; N/A                                     ; 181.46 MHz ( period = 5.511 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Yesterday:inst11|state[6]        ; clk        ; clk      ; None                        ; None                      ; 5.301 ns                ;
+; N/A                                     ; 184.57 MHz ( period = 5.418 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Call_Me_Maybe:inst5|state[0]     ; clk        ; clk      ; None                        ; None                      ; 5.204 ns                ;
+; N/A                                     ; 185.15 MHz ( period = 5.401 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Yesterday:inst11|state[4]        ; clk        ; clk      ; None                        ; None                      ; 5.191 ns                ;
+; N/A                                     ; 185.15 MHz ( period = 5.401 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Yesterday:inst11|state[3]        ; clk        ; clk      ; None                        ; None                      ; 5.191 ns                ;
+; N/A                                     ; 185.15 MHz ( period = 5.401 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Yesterday:inst11|state[2]        ; clk        ; clk      ; None                        ; None                      ; 5.191 ns                ;
+; N/A                                     ; 185.15 MHz ( period = 5.401 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Yesterday:inst11|state[1]        ; clk        ; clk      ; None                        ; None                      ; 5.191 ns                ;
+; N/A                                     ; 185.15 MHz ( period = 5.401 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Yesterday:inst11|state[5]        ; clk        ; clk      ; None                        ; None                      ; 5.191 ns                ;
+; N/A                                     ; 185.15 MHz ( period = 5.401 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Yesterday:inst11|state[6]        ; clk        ; clk      ; None                        ; None                      ; 5.191 ns                ;
+; N/A                                     ; 187.09 MHz ( period = 5.345 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Indiana_Jones:inst|state[1]      ; clk        ; clk      ; None                        ; None                      ; 5.125 ns                ;
+; N/A                                     ; 187.09 MHz ( period = 5.345 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Indiana_Jones:inst|state[2]      ; clk        ; clk      ; None                        ; None                      ; 5.125 ns                ;
+; N/A                                     ; 187.09 MHz ( period = 5.345 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Indiana_Jones:inst|state[3]      ; clk        ; clk      ; None                        ; None                      ; 5.125 ns                ;
+; N/A                                     ; 187.09 MHz ( period = 5.345 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Indiana_Jones:inst|state[4]      ; clk        ; clk      ; None                        ; None                      ; 5.125 ns                ;
+; N/A                                     ; 187.09 MHz ( period = 5.345 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Indiana_Jones:inst|state[5]      ; clk        ; clk      ; None                        ; None                      ; 5.125 ns                ;
+; N/A                                     ; 187.09 MHz ( period = 5.345 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Indiana_Jones:inst|state[6]      ; clk        ; clk      ; None                        ; None                      ; 5.125 ns                ;
+; N/A                                     ; 187.79 MHz ( period = 5.325 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Indiana_Jones:inst|state[0]      ; clk        ; clk      ; None                        ; None                      ; 5.104 ns                ;
+; N/A                                     ; 188.32 MHz ( period = 5.310 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Call_Me_Maybe:inst5|state[0]     ; clk        ; clk      ; None                        ; None                      ; 5.096 ns                ;
+; N/A                                     ; 188.93 MHz ( period = 5.293 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Yesterday:inst11|state[4]        ; clk        ; clk      ; None                        ; None                      ; 5.083 ns                ;
+; N/A                                     ; 188.93 MHz ( period = 5.293 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Yesterday:inst11|state[3]        ; clk        ; clk      ; None                        ; None                      ; 5.083 ns                ;
+; N/A                                     ; 188.93 MHz ( period = 5.293 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Yesterday:inst11|state[2]        ; clk        ; clk      ; None                        ; None                      ; 5.083 ns                ;
+; N/A                                     ; 188.93 MHz ( period = 5.293 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Yesterday:inst11|state[1]        ; clk        ; clk      ; None                        ; None                      ; 5.083 ns                ;
+; N/A                                     ; 188.93 MHz ( period = 5.293 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Yesterday:inst11|state[5]        ; clk        ; clk      ; None                        ; None                      ; 5.083 ns                ;
+; N/A                                     ; 188.93 MHz ( period = 5.293 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Yesterday:inst11|state[6]        ; clk        ; clk      ; None                        ; None                      ; 5.083 ns                ;
+; N/A                                     ; 191.02 MHz ( period = 5.235 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Indiana_Jones:inst|state[1]      ; clk        ; clk      ; None                        ; None                      ; 5.015 ns                ;
+; N/A                                     ; 191.02 MHz ( period = 5.235 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Indiana_Jones:inst|state[2]      ; clk        ; clk      ; None                        ; None                      ; 5.015 ns                ;
+; N/A                                     ; 191.02 MHz ( period = 5.235 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Indiana_Jones:inst|state[3]      ; clk        ; clk      ; None                        ; None                      ; 5.015 ns                ;
+; N/A                                     ; 191.02 MHz ( period = 5.235 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Indiana_Jones:inst|state[4]      ; clk        ; clk      ; None                        ; None                      ; 5.015 ns                ;
+; N/A                                     ; 191.02 MHz ( period = 5.235 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Indiana_Jones:inst|state[5]      ; clk        ; clk      ; None                        ; None                      ; 5.015 ns                ;
+; N/A                                     ; 191.02 MHz ( period = 5.235 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Indiana_Jones:inst|state[6]      ; clk        ; clk      ; None                        ; None                      ; 5.015 ns                ;
+; N/A                                     ; 191.35 MHz ( period = 5.226 ns )                    ; FSM_Yesterday:inst11|counter[6]     ; FSM_Call_Me_Maybe:inst5|state[1]     ; clk        ; clk      ; None                        ; None                      ; 5.012 ns                ;
+; N/A                                     ; 191.35 MHz ( period = 5.226 ns )                    ; FSM_Yesterday:inst11|counter[6]     ; FSM_Call_Me_Maybe:inst5|state[2]     ; clk        ; clk      ; None                        ; None                      ; 5.012 ns                ;
+; N/A                                     ; 191.35 MHz ( period = 5.226 ns )                    ; FSM_Yesterday:inst11|counter[6]     ; FSM_Call_Me_Maybe:inst5|state[5]     ; clk        ; clk      ; None                        ; None                      ; 5.012 ns                ;
+; N/A                                     ; 191.35 MHz ( period = 5.226 ns )                    ; FSM_Yesterday:inst11|counter[6]     ; FSM_Call_Me_Maybe:inst5|state[4]     ; clk        ; clk      ; None                        ; None                      ; 5.012 ns                ;
+; N/A                                     ; 191.35 MHz ( period = 5.226 ns )                    ; FSM_Yesterday:inst11|counter[6]     ; FSM_Call_Me_Maybe:inst5|state[3]     ; clk        ; clk      ; None                        ; None                      ; 5.012 ns                ;
+; N/A                                     ; 191.35 MHz ( period = 5.226 ns )                    ; FSM_Yesterday:inst11|counter[6]     ; FSM_Call_Me_Maybe:inst5|state[6]     ; clk        ; clk      ; None                        ; None                      ; 5.012 ns                ;
+; N/A                                     ; 191.75 MHz ( period = 5.215 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Indiana_Jones:inst|state[0]      ; clk        ; clk      ; None                        ; None                      ; 4.994 ns                ;
+; N/A                                     ; 194.89 MHz ( period = 5.131 ns )                    ; FSM_Yesterday:inst11|counter[4]     ; FSM_Call_Me_Maybe:inst5|state[1]     ; clk        ; clk      ; None                        ; None                      ; 4.917 ns                ;
+; N/A                                     ; 194.89 MHz ( period = 5.131 ns )                    ; FSM_Yesterday:inst11|counter[4]     ; FSM_Call_Me_Maybe:inst5|state[2]     ; clk        ; clk      ; None                        ; None                      ; 4.917 ns                ;
+; N/A                                     ; 194.89 MHz ( period = 5.131 ns )                    ; FSM_Yesterday:inst11|counter[4]     ; FSM_Call_Me_Maybe:inst5|state[5]     ; clk        ; clk      ; None                        ; None                      ; 4.917 ns                ;
+; N/A                                     ; 194.89 MHz ( period = 5.131 ns )                    ; FSM_Yesterday:inst11|counter[4]     ; FSM_Call_Me_Maybe:inst5|state[4]     ; clk        ; clk      ; None                        ; None                      ; 4.917 ns                ;
+; N/A                                     ; 194.89 MHz ( period = 5.131 ns )                    ; FSM_Yesterday:inst11|counter[4]     ; FSM_Call_Me_Maybe:inst5|state[3]     ; clk        ; clk      ; None                        ; None                      ; 4.917 ns                ;
+; N/A                                     ; 194.89 MHz ( period = 5.131 ns )                    ; FSM_Yesterday:inst11|counter[4]     ; FSM_Call_Me_Maybe:inst5|state[6]     ; clk        ; clk      ; None                        ; None                      ; 4.917 ns                ;
+; N/A                                     ; 195.05 MHz ( period = 5.127 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Indiana_Jones:inst|state[1]      ; clk        ; clk      ; None                        ; None                      ; 4.907 ns                ;
+; N/A                                     ; 195.05 MHz ( period = 5.127 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Indiana_Jones:inst|state[2]      ; clk        ; clk      ; None                        ; None                      ; 4.907 ns                ;
+; N/A                                     ; 195.05 MHz ( period = 5.127 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Indiana_Jones:inst|state[3]      ; clk        ; clk      ; None                        ; None                      ; 4.907 ns                ;
+; N/A                                     ; 195.05 MHz ( period = 5.127 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Indiana_Jones:inst|state[4]      ; clk        ; clk      ; None                        ; None                      ; 4.907 ns                ;
+; N/A                                     ; 195.05 MHz ( period = 5.127 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Indiana_Jones:inst|state[5]      ; clk        ; clk      ; None                        ; None                      ; 4.907 ns                ;
+; N/A                                     ; 195.05 MHz ( period = 5.127 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Indiana_Jones:inst|state[6]      ; clk        ; clk      ; None                        ; None                      ; 4.907 ns                ;
+; N/A                                     ; 195.58 MHz ( period = 5.113 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Yesterday:inst11|state[0]        ; clk        ; clk      ; None                        ; None                      ; 4.903 ns                ;
+; N/A                                     ; 195.81 MHz ( period = 5.107 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Indiana_Jones:inst|state[0]      ; clk        ; clk      ; None                        ; None                      ; 4.886 ns                ;
+; N/A                                     ; 197.36 MHz ( period = 5.067 ns )                    ; M:inst3|Low_G_Sharp:inst9|out       ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 4.846 ns                ;
+; N/A                                     ; 199.72 MHz ( period = 5.007 ns )                    ; M:inst3|G_Sharp:inst17|out          ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 4.790 ns                ;
+; N/A                                     ; 199.88 MHz ( period = 5.003 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Yesterday:inst11|state[0]        ; clk        ; clk      ; None                        ; None                      ; 4.793 ns                ;
+; N/A                                     ; 201.21 MHz ( period = 4.970 ns )                    ; FSM_Yesterday:inst11|counter[5]     ; FSM_Call_Me_Maybe:inst5|state[1]     ; clk        ; clk      ; None                        ; None                      ; 4.756 ns                ;
+; N/A                                     ; 201.21 MHz ( period = 4.970 ns )                    ; FSM_Yesterday:inst11|counter[5]     ; FSM_Call_Me_Maybe:inst5|state[2]     ; clk        ; clk      ; None                        ; None                      ; 4.756 ns                ;
+; N/A                                     ; 201.21 MHz ( period = 4.970 ns )                    ; FSM_Yesterday:inst11|counter[5]     ; FSM_Call_Me_Maybe:inst5|state[5]     ; clk        ; clk      ; None                        ; None                      ; 4.756 ns                ;
+; N/A                                     ; 201.21 MHz ( period = 4.970 ns )                    ; FSM_Yesterday:inst11|counter[5]     ; FSM_Call_Me_Maybe:inst5|state[4]     ; clk        ; clk      ; None                        ; None                      ; 4.756 ns                ;
+; N/A                                     ; 201.21 MHz ( period = 4.970 ns )                    ; FSM_Yesterday:inst11|counter[5]     ; FSM_Call_Me_Maybe:inst5|state[3]     ; clk        ; clk      ; None                        ; None                      ; 4.756 ns                ;
+; N/A                                     ; 201.21 MHz ( period = 4.970 ns )                    ; FSM_Yesterday:inst11|counter[5]     ; FSM_Call_Me_Maybe:inst5|state[6]     ; clk        ; clk      ; None                        ; None                      ; 4.756 ns                ;
+; N/A                                     ; 202.47 MHz ( period = 4.939 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Yesterday:inst11|counter[10]     ; clk        ; clk      ; None                        ; None                      ; 4.725 ns                ;
+; N/A                                     ; 203.50 MHz ( period = 4.914 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Star_Wars:inst8|state[6]         ; clk        ; clk      ; None                        ; None                      ; 4.702 ns                ;
+; N/A                                     ; 203.50 MHz ( period = 4.914 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Star_Wars:inst8|state[5]         ; clk        ; clk      ; None                        ; None                      ; 4.702 ns                ;
+; N/A                                     ; 203.50 MHz ( period = 4.914 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Star_Wars:inst8|state[4]         ; clk        ; clk      ; None                        ; None                      ; 4.702 ns                ;
+; N/A                                     ; 203.50 MHz ( period = 4.914 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Star_Wars:inst8|state[3]         ; clk        ; clk      ; None                        ; None                      ; 4.702 ns                ;
+; N/A                                     ; 203.50 MHz ( period = 4.914 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Star_Wars:inst8|state[2]         ; clk        ; clk      ; None                        ; None                      ; 4.702 ns                ;
+; N/A                                     ; 203.50 MHz ( period = 4.914 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Star_Wars:inst8|state[1]         ; clk        ; clk      ; None                        ; None                      ; 4.702 ns                ;
+; N/A                                     ; 204.29 MHz ( period = 4.895 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Yesterday:inst11|state[0]        ; clk        ; clk      ; None                        ; None                      ; 4.685 ns                ;
+; N/A                                     ; 204.62 MHz ( period = 4.887 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[18] ; FSM_Call_Me_Maybe:inst5|state[1]     ; clk        ; clk      ; None                        ; None                      ; 4.672 ns                ;
+; N/A                                     ; 204.62 MHz ( period = 4.887 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[18] ; FSM_Call_Me_Maybe:inst5|state[2]     ; clk        ; clk      ; None                        ; None                      ; 4.672 ns                ;
+; N/A                                     ; 204.62 MHz ( period = 4.887 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[18] ; FSM_Call_Me_Maybe:inst5|state[5]     ; clk        ; clk      ; None                        ; None                      ; 4.672 ns                ;
+; N/A                                     ; 204.62 MHz ( period = 4.887 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[18] ; FSM_Call_Me_Maybe:inst5|state[4]     ; clk        ; clk      ; None                        ; None                      ; 4.672 ns                ;
+; N/A                                     ; 204.62 MHz ( period = 4.887 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[18] ; FSM_Call_Me_Maybe:inst5|state[3]     ; clk        ; clk      ; None                        ; None                      ; 4.672 ns                ;
+; N/A                                     ; 204.62 MHz ( period = 4.887 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[18] ; FSM_Call_Me_Maybe:inst5|state[6]     ; clk        ; clk      ; None                        ; None                      ; 4.672 ns                ;
+; N/A                                     ; 205.68 MHz ( period = 4.862 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[12] ; FSM_Call_Me_Maybe:inst5|state[1]     ; clk        ; clk      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 205.68 MHz ( period = 4.862 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[12] ; FSM_Call_Me_Maybe:inst5|state[2]     ; clk        ; clk      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 205.68 MHz ( period = 4.862 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[12] ; FSM_Call_Me_Maybe:inst5|state[5]     ; clk        ; clk      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 205.68 MHz ( period = 4.862 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[12] ; FSM_Call_Me_Maybe:inst5|state[4]     ; clk        ; clk      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 205.68 MHz ( period = 4.862 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[12] ; FSM_Call_Me_Maybe:inst5|state[3]     ; clk        ; clk      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 205.68 MHz ( period = 4.862 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[12] ; FSM_Call_Me_Maybe:inst5|state[6]     ; clk        ; clk      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 205.85 MHz ( period = 4.858 ns )                    ; g00_audio_interface:inst4|Mcount    ; M:inst3|Low_E:inst5|counter[16]      ; clk        ; clk      ; None                        ; None                      ; 4.647 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[21] ; FSM_Call_Me_Maybe:inst5|state[1]     ; clk        ; clk      ; None                        ; None                      ; 4.629 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[21] ; FSM_Call_Me_Maybe:inst5|state[2]     ; clk        ; clk      ; None                        ; None                      ; 4.629 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[21] ; FSM_Call_Me_Maybe:inst5|state[5]     ; clk        ; clk      ; None                        ; None                      ; 4.629 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[21] ; FSM_Call_Me_Maybe:inst5|state[4]     ; clk        ; clk      ; None                        ; None                      ; 4.629 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[21] ; FSM_Call_Me_Maybe:inst5|state[3]     ; clk        ; clk      ; None                        ; None                      ; 4.629 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[21] ; FSM_Call_Me_Maybe:inst5|state[6]     ; clk        ; clk      ; None                        ; None                      ; 4.629 ns                ;
+; N/A                                     ; 207.08 MHz ( period = 4.829 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Yesterday:inst11|counter[10]     ; clk        ; clk      ; None                        ; None                      ; 4.615 ns                ;
+; N/A                                     ; 207.08 MHz ( period = 4.829 ns )                    ; g00_audio_interface:inst4|Mcount    ; M:inst3|A_Sharp:inst18|counter[14]   ; clk        ; clk      ; None                        ; None                      ; 4.633 ns                ;
+; N/A                                     ; 207.60 MHz ( period = 4.817 ns )                    ; FSM_Yesterday:inst11|counter[6]     ; FSM_Call_Me_Maybe:inst5|state[0]     ; clk        ; clk      ; None                        ; None                      ; 4.603 ns                ;
+; N/A                                     ; 207.99 MHz ( period = 4.808 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Star_Wars:inst8|state[0]         ; clk        ; clk      ; None                        ; None                      ; 4.595 ns                ;
+; N/A                                     ; 208.16 MHz ( period = 4.804 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Star_Wars:inst8|state[6]         ; clk        ; clk      ; None                        ; None                      ; 4.592 ns                ;
+; N/A                                     ; 208.16 MHz ( period = 4.804 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Star_Wars:inst8|state[5]         ; clk        ; clk      ; None                        ; None                      ; 4.592 ns                ;
+; N/A                                     ; 208.16 MHz ( period = 4.804 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Star_Wars:inst8|state[4]         ; clk        ; clk      ; None                        ; None                      ; 4.592 ns                ;
+; N/A                                     ; 208.16 MHz ( period = 4.804 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Star_Wars:inst8|state[3]         ; clk        ; clk      ; None                        ; None                      ; 4.592 ns                ;
+; N/A                                     ; 208.16 MHz ( period = 4.804 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Star_Wars:inst8|state[2]         ; clk        ; clk      ; None                        ; None                      ; 4.592 ns                ;
+; N/A                                     ; 208.16 MHz ( period = 4.804 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Star_Wars:inst8|state[1]         ; clk        ; clk      ; None                        ; None                      ; 4.592 ns                ;
+; N/A                                     ; 208.33 MHz ( period = 4.800 ns )                    ; FSM_Yesterday:inst11|counter[6]     ; FSM_Yesterday:inst11|state[4]        ; clk        ; clk      ; None                        ; None                      ; 4.590 ns                ;
+; N/A                                     ; 208.33 MHz ( period = 4.800 ns )                    ; FSM_Yesterday:inst11|counter[6]     ; FSM_Yesterday:inst11|state[3]        ; clk        ; clk      ; None                        ; None                      ; 4.590 ns                ;
+; N/A                                     ; 208.33 MHz ( period = 4.800 ns )                    ; FSM_Yesterday:inst11|counter[6]     ; FSM_Yesterday:inst11|state[2]        ; clk        ; clk      ; None                        ; None                      ; 4.590 ns                ;
+; N/A                                     ; 208.33 MHz ( period = 4.800 ns )                    ; FSM_Yesterday:inst11|counter[6]     ; FSM_Yesterday:inst11|state[1]        ; clk        ; clk      ; None                        ; None                      ; 4.590 ns                ;
+; N/A                                     ; 208.33 MHz ( period = 4.800 ns )                    ; FSM_Yesterday:inst11|counter[6]     ; FSM_Yesterday:inst11|state[5]        ; clk        ; clk      ; None                        ; None                      ; 4.590 ns                ;
+; N/A                                     ; 208.33 MHz ( period = 4.800 ns )                    ; FSM_Yesterday:inst11|counter[6]     ; FSM_Yesterday:inst11|state[6]        ; clk        ; clk      ; None                        ; None                      ; 4.590 ns                ;
+; N/A                                     ; 208.81 MHz ( period = 4.789 ns )                    ; g00_audio_interface:inst4|Mcount    ; FSM_Indiana_Jones:inst|counter[15]   ; clk        ; clk      ; None                        ; None                      ; 4.569 ns                ;
+; N/A                                     ; 210.97 MHz ( period = 4.740 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[23] ; FSM_Call_Me_Maybe:inst5|state[1]     ; clk        ; clk      ; None                        ; None                      ; 4.525 ns                ;
+; N/A                                     ; 210.97 MHz ( period = 4.740 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[23] ; FSM_Call_Me_Maybe:inst5|state[2]     ; clk        ; clk      ; None                        ; None                      ; 4.525 ns                ;
+; N/A                                     ; 210.97 MHz ( period = 4.740 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[23] ; FSM_Call_Me_Maybe:inst5|state[5]     ; clk        ; clk      ; None                        ; None                      ; 4.525 ns                ;
+; N/A                                     ; 210.97 MHz ( period = 4.740 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[23] ; FSM_Call_Me_Maybe:inst5|state[4]     ; clk        ; clk      ; None                        ; None                      ; 4.525 ns                ;
+; N/A                                     ; 210.97 MHz ( period = 4.740 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[23] ; FSM_Call_Me_Maybe:inst5|state[3]     ; clk        ; clk      ; None                        ; None                      ; 4.525 ns                ;
+; N/A                                     ; 210.97 MHz ( period = 4.740 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[23] ; FSM_Call_Me_Maybe:inst5|state[6]     ; clk        ; clk      ; None                        ; None                      ; 4.525 ns                ;
+; N/A                                     ; 211.77 MHz ( period = 4.722 ns )                    ; FSM_Yesterday:inst11|counter[4]     ; FSM_Call_Me_Maybe:inst5|state[0]     ; clk        ; clk      ; None                        ; None                      ; 4.508 ns                ;
+; N/A                                     ; 211.82 MHz ( period = 4.721 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Yesterday:inst11|counter[10]     ; clk        ; clk      ; None                        ; None                      ; 4.507 ns                ;
+; N/A                                     ; 212.13 MHz ( period = 4.714 ns )                    ; FSM_Yesterday:inst11|counter[3]     ; FSM_Yesterday:inst11|counter[9]      ; clk        ; clk      ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 212.54 MHz ( period = 4.705 ns )                    ; FSM_Yesterday:inst11|counter[4]     ; FSM_Yesterday:inst11|state[4]        ; clk        ; clk      ; None                        ; None                      ; 4.495 ns                ;
+; N/A                                     ; 212.54 MHz ( period = 4.705 ns )                    ; FSM_Yesterday:inst11|counter[4]     ; FSM_Yesterday:inst11|state[3]        ; clk        ; clk      ; None                        ; None                      ; 4.495 ns                ;
+; N/A                                     ; 212.54 MHz ( period = 4.705 ns )                    ; FSM_Yesterday:inst11|counter[4]     ; FSM_Yesterday:inst11|state[2]        ; clk        ; clk      ; None                        ; None                      ; 4.495 ns                ;
+; N/A                                     ; 212.54 MHz ( period = 4.705 ns )                    ; FSM_Yesterday:inst11|counter[4]     ; FSM_Yesterday:inst11|state[1]        ; clk        ; clk      ; None                        ; None                      ; 4.495 ns                ;
+; N/A                                     ; 212.54 MHz ( period = 4.705 ns )                    ; FSM_Yesterday:inst11|counter[4]     ; FSM_Yesterday:inst11|state[5]        ; clk        ; clk      ; None                        ; None                      ; 4.495 ns                ;
+; N/A                                     ; 212.54 MHz ( period = 4.705 ns )                    ; FSM_Yesterday:inst11|counter[4]     ; FSM_Yesterday:inst11|state[6]        ; clk        ; clk      ; None                        ; None                      ; 4.495 ns                ;
+; N/A                                     ; 212.81 MHz ( period = 4.699 ns )                    ; M:inst3|A_Sharp:inst18|out          ; g00_audio_interface:inst4|LRDATA[49] ; clk        ; clk      ; None                        ; None                      ; 4.473 ns                ;
+; N/A                                     ; 212.86 MHz ( period = 4.698 ns )                    ; FSM_Yesterday:inst11|counter[1]     ; FSM_Star_Wars:inst8|state[0]         ; clk        ; clk      ; None                        ; None                      ; 4.485 ns                ;
+; N/A                                     ; 212.95 MHz ( period = 4.696 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Star_Wars:inst8|state[6]         ; clk        ; clk      ; None                        ; None                      ; 4.484 ns                ;
+; N/A                                     ; 212.95 MHz ( period = 4.696 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Star_Wars:inst8|state[5]         ; clk        ; clk      ; None                        ; None                      ; 4.484 ns                ;
+; N/A                                     ; 212.95 MHz ( period = 4.696 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Star_Wars:inst8|state[4]         ; clk        ; clk      ; None                        ; None                      ; 4.484 ns                ;
+; N/A                                     ; 212.95 MHz ( period = 4.696 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Star_Wars:inst8|state[3]         ; clk        ; clk      ; None                        ; None                      ; 4.484 ns                ;
+; N/A                                     ; 212.95 MHz ( period = 4.696 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Star_Wars:inst8|state[2]         ; clk        ; clk      ; None                        ; None                      ; 4.484 ns                ;
+; N/A                                     ; 212.95 MHz ( period = 4.696 ns )                    ; FSM_Yesterday:inst11|counter[2]     ; FSM_Star_Wars:inst8|state[1]         ; clk        ; clk      ; None                        ; None                      ; 4.484 ns                ;
+; N/A                                     ; 213.68 MHz ( period = 4.680 ns )                    ; M:inst3|C:inst|counter[6]           ; M:inst3|C:inst|counter[1]            ; clk        ; clk      ; None                        ; None                      ; 4.466 ns                ;
+; N/A                                     ; 214.18 MHz ( period = 4.669 ns )                    ; M:inst3|C:inst|counter[3]           ; M:inst3|C:inst|counter[1]            ; clk        ; clk      ; None                        ; None                      ; 4.455 ns                ;
+; N/A                                     ; 215.56 MHz ( period = 4.639 ns )                    ; g00_audio_interface:inst4|Mcount    ; FSM_Hallelujah:inst6|counter[20]     ; clk        ; clk      ; None                        ; None                      ; 4.416 ns                ;
+; N/A                                     ; 216.59 MHz ( period = 4.617 ns )                    ; g00_audio_interface:inst4|Mcount    ; FSM_Hallelujah:inst6|counter[23]     ; clk        ; clk      ; None                        ; None                      ; 4.393 ns                ;
+; N/A                                     ; 216.64 MHz ( period = 4.616 ns )                    ; FSM_Star_Wars:inst8|counter[6]      ; FSM_Indiana_Jones:inst|state[1]      ; clk        ; clk      ; None                        ; None                      ; 4.406 ns                ;
+; N/A                                     ; 216.64 MHz ( period = 4.616 ns )                    ; FSM_Star_Wars:inst8|counter[6]      ; FSM_Indiana_Jones:inst|state[2]      ; clk        ; clk      ; None                        ; None                      ; 4.406 ns                ;
+; N/A                                     ; 216.64 MHz ( period = 4.616 ns )                    ; FSM_Star_Wars:inst8|counter[6]      ; FSM_Indiana_Jones:inst|state[3]      ; clk        ; clk      ; None                        ; None                      ; 4.406 ns                ;
+; N/A                                     ; 216.64 MHz ( period = 4.616 ns )                    ; FSM_Star_Wars:inst8|counter[6]      ; FSM_Indiana_Jones:inst|state[4]      ; clk        ; clk      ; None                        ; None                      ; 4.406 ns                ;
+; N/A                                     ; 216.64 MHz ( period = 4.616 ns )                    ; FSM_Star_Wars:inst8|counter[6]      ; FSM_Indiana_Jones:inst|state[5]      ; clk        ; clk      ; None                        ; None                      ; 4.406 ns                ;
+; N/A                                     ; 216.64 MHz ( period = 4.616 ns )                    ; FSM_Star_Wars:inst8|counter[6]      ; FSM_Indiana_Jones:inst|state[6]      ; clk        ; clk      ; None                        ; None                      ; 4.406 ns                ;
+; N/A                                     ; 216.68 MHz ( period = 4.615 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[24] ; FSM_Call_Me_Maybe:inst5|state[1]     ; clk        ; clk      ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 216.68 MHz ( period = 4.615 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[24] ; FSM_Call_Me_Maybe:inst5|state[2]     ; clk        ; clk      ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 216.68 MHz ( period = 4.615 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[24] ; FSM_Call_Me_Maybe:inst5|state[5]     ; clk        ; clk      ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 216.68 MHz ( period = 4.615 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[24] ; FSM_Call_Me_Maybe:inst5|state[4]     ; clk        ; clk      ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 216.68 MHz ( period = 4.615 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[24] ; FSM_Call_Me_Maybe:inst5|state[3]     ; clk        ; clk      ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 216.68 MHz ( period = 4.615 ns )                    ; FSM_Call_Me_Maybe:inst5|counter[24] ; FSM_Call_Me_Maybe:inst5|state[6]     ; clk        ; clk      ; None                        ; None                      ; 4.400 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                     ;                                      ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------------+--------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; tsu                                                                                               ;
++-------+--------------+------------+-------------+--------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From        ; To                                   ; To Clock ;
++-------+--------------+------------+-------------+--------------------------------------+----------+
+; N/A   ; None         ; 5.615 ns   ; SongSelect0 ; g00_audio_interface:inst4|LRDATA[49] ; clk      ;
+; N/A   ; None         ; 5.475 ns   ; SongSelect2 ; g00_audio_interface:inst4|LRDATA[49] ; clk      ;
+; N/A   ; None         ; 5.470 ns   ; SongSelect1 ; g00_audio_interface:inst4|LRDATA[49] ; clk      ;
++-------+--------------+------------+-------------+--------------------------------------+----------+
+
+
++--------------------------------------------------------------------------------------------------+
+; tco                                                                                              ;
++-------+--------------+------------+---------------------------------------+---------+------------+
+; Slack ; Required tco ; Actual tco ; From                                  ; To      ; From Clock ;
++-------+--------------+------------+---------------------------------------+---------+------------+
+; N/A   ; None         ; 10.330 ns  ; g00_audio_interface:inst4|AUD_DACDAT  ; DACDAT  ; clk        ;
+; N/A   ; None         ; 9.622 ns   ; g00_audio_interface:inst4|AUD_DACLRCK ; DACLRCK ; clk        ;
+; N/A   ; None         ; 8.694 ns   ; g00_audio_interface:inst4|AUD_BCLK    ; BCLK    ; clk        ;
+; N/A   ; None         ; 8.332 ns   ; g00_audio_interface:inst4|Mcount      ; XCK     ; clk        ;
++-------+--------------+------------+---------------------------------------+---------+------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; th                                                                                                      ;
++---------------+-------------+-----------+-------------+--------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From        ; To                                   ; To Clock ;
++---------------+-------------+-----------+-------------+--------------------------------------+----------+
+; N/A           ; None        ; -1.131 ns ; SongSelect0 ; g00_audio_interface:inst4|LRDATA[49] ; clk      ;
+; N/A           ; None        ; -1.536 ns ; SongSelect2 ; g00_audio_interface:inst4|LRDATA[49] ; clk      ;
+; N/A           ; None        ; -1.693 ns ; SongSelect1 ; g00_audio_interface:inst4|LRDATA[49] ; clk      ;
++---------------+-------------+-----------+-------------+--------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Mon Mar 18 16:00:08 2013
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off M -c M --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Info: Clock "clk" has Internal fmax of 128.97 MHz between source register "FSM_Indiana_Jones:inst|state[0]" and destination register "g00_audio_interface:inst4|LRDATA[49]" (period= 7.754 ns)
+    Info: + Longest register to register delay is 7.552 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X50_Y18_N1; Fanout = 19; REG Node = 'FSM_Indiana_Jones:inst|state[0]'
+        Info: 2: + IC(0.795 ns) + CELL(0.150 ns) = 0.945 ns; Loc. = LCCOMB_X51_Y18_N8; Fanout = 1; COMB Node = 'FSM_Indiana_Jones:inst|Ram0~2248'
+        Info: 3: + IC(0.255 ns) + CELL(0.275 ns) = 1.475 ns; Loc. = LCCOMB_X51_Y18_N2; Fanout = 1; COMB Node = 'FSM_Indiana_Jones:inst|Ram0~2249'
+        Info: 4: + IC(0.712 ns) + CELL(0.438 ns) = 2.625 ns; Loc. = LCCOMB_X54_Y18_N30; Fanout = 1; COMB Node = 'FSM_Indiana_Jones:inst|Ram0~2253'
+        Info: 5: + IC(0.253 ns) + CELL(0.420 ns) = 3.298 ns; Loc. = LCCOMB_X54_Y18_N20; Fanout = 1; COMB Node = 'lpm_mux7:inst24|lpm_mux:lpm_mux_component|mux_1nc:auto_generated|result_node[0]~4429'
+        Info: 6: + IC(0.257 ns) + CELL(0.271 ns) = 3.826 ns; Loc. = LCCOMB_X54_Y18_N12; Fanout = 1; COMB Node = 'lpm_mux7:inst24|lpm_mux:lpm_mux_component|mux_1nc:auto_generated|result_node[0]~4452'
+        Info: 7: + IC(0.247 ns) + CELL(0.150 ns) = 4.223 ns; Loc. = LCCOMB_X54_Y18_N6; Fanout = 11; COMB Node = 'lpm_mux7:inst24|lpm_mux:lpm_mux_component|mux_1nc:auto_generated|result_node[0]~4453'
+        Info: 8: + IC(0.516 ns) + CELL(0.275 ns) = 5.014 ns; Loc. = LCCOMB_X55_Y18_N22; Fanout = 1; COMB Node = 'M:inst3|lpm_mux3:inst15|lpm_mux:lpm_mux_component|mux_foc:auto_generated|_~984'
+        Info: 9: + IC(0.248 ns) + CELL(0.150 ns) = 5.412 ns; Loc. = LCCOMB_X55_Y18_N8; Fanout = 1; COMB Node = 'M:inst3|lpm_mux3:inst15|lpm_mux:lpm_mux_component|mux_foc:auto_generated|_~985'
+        Info: 10: + IC(0.253 ns) + CELL(0.419 ns) = 6.084 ns; Loc. = LCCOMB_X55_Y18_N30; Fanout = 1; COMB Node = 'M:inst3|lpm_mux3:inst15|lpm_mux:lpm_mux_component|mux_foc:auto_generated|result_node[0]~363'
+        Info: 11: + IC(0.253 ns) + CELL(0.420 ns) = 6.757 ns; Loc. = LCCOMB_X55_Y18_N6; Fanout = 1; COMB Node = 'M:inst3|lpm_mux3:inst15|lpm_mux:lpm_mux_component|mux_foc:auto_generated|result_node[0]~365'
+        Info: 12: + IC(0.273 ns) + CELL(0.438 ns) = 7.468 ns; Loc. = LCCOMB_X55_Y18_N24; Fanout = 1; COMB Node = 'g00_audio_interface:inst4|LRDATA[49]~334'
+        Info: 13: + IC(0.000 ns) + CELL(0.084 ns) = 7.552 ns; Loc. = LCFF_X55_Y18_N25; Fanout = 2; REG Node = 'g00_audio_interface:inst4|LRDATA[49]'
+        Info: Total cell delay = 3.490 ns ( 46.21 % )
+        Info: Total interconnect delay = 4.062 ns ( 53.79 % )
+    Info: - Smallest clock skew is 0.012 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 2.686 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 1; CLK Node = 'clk'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 558; COMB Node = 'clk~clkctrl'
+            Info: 3: + IC(1.032 ns) + CELL(0.537 ns) = 2.686 ns; Loc. = LCFF_X55_Y18_N25; Fanout = 2; REG Node = 'g00_audio_interface:inst4|LRDATA[49]'
+            Info: Total cell delay = 1.536 ns ( 57.19 % )
+            Info: Total interconnect delay = 1.150 ns ( 42.81 % )
+        Info: - Longest clock path from clock "clk" to source register is 2.674 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 1; CLK Node = 'clk'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 558; COMB Node = 'clk~clkctrl'
+            Info: 3: + IC(1.020 ns) + CELL(0.537 ns) = 2.674 ns; Loc. = LCFF_X50_Y18_N1; Fanout = 19; REG Node = 'FSM_Indiana_Jones:inst|state[0]'
+            Info: Total cell delay = 1.536 ns ( 57.44 % )
+            Info: Total interconnect delay = 1.138 ns ( 42.56 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: tsu for register "g00_audio_interface:inst4|LRDATA[49]" (data pin = "SongSelect0", clock pin = "clk") is 5.615 ns
+    Info: + Longest pin to register delay is 8.337 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N25; Fanout = 11; PIN Node = 'SongSelect0'
+        Info: 2: + IC(1.049 ns) + CELL(0.271 ns) = 2.319 ns; Loc. = LCCOMB_X55_Y20_N16; Fanout = 4; COMB Node = 'lpm_mux7:inst24|lpm_mux:lpm_mux_component|mux_1nc:auto_generated|result_node[3]~4420'
+        Info: 3: + IC(0.682 ns) + CELL(0.438 ns) = 3.439 ns; Loc. = LCCOMB_X56_Y20_N30; Fanout = 1; COMB Node = 'lpm_mux7:inst24|lpm_mux:lpm_mux_component|mux_1nc:auto_generated|result_node[4]~4445'
+        Info: 4: + IC(0.244 ns) + CELL(0.150 ns) = 3.833 ns; Loc. = LCCOMB_X56_Y20_N0; Fanout = 1; COMB Node = 'lpm_mux7:inst24|lpm_mux:lpm_mux_component|mux_1nc:auto_generated|result_node[4]~4446'
+        Info: 5: + IC(0.959 ns) + CELL(0.420 ns) = 5.212 ns; Loc. = LCCOMB_X53_Y18_N14; Fanout = 3; COMB Node = 'lpm_mux7:inst24|lpm_mux:lpm_mux_component|mux_1nc:auto_generated|result_node[4]~4451'
+        Info: 6: + IC(0.705 ns) + CELL(0.150 ns) = 6.067 ns; Loc. = LCCOMB_X55_Y18_N26; Fanout = 1; COMB Node = 'M:inst3|lpm_mux3:inst15|lpm_mux:lpm_mux_component|mux_foc:auto_generated|result_node[0]~361'
+        Info: 7: + IC(0.248 ns) + CELL(0.150 ns) = 6.465 ns; Loc. = LCCOMB_X55_Y18_N12; Fanout = 2; COMB Node = 'M:inst3|lpm_mux3:inst15|lpm_mux:lpm_mux_component|mux_foc:auto_generated|result_node[0]~362'
+        Info: 8: + IC(0.254 ns) + CELL(0.150 ns) = 6.869 ns; Loc. = LCCOMB_X55_Y18_N30; Fanout = 1; COMB Node = 'M:inst3|lpm_mux3:inst15|lpm_mux:lpm_mux_component|mux_foc:auto_generated|result_node[0]~363'
+        Info: 9: + IC(0.253 ns) + CELL(0.420 ns) = 7.542 ns; Loc. = LCCOMB_X55_Y18_N6; Fanout = 1; COMB Node = 'M:inst3|lpm_mux3:inst15|lpm_mux:lpm_mux_component|mux_foc:auto_generated|result_node[0]~365'
+        Info: 10: + IC(0.273 ns) + CELL(0.438 ns) = 8.253 ns; Loc. = LCCOMB_X55_Y18_N24; Fanout = 1; COMB Node = 'g00_audio_interface:inst4|LRDATA[49]~334'
+        Info: 11: + IC(0.000 ns) + CELL(0.084 ns) = 8.337 ns; Loc. = LCFF_X55_Y18_N25; Fanout = 2; REG Node = 'g00_audio_interface:inst4|LRDATA[49]'
+        Info: Total cell delay = 3.670 ns ( 44.02 % )
+        Info: Total interconnect delay = 4.667 ns ( 55.98 % )
+    Info: + Micro setup delay of destination is -0.036 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 2.686 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 558; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(1.032 ns) + CELL(0.537 ns) = 2.686 ns; Loc. = LCFF_X55_Y18_N25; Fanout = 2; REG Node = 'g00_audio_interface:inst4|LRDATA[49]'
+        Info: Total cell delay = 1.536 ns ( 57.19 % )
+        Info: Total interconnect delay = 1.150 ns ( 42.81 % )
+Info: tco from clock "clk" to destination pin "DACDAT" through register "g00_audio_interface:inst4|AUD_DACDAT" is 10.330 ns
+    Info: + Longest clock path from clock "clk" to source register is 2.675 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 558; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(1.021 ns) + CELL(0.537 ns) = 2.675 ns; Loc. = LCFF_X41_Y22_N9; Fanout = 1; REG Node = 'g00_audio_interface:inst4|AUD_DACDAT'
+        Info: Total cell delay = 1.536 ns ( 57.42 % )
+        Info: Total interconnect delay = 1.139 ns ( 42.58 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 7.405 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X41_Y22_N9; Fanout = 1; REG Node = 'g00_audio_interface:inst4|AUD_DACDAT'
+        Info: 2: + IC(4.587 ns) + CELL(2.818 ns) = 7.405 ns; Loc. = PIN_A4; Fanout = 0; PIN Node = 'DACDAT'
+        Info: Total cell delay = 2.818 ns ( 38.06 % )
+        Info: Total interconnect delay = 4.587 ns ( 61.94 % )
+Info: th for register "g00_audio_interface:inst4|LRDATA[49]" (data pin = "SongSelect0", clock pin = "clk") is -1.131 ns
+    Info: + Longest clock path from clock "clk" to destination register is 2.686 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 558; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(1.032 ns) + CELL(0.537 ns) = 2.686 ns; Loc. = LCFF_X55_Y18_N25; Fanout = 2; REG Node = 'g00_audio_interface:inst4|LRDATA[49]'
+        Info: Total cell delay = 1.536 ns ( 57.19 % )
+        Info: Total interconnect delay = 1.150 ns ( 42.81 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+    Info: - Shortest pin to register delay is 4.083 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N25; Fanout = 11; PIN Node = 'SongSelect0'
+        Info: 2: + IC(1.040 ns) + CELL(0.437 ns) = 2.476 ns; Loc. = LCCOMB_X53_Y18_N14; Fanout = 3; COMB Node = 'lpm_mux7:inst24|lpm_mux:lpm_mux_component|mux_1nc:auto_generated|result_node[4]~4451'
+        Info: 3: + IC(0.724 ns) + CELL(0.398 ns) = 3.598 ns; Loc. = LCCOMB_X55_Y18_N0; Fanout = 1; COMB Node = 'M:inst3|lpm_mux3:inst15|lpm_mux:lpm_mux_component|mux_foc:auto_generated|result_node[0]~360'
+        Info: 4: + IC(0.251 ns) + CELL(0.150 ns) = 3.999 ns; Loc. = LCCOMB_X55_Y18_N24; Fanout = 1; COMB Node = 'g00_audio_interface:inst4|LRDATA[49]~334'
+        Info: 5: + IC(0.000 ns) + CELL(0.084 ns) = 4.083 ns; Loc. = LCFF_X55_Y18_N25; Fanout = 2; REG Node = 'g00_audio_interface:inst4|LRDATA[49]'
+        Info: Total cell delay = 2.068 ns ( 50.65 % )
+        Info: Total interconnect delay = 2.015 ns ( 49.35 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 182 megabytes
+    Info: Processing ended: Mon Mar 18 16:00:09 2013
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,100 @@
+# Copyright (C) 1991-2008 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		M_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name TOP_LEVEL_ENTITY Final
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 8.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:27:59  FEBRUARY 22, 2013"
+set_global_assignment -name LAST_QUARTUS_VERSION 8.0
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_palace
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE M.vwf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 14622752 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_N2 -to clk
+set_location_assignment PIN_B4 -to BCLK
+set_location_assignment PIN_A4 -to DACDAT
+set_location_assignment PIN_C6 -to DACLRCK
+set_location_assignment PIN_A5 -to XCK
+set_global_assignment -name VHDL_FILE ../g00_audio_interface.vhd
+set_global_assignment -name BDF_FILE M.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE M.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+set_global_assignment -name VERILOG_FILE A.v
+set_global_assignment -name VERILOG_FILE B.v
+set_global_assignment -name VERILOG_FILE D.v
+set_global_assignment -name VERILOG_FILE E.v
+set_global_assignment -name VERILOG_FILE F.v
+set_global_assignment -name VERILOG_FILE G.v
+set_global_assignment -name VERILOG_FILE HighC.v
+set_global_assignment -name VERILOG_FILE 8bitDemux.v
+set_global_assignment -name VERILOG_FILE LowC.v
+set_global_assignment -name QIP_FILE lpm_mux0.qip
+set_global_assignment -name VERILOG_FILE FSM.v
+set_global_assignment -name BDF_FILE Final.bdf
+set_global_assignment -name VERILOG_FILE i2c.v
+set_global_assignment -name VERILOG_FILE CLOCK_500.v
+set_global_assignment -name VERILOG_FILE Splitter.v
+set_global_assignment -name VERILOG_FILE C_Sharp.v
+set_global_assignment -name VERILOG_FILE D_Sharp.v
+set_global_assignment -name VERILOG_FILE F_Sharp.v
+set_global_assignment -name VERILOG_FILE G_Sharp.v
+set_global_assignment -name VERILOG_FILE A_Sharp.v
+set_global_assignment -name VERILOG_FILE Low_C.v
+set_global_assignment -name VERILOG_FILE Low_C_Sharp.v
+set_global_assignment -name VERILOG_FILE Low_D.v
+set_global_assignment -name VERILOG_FILE Low_D_Sharp.v
+set_global_assignment -name VERILOG_FILE Low_E.v
+set_global_assignment -name VERILOG_FILE Low_F.v
+set_global_assignment -name VERILOG_FILE Low_F_Sharp.v
+set_global_assignment -name VERILOG_FILE Low_G.v
+set_global_assignment -name VERILOG_FILE Low_G_Sharp.v
+set_global_assignment -name VERILOG_FILE Low_A.v
+set_global_assignment -name VERILOG_FILE Low_A_Sharp.v
+set_global_assignment -name VERILOG_FILE Low_B.v
+set_global_assignment -name QIP_FILE lpm_mux1.qip
+set_global_assignment -name QIP_FILE lpm_mux2.qip
+set_global_assignment -name QIP_FILE lpm_mux3.qip
+set_global_assignment -name VERILOG_FILE FSM_Yesterday.v
+set_global_assignment -name VERILOG_FILE FSM_Hallelujah.v
+set_global_assignment -name VERILOG_FILE FSM_Hallelujah_2.v
+set_global_assignment -name VERILOG_FILE FSM_Star_Wars.v
+set_global_assignment -name VERILOG_FILE FSM_Call_Me_Maybe.v
+set_global_assignment -name VERILOG_FILE FSM_Mario.v
+set_global_assignment -name VERILOG_FILE Demux.v
+set_global_assignment -name VERILOG_FILE FSM_Indiana_Jones.v
+set_location_assignment PIN_N25 -to SongSelect0
+set_location_assignment PIN_N26 -to SongSelect1
+set_location_assignment PIN_P25 -to SongSelect2
+set_global_assignment -name QIP_FILE lpm_mux4.qip
+set_global_assignment -name QIP_FILE lpm_mux5.qip
+set_global_assignment -name QIP_FILE lpm_mux6.qip
+set_global_assignment -name QIP_FILE lpm_mux7.qip
+set_global_assignment -name VERILOG_FILE FSM_Pause.v

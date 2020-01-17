@@ -1,0 +1,28 @@
+module frame_conversion (vga_x_in, vga_y_in, clk, frame_x, frame_y, frame_there);
+	input[9:0] vga_x_in;
+	input[9:0] vga_y_in;
+	input clk;
+	output[9:0] frame_x;
+	output[9:0] frame_y;
+	output frame_there;
+
+
+wire [9:0] vga_x_in;
+wire [9:0] vga_y_in;
+reg frame_there;
+reg[9:0] rom_coord;
+
+	
+always @(posedge clk)
+
+	//if the sprite's coordinates coincide with the current pixel being sent to the vga, it calculates the position in the rom
+	if(vga_x_in >= sprite_x && vga_x_in < sprite_x + 32 && vga_y_in >= sprite_y && vga_y_in < sprite_y + 32) begin
+		rom_coord <= (vga_x_in - sprite_x) + ((vga_y_in - sprite_y) * 32);
+		square_there <= 1;
+	end
+	else begin
+		square_there <= 0;
+	end
+
+
+endmodule

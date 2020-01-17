@@ -1,0 +1,926 @@
+Analysis & Synthesis report for M
+Mon Mar 18 15:59:50 2013
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. State Machine - |Final|g00_audio_interface:inst4|state
+  8. State Machine - |Final|g00_audio_interface:inst4|state2
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: M:inst3|lpm_mux3:inst15|lpm_mux:lpm_mux_component
+ 14. Parameter Settings for User Entity Instance: lpm_mux7:inst24|lpm_mux:lpm_mux_component
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Mar 18 15:59:50 2013    ;
+; Quartus II Version                 ; 8.0 Build 215 05/29/2008 SJ Full Version ;
+; Revision Name                      ; M                                        ;
+; Top-level Entity Name              ; Final                                    ;
+; Family                             ; Cyclone II                               ;
+; Total logic elements               ; 1,328                                    ;
+;     Total combinational functions  ; 1,328                                    ;
+;     Dedicated logic registers      ; 558                                      ;
+; Total registers                    ; 558                                      ;
+; Total pins                         ; 8                                        ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Device                                                       ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                        ; Final              ; M                  ;
+; Family name                                                  ; Cyclone II         ; Stratix II         ;
+; Use Generated Physical Constraints File                      ; Off                ;                    ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Maximum processors allowed for parallel compilation          ; 1                  ; 1                  ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; DSP Block Balancing                                          ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Perform gate-level register retiming                         ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax       ; On                 ; On                 ;
+; Auto ROM Replacement                                         ; On                 ; On                 ;
+; Auto RAM Replacement                                         ; On                 ; On                 ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Strict RAM Replacement                                       ; Off                ; Off                ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                            ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                ; Off                ; Off                ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; SDC constraint protection                                    ; Off                ; Off                ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                               ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------+
+; ../g00_audio_interface.vhd       ; yes             ; User VHDL File                     ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/g00_audio_interface.vhd    ;
+; M.bdf                            ; yes             ; User Block Diagram/Schematic File  ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/M.bdf                      ;
+; A.v                              ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/A.v                        ;
+; B.v                              ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/B.v                        ;
+; D.v                              ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/D.v                        ;
+; E.v                              ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/E.v                        ;
+; F.v                              ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/F.v                        ;
+; G.v                              ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/G.v                        ;
+; HighC.v                          ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/HighC.v                    ;
+; Final.bdf                        ; yes             ; User Block Diagram/Schematic File  ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/Final.bdf                  ;
+; Splitter.v                       ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/Splitter.v                 ;
+; C_Sharp.v                        ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/C_Sharp.v                  ;
+; D_Sharp.v                        ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/D_Sharp.v                  ;
+; F_Sharp.v                        ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/F_Sharp.v                  ;
+; G_Sharp.v                        ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/G_Sharp.v                  ;
+; A_Sharp.v                        ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/A_Sharp.v                  ;
+; Low_C.v                          ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/Low_C.v                    ;
+; Low_C_Sharp.v                    ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/Low_C_Sharp.v              ;
+; Low_D.v                          ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/Low_D.v                    ;
+; Low_D_Sharp.v                    ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/Low_D_Sharp.v              ;
+; Low_E.v                          ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/Low_E.v                    ;
+; Low_F.v                          ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/Low_F.v                    ;
+; Low_F_Sharp.v                    ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/Low_F_Sharp.v              ;
+; Low_G.v                          ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/Low_G.v                    ;
+; Low_G_Sharp.v                    ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/Low_G_Sharp.v              ;
+; Low_A.v                          ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/Low_A.v                    ;
+; Low_A_Sharp.v                    ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/Low_A_Sharp.v              ;
+; Low_B.v                          ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/Low_B.v                    ;
+; FSM_Yesterday.v                  ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/FSM_Yesterday.v            ;
+; FSM_Hallelujah.v                 ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/FSM_Hallelujah.v           ;
+; FSM_Star_Wars.v                  ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/FSM_Star_Wars.v            ;
+; FSM_Call_Me_Maybe.v              ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/FSM_Call_Me_Maybe.v        ;
+; FSM_Indiana_Jones.v              ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/FSM_Indiana_Jones.v        ;
+; FSM_Pause.v                      ; yes             ; User Verilog HDL File              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/FSM_Pause.v                ;
+; lpm_mux3.tdf                     ; yes             ; Other                              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/lpm_mux3.tdf               ;
+; lpm_mux.inc                      ; yes             ; Other                              ; c:/altera/80/quartus/libraries/megafunctions/lpm_mux.inc   ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/lpm_mux.tdf   ;
+; aglobal80.inc                    ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/aglobal80.inc ;
+; muxlut.inc                       ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/muxlut.inc    ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/bypassff.inc  ;
+; altshift.inc                     ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/altshift.inc  ;
+; db/mux_foc.tdf                   ; yes             ; Auto-Generated Megafunction        ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/db/mux_foc.tdf             ;
+; C.v                              ; yes             ; Other                              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/C.v                        ;
+; lpm_mux7.tdf                     ; yes             ; Other                              ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/lpm_mux7.tdf               ;
+; db/mux_1nc.tdf                   ; yes             ; Auto-Generated Megafunction        ; H:/Work/Lab/ISE1_FPGA_2011_Ex/M/db/mux_1nc.tdf             ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 1,328 ;
+;                                             ;       ;
+; Total combinational functions               ; 1328  ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 529   ;
+;     -- 3 input functions                    ; 168   ;
+;     -- <=2 input functions                  ; 631   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 809   ;
+;     -- arithmetic mode                      ; 519   ;
+;                                             ;       ;
+; Total registers                             ; 558   ;
+;     -- Dedicated logic registers            ; 558   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 8     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 558   ;
+; Total fan-out                               ; 5006  ;
+; Average fan-out                             ; 2.64  ;
++---------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                               ;
++--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                             ; Library Name ;
++--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
+; |Final                               ; 1328 (0)          ; 558 (0)      ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |Final                                                                          ; work         ;
+;    |FSM_Call_Me_Maybe:inst5|         ; 69 (69)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|FSM_Call_Me_Maybe:inst5                                                  ; work         ;
+;    |FSM_Hallelujah:inst6|            ; 95 (95)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|FSM_Hallelujah:inst6                                                     ; work         ;
+;    |FSM_Indiana_Jones:inst|          ; 91 (91)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|FSM_Indiana_Jones:inst                                                   ; work         ;
+;    |FSM_Star_Wars:inst8|             ; 73 (73)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|FSM_Star_Wars:inst8                                                      ; work         ;
+;    |FSM_Yesterday:inst11|            ; 70 (70)           ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|FSM_Yesterday:inst11                                                     ; work         ;
+;    |M:inst3|                         ; 841 (0)           ; 409 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3                                                                  ; work         ;
+;       |A:inst41|                     ; 37 (37)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|A:inst41                                                         ; work         ;
+;       |A_Sharp:inst18|               ; 34 (34)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|A_Sharp:inst18                                                   ; work         ;
+;       |B:inst42|                     ; 34 (34)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|B:inst42                                                         ; work         ;
+;       |C:inst|                       ; 32 (32)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|C:inst                                                           ; work         ;
+;       |C_Sharp:inst13|               ; 28 (28)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|C_Sharp:inst13                                                   ; work         ;
+;       |D:inst37|                     ; 32 (32)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|D:inst37                                                         ; work         ;
+;       |D_Sharp:inst14|               ; 31 (31)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|D_Sharp:inst14                                                   ; work         ;
+;       |E:inst38|                     ; 29 (29)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|E:inst38                                                         ; work         ;
+;       |F:inst39|                     ; 33 (33)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|F:inst39                                                         ; work         ;
+;       |F_Sharp:inst16|               ; 32 (32)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|F_Sharp:inst16                                                   ; work         ;
+;       |G:inst40|                     ; 30 (30)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|G:inst40                                                         ; work         ;
+;       |G_Sharp:inst17|               ; 32 (32)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|G_Sharp:inst17                                                   ; work         ;
+;       |HighC:inst43|                 ; 33 (33)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|HighC:inst43                                                     ; work         ;
+;       |Low_A:inst10|                 ; 37 (37)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|Low_A:inst10                                                     ; work         ;
+;       |Low_A_Sharp:inst11|           ; 37 (37)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|Low_A_Sharp:inst11                                               ; work         ;
+;       |Low_B:inst12|                 ; 36 (36)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|Low_B:inst12                                                     ; work         ;
+;       |Low_C:inst1|                  ; 33 (33)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|Low_C:inst1                                                      ; work         ;
+;       |Low_C_Sharp:inst2|            ; 30 (30)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|Low_C_Sharp:inst2                                                ; work         ;
+;       |Low_D:inst3|                  ; 31 (31)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|Low_D:inst3                                                      ; work         ;
+;       |Low_D_Sharp:inst4|            ; 32 (32)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|Low_D_Sharp:inst4                                                ; work         ;
+;       |Low_E:inst5|                  ; 29 (29)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|Low_E:inst5                                                      ; work         ;
+;       |Low_F:inst6|                  ; 33 (33)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|Low_F:inst6                                                      ; work         ;
+;       |Low_F_Sharp:inst7|            ; 35 (35)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|Low_F_Sharp:inst7                                                ; work         ;
+;       |Low_G:inst8|                  ; 34 (34)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|Low_G:inst8                                                      ; work         ;
+;       |Low_G_Sharp:inst9|            ; 35 (35)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|Low_G_Sharp:inst9                                                ; work         ;
+;       |lpm_mux3:inst15|              ; 22 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|lpm_mux3:inst15                                                  ; work         ;
+;          |lpm_mux:lpm_mux_component| ; 22 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|lpm_mux3:inst15|lpm_mux:lpm_mux_component                        ; work         ;
+;             |mux_foc:auto_generated| ; 22 (22)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|M:inst3|lpm_mux3:inst15|lpm_mux:lpm_mux_component|mux_foc:auto_generated ; work         ;
+;    |g00_audio_interface:inst4|       ; 22 (22)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|g00_audio_interface:inst4                                                ; work         ;
+;    |lpm_mux7:inst24|                 ; 67 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|lpm_mux7:inst24                                                          ; work         ;
+;       |lpm_mux:lpm_mux_component|    ; 67 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|lpm_mux7:inst24|lpm_mux:lpm_mux_component                                ; work         ;
+;          |mux_1nc:auto_generated|    ; 67 (67)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Final|lpm_mux7:inst24|lpm_mux:lpm_mux_component|mux_1nc:auto_generated         ; work         ;
++--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Final|g00_audio_interface:inst4|state                                                                                                                                                                                                                                                                                                           ;
++----------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+------------+------------+------------+----------+----------+----------+----------------+----------------+
+; Name           ; state.send ; state.sw2b3 ; state.sw2b2 ; state.sw2b1 ; state.sw1b3 ; state.sw1b2 ; state.sw1b1 ; state.sack33 ; state.sack32 ; state.sack31 ; state.sack23 ; state.sack22 ; state.sack21 ; state.sack13 ; state.sack12 ; state.sack11 ; state.sab3 ; state.sab2 ; state.sab1 ; state.s2 ; state.s1 ; state.s0 ; state.sw_init1 ; state.sw_init0 ;
++----------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+------------+------------+------------+----------+----------+----------+----------------+----------------+
+; state.sw_init0 ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 0              ;
+; state.sw_init1 ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 1              ; 1              ;
+; state.s0       ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 1        ; 0              ; 1              ;
+; state.s1       ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 1        ; 0        ; 0              ; 1              ;
+; state.s2       ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 1        ; 0        ; 0        ; 0              ; 1              ;
+; state.sab1     ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 1          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sab2     ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 1          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sab3     ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sack11   ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sack12   ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sack13   ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sack21   ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sack22   ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sack23   ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sack31   ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sack32   ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sack33   ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sw1b1    ; 0          ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sw1b2    ; 0          ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sw1b3    ; 0          ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sw2b1    ; 0          ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sw2b2    ; 0          ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.sw2b3    ; 0          ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
+; state.send     ; 1          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0        ; 0        ; 0        ; 0              ; 1              ;
++----------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+------------+------------+------------+----------+----------+----------+----------------+----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------+
+; State Machine - |Final|g00_audio_interface:inst4|state2                                 ;
++-----------------+-----------------+-----------------+-----------------+-----------------+
+; Name            ; state2.sw_write ; state2.sw_ready ; state2.sw_init1 ; state2.sw_init0 ;
++-----------------+-----------------+-----------------+-----------------+-----------------+
+; state2.sw_init0 ; 0               ; 0               ; 0               ; 0               ;
+; state2.sw_init1 ; 0               ; 0               ; 1               ; 1               ;
+; state2.sw_ready ; 0               ; 1               ; 0               ; 1               ;
+; state2.sw_write ; 1               ; 0               ; 0               ; 1               ;
++-----------------+-----------------+-----------------+-----------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                            ;
++--------------------------------------------+--------------------------------------------------+
+; Register name                              ; Reason for Removal                               ;
++--------------------------------------------+--------------------------------------------------+
+; g00_audio_interface:inst4|LRDATA[0..25]    ; Stuck at GND due to stuck port data_in           ;
+; g00_audio_interface:inst4|AUD_MCLK         ; Merged with g00_audio_interface:inst4|Mcount     ;
+; g00_audio_interface:inst4|LRDATA[26..48]   ; Merged with g00_audio_interface:inst4|LRDATA[49] ;
+; g00_audio_interface:inst4|SCI_WRITE        ; Lost fanout                                      ;
+; g00_audio_interface:inst4|clk_count[0..5]  ; Lost fanout                                      ;
+; g00_audio_interface:inst4|bit_count[0..2]  ; Lost fanout                                      ;
+; g00_audio_interface:inst4|word_count[3]    ; Lost fanout                                      ;
+; g00_audio_interface:inst4|SCI_READY        ; Lost fanout                                      ;
+; g00_audio_interface:inst4|word_count[0..2] ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sw_init0   ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sw_init1   ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.s0         ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.s1         ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.s2         ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sab1       ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sab2       ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sab3       ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sack11     ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sack12     ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sack13     ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sack21     ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sack22     ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sack23     ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sack31     ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sack32     ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sack33     ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sw1b1      ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sw1b2      ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sw1b3      ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sw2b1      ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sw2b2      ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.sw2b3      ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state.send       ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state2.sw_init0  ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state2.sw_init1  ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state2.sw_ready  ; Lost fanout                                      ;
+; g00_audio_interface:inst4|state2.sw_write  ; Lost fanout                                      ;
+; FSM_Star_Wars:inst8|counter[0]             ; Merged with g00_audio_interface:inst4|Mcount     ;
+; M:inst3|G_Sharp:inst17|counter[0]          ; Merged with g00_audio_interface:inst4|Mcount     ;
+; M:inst3|C_Sharp:inst13|counter[0]          ; Merged with g00_audio_interface:inst4|Mcount     ;
+; M:inst3|Low_D_Sharp:inst4|counter[0]       ; Merged with g00_audio_interface:inst4|Mcount     ;
+; M:inst3|D_Sharp:inst14|counter[0]          ; Merged with g00_audio_interface:inst4|Mcount     ;
+; M:inst3|Low_D:inst3|counter[0]             ; Merged with g00_audio_interface:inst4|Mcount     ;
+; FSM_Hallelujah:inst6|counter[0]            ; Merged with g00_audio_interface:inst4|Mcount     ;
+; FSM_Indiana_Jones:inst|counter[0]          ; Merged with g00_audio_interface:inst4|Mcount     ;
+; M:inst3|C:inst|counter[0]                  ; Merged with g00_audio_interface:inst4|Mcount     ;
+; M:inst3|Low_A:inst10|counter[0]            ; Merged with g00_audio_interface:inst4|Mcount     ;
+; FSM_Yesterday:inst11|counter[0]            ; Merged with g00_audio_interface:inst4|Mcount     ;
+; M:inst3|Low_C_Sharp:inst2|counter[0]       ; Merged with g00_audio_interface:inst4|Mcount     ;
+; M:inst3|Low_F:inst6|counter[0]             ; Merged with g00_audio_interface:inst4|Mcount     ;
+; M:inst3|A_Sharp:inst18|counter[0]          ; Merged with g00_audio_interface:inst4|Mcount     ;
+; M:inst3|F_Sharp:inst16|counter[0]          ; Merged with g00_audio_interface:inst4|Mcount     ;
+; FSM_Call_Me_Maybe:inst5|counter[0]         ; Merged with g00_audio_interface:inst4|Mcount     ;
+; M:inst3|Low_E:inst5|counter[0]             ; Merged with g00_audio_interface:inst4|Mcount     ;
+; M:inst3|Low_C:inst1|counter[0]             ; Merged with g00_audio_interface:inst4|Mcount     ;
+; M:inst3|G:inst40|counter[0]                ; Merged with g00_audio_interface:inst4|Mcount     ;
+; FSM_Call_Me_Maybe:inst5|counter[1]         ; Merged with FSM_Yesterday:inst11|counter[1]      ;
+; FSM_Hallelujah:inst6|counter[1]            ; Merged with FSM_Yesterday:inst11|counter[1]      ;
+; M:inst3|D_Sharp:inst14|counter[1]          ; Merged with FSM_Star_Wars:inst8|counter[1]       ;
+; M:inst3|C_Sharp:inst13|counter[1]          ; Merged with FSM_Star_Wars:inst8|counter[1]       ;
+; FSM_Indiana_Jones:inst|counter[1]          ; Merged with FSM_Star_Wars:inst8|counter[1]       ;
+; M:inst3|Low_D:inst3|counter[1]             ; Merged with FSM_Star_Wars:inst8|counter[1]       ;
+; M:inst3|Low_D_Sharp:inst4|counter[1]       ; Merged with FSM_Star_Wars:inst8|counter[1]       ;
+; M:inst3|F_Sharp:inst16|counter[1]          ; Merged with FSM_Star_Wars:inst8|counter[1]       ;
+; M:inst3|G:inst40|counter[1]                ; Merged with FSM_Star_Wars:inst8|counter[1]       ;
+; FSM_Star_Wars:inst8|counter[1]             ; Merged with FSM_Yesterday:inst11|counter[1]      ;
+; FSM_Indiana_Jones:inst|counter[2]          ; Merged with FSM_Star_Wars:inst8|counter[2]       ;
+; M:inst3|C_Sharp:inst13|counter[2]          ; Merged with FSM_Star_Wars:inst8|counter[2]       ;
+; M:inst3|Low_D_Sharp:inst4|counter[2]       ; Merged with FSM_Star_Wars:inst8|counter[2]       ;
+; FSM_Hallelujah:inst6|counter[2]            ; Merged with FSM_Call_Me_Maybe:inst5|counter[2]   ;
+; M:inst3|F_Sharp:inst16|counter[2]          ; Merged with M:inst3|D_Sharp:inst14|counter[2]    ;
+; M:inst3|G:inst40|counter[2]                ; Merged with M:inst3|D_Sharp:inst14|counter[2]    ;
+; M:inst3|D_Sharp:inst14|counter[2]          ; Merged with FSM_Yesterday:inst11|counter[2]      ;
+; FSM_Call_Me_Maybe:inst5|counter[2]         ; Merged with FSM_Star_Wars:inst8|counter[2]       ;
+; M:inst3|Low_D_Sharp:inst4|counter[3]       ; Merged with FSM_Star_Wars:inst8|counter[3]       ;
+; FSM_Hallelujah:inst6|counter[3]            ; Merged with FSM_Call_Me_Maybe:inst5|counter[3]   ;
+; M:inst3|G:inst40|counter[3]                ; Merged with M:inst3|D_Sharp:inst14|counter[3]    ;
+; FSM_Star_Wars:inst8|counter[2]             ; Merged with FSM_Yesterday:inst11|counter[2]      ;
+; FSM_Indiana_Jones:inst|counter[3]          ; Merged with FSM_Star_Wars:inst8|counter[3]       ;
+; M:inst3|Low_D_Sharp:inst4|counter[4]       ; Merged with FSM_Star_Wars:inst8|counter[4]       ;
+; FSM_Star_Wars:inst8|counter[3]             ; Merged with FSM_Yesterday:inst11|counter[3]      ;
+; FSM_Call_Me_Maybe:inst5|counter[3]         ; Merged with FSM_Yesterday:inst11|counter[3]      ;
+; FSM_Indiana_Jones:inst|counter[4]          ; Merged with FSM_Star_Wars:inst8|counter[4]       ;
+; M:inst3|D_Sharp:inst14|counter[3]          ; Merged with FSM_Yesterday:inst11|counter[3]      ;
+; FSM_Call_Me_Maybe:inst5|counter[4]         ; Merged with FSM_Yesterday:inst11|counter[4]      ;
+; FSM_Hallelujah:inst6|counter[4]            ; Merged with FSM_Star_Wars:inst8|counter[4]       ;
+; FSM_Indiana_Jones:inst|counter[5]          ; Merged with FSM_Star_Wars:inst8|counter[5]       ;
+; FSM_Call_Me_Maybe:inst5|counter[5]         ; Merged with FSM_Yesterday:inst11|counter[5]      ;
+; FSM_Hallelujah:inst6|counter[5]            ; Merged with FSM_Star_Wars:inst8|counter[5]       ;
+; FSM_Call_Me_Maybe:inst5|counter[6]         ; Merged with FSM_Yesterday:inst11|counter[6]      ;
+; FSM_Indiana_Jones:inst|counter[6]          ; Merged with FSM_Star_Wars:inst8|counter[6]       ;
+; Total Number of Removed Registers = 147    ;                                                  ;
++--------------------------------------------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                        ;
++-------------------------------------+--------------------+-----------------------------------------+
+; Register name                       ; Reason for Removal ; Registers Removed due to This Register  ;
++-------------------------------------+--------------------+-----------------------------------------+
+; g00_audio_interface:inst4|SCI_WRITE ; Lost Fanouts       ; g00_audio_interface:inst4|word_count[3] ;
++-------------------------------------+--------------------+-----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 558   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 42    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |Final|g00_audio_interface:inst4|bit_count[2] ;
+; 19:1               ; 6 bits    ; 72 LEs        ; 6 LEs                ; 66 LEs                 ; Yes        ; |Final|g00_audio_interface:inst4|clk_count[4] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |Final|g00_audio_interface:inst4|Selector6    ;
+; 12:1               ; 3 bits    ; 24 LEs        ; 9 LEs                ; 15 LEs                 ; No         ; |Final|g00_audio_interface:inst4|Selector11   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: M:inst3|lpm_mux3:inst15|lpm_mux:lpm_mux_component ;
++------------------------+------------+----------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                     ;
++------------------------+------------+----------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                           ;
+; LPM_WIDTH              ; 1          ; Untyped                                                  ;
+; LPM_SIZE               ; 26         ; Untyped                                                  ;
+; LPM_WIDTHS             ; 5          ; Untyped                                                  ;
+; LPM_PIPELINE           ; 0          ; Untyped                                                  ;
+; CBXI_PARAMETER         ; mux_foc    ; Untyped                                                  ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                  ;
++------------------------+------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_mux7:inst24|lpm_mux:lpm_mux_component ;
++------------------------+------------+--------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                             ;
++------------------------+------------+--------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                   ;
+; LPM_WIDTH              ; 5          ; Untyped                                          ;
+; LPM_SIZE               ; 8          ; Untyped                                          ;
+; LPM_WIDTHS             ; 3          ; Untyped                                          ;
+; LPM_PIPELINE           ; 0          ; Untyped                                          ;
+; CBXI_PARAMETER         ; mux_1nc    ; Untyped                                          ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                          ;
++------------------------+------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Mon Mar 18 15:59:35 2013
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off M -c M
+Info: Found 2 design units, including 1 entities, in source file g00_audio_interface.vhd
+    Info: Found design unit 1: g00_audio_interface-a
+    Info: Found entity 1: g00_audio_interface
+Info: Found 1 design units, including 1 entities, in source file M.bdf
+    Info: Found entity 1: M
+Info: Found 1 design units, including 1 entities, in source file A.v
+    Info: Found entity 1: A
+Info: Found 1 design units, including 1 entities, in source file B.v
+    Info: Found entity 1: B
+Info: Found 1 design units, including 1 entities, in source file D.v
+    Info: Found entity 1: D
+Info: Found 1 design units, including 1 entities, in source file E.v
+    Info: Found entity 1: E
+Info: Found 1 design units, including 1 entities, in source file F.v
+    Info: Found entity 1: F
+Info: Found 1 design units, including 1 entities, in source file G.v
+    Info: Found entity 1: G
+Info: Found 1 design units, including 1 entities, in source file HighC.v
+    Info: Found entity 1: HighC
+Info: Found 1 design units, including 1 entities, in source file 8bitDemux.v
+    Info: Found entity 1: eightbitDemux
+Info: Found 1 design units, including 1 entities, in source file LowC.v
+    Info: Found entity 1: LowC
+Info: Found 1 design units, including 1 entities, in source file FSM.v
+    Info: Found entity 1: FSM
+Info: Found 1 design units, including 1 entities, in source file Final.bdf
+    Info: Found entity 1: Final
+Info: Found 1 design units, including 1 entities, in source file i2c.v
+    Info: Found entity 1: i2c
+Info: Found 1 design units, including 1 entities, in source file CLOCK_500.v
+    Info: Found entity 1: CLOCK_500
+Info: Found 1 design units, including 1 entities, in source file Splitter.v
+    Info: Found entity 1: Splitter
+Info: Found 1 design units, including 1 entities, in source file C_Sharp.v
+    Info: Found entity 1: C_Sharp
+Info: Found 1 design units, including 1 entities, in source file D_Sharp.v
+    Info: Found entity 1: D_Sharp
+Info: Found 1 design units, including 1 entities, in source file F_Sharp.v
+    Info: Found entity 1: F_Sharp
+Info: Found 1 design units, including 1 entities, in source file G_Sharp.v
+    Info: Found entity 1: G_Sharp
+Info: Found 1 design units, including 1 entities, in source file A_Sharp.v
+    Info: Found entity 1: A_Sharp
+Info: Found 1 design units, including 1 entities, in source file Low_C.v
+    Info: Found entity 1: Low_C
+Info: Found 1 design units, including 1 entities, in source file Low_C_Sharp.v
+    Info: Found entity 1: Low_C_Sharp
+Info: Found 1 design units, including 1 entities, in source file Low_D.v
+    Info: Found entity 1: Low_D
+Info: Found 1 design units, including 1 entities, in source file Low_D_Sharp.v
+    Info: Found entity 1: Low_D_Sharp
+Info: Found 1 design units, including 1 entities, in source file Low_E.v
+    Info: Found entity 1: Low_E
+Info: Found 1 design units, including 1 entities, in source file Low_F.v
+    Info: Found entity 1: Low_F
+Info: Found 1 design units, including 1 entities, in source file Low_F_Sharp.v
+    Info: Found entity 1: Low_F_Sharp
+Info: Found 1 design units, including 1 entities, in source file Low_G.v
+    Info: Found entity 1: Low_G
+Info: Found 1 design units, including 1 entities, in source file Low_G_Sharp.v
+    Info: Found entity 1: Low_G_Sharp
+Info: Found 1 design units, including 1 entities, in source file Low_A.v
+    Info: Found entity 1: Low_A
+Info: Found 1 design units, including 1 entities, in source file Low_A_Sharp.v
+    Info: Found entity 1: Low_A_Sharp
+Info: Found 1 design units, including 1 entities, in source file Low_B.v
+    Info: Found entity 1: Low_B
+Info: Found 1 design units, including 1 entities, in source file FSM_Yesterday.v
+    Info: Found entity 1: FSM_Yesterday
+Info: Found 1 design units, including 1 entities, in source file FSM_Hallelujah.v
+    Info: Found entity 1: FSM_Hallelujah
+Info: Found 1 design units, including 1 entities, in source file FSM_Hallelujah_2.v
+    Info: Found entity 1: FSM_Hallelujah_2
+Info: Found 1 design units, including 1 entities, in source file FSM_Star_Wars.v
+    Info: Found entity 1: FSM_Star_Wars
+Info: Found 1 design units, including 1 entities, in source file FSM_Call_Me_Maybe.v
+    Info: Found entity 1: FSM_Call_Me_Maybe
+Info: Found 1 design units, including 1 entities, in source file FSM_Mario.v
+    Info: Found entity 1: FSM_Mario
+Info: Found 1 design units, including 1 entities, in source file Demux.v
+    Info: Found entity 1: Demux
+Info: Found 1 design units, including 1 entities, in source file FSM_Indiana_Jones.v
+    Info: Found entity 1: FSM_Indiana_Jones
+Info: Found 1 design units, including 1 entities, in source file FSM_Pause.v
+    Info: Found entity 1: FSM_Pause
+Info: Elaborating entity "Final" for the top level hierarchy
+Info: Elaborating entity "g00_audio_interface" for hierarchy "g00_audio_interface:inst4"
+Info: Elaborating entity "Splitter" for hierarchy "Splitter:inst9"
+Info: Elaborating entity "M" for hierarchy "M:inst3"
+Warning: Block or symbol "C" of instance "inst" overlaps another block or symbol
+Warning: Block or symbol "D" of instance "inst37" overlaps another block or symbol
+Warning: Block or symbol "E" of instance "inst38" overlaps another block or symbol
+Warning: Block or symbol "G" of instance "inst40" overlaps another block or symbol
+Warning: Block or symbol "A" of instance "inst41" overlaps another block or symbol
+Warning: Block or symbol "B" of instance "inst42" overlaps another block or symbol
+Warning: Block or symbol "Low_C" of instance "inst1" overlaps another block or symbol
+Warning: Block or symbol "Low_D" of instance "inst3" overlaps another block or symbol
+Warning: Block or symbol "Low_E" of instance "inst5" overlaps another block or symbol
+Warning: Block or symbol "Low_F_Sharp" of instance "inst7" overlaps another block or symbol
+Warning: Block or symbol "Low_G_Sharp" of instance "inst9" overlaps another block or symbol
+Warning: Block or symbol "Low_A_Sharp" of instance "inst11" overlaps another block or symbol
+Warning: Using design file lpm_mux3.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: lpm_mux3
+Info: Elaborating entity "lpm_mux3" for hierarchy "M:inst3|lpm_mux3:inst15"
+Info: Elaborating entity "lpm_mux" for hierarchy "M:inst3|lpm_mux3:inst15|lpm_mux:lpm_mux_component"
+Info: Elaborated megafunction instantiation "M:inst3|lpm_mux3:inst15|lpm_mux:lpm_mux_component"
+Info: Instantiated megafunction "M:inst3|lpm_mux3:inst15|lpm_mux:lpm_mux_component" with the following parameter:
+    Info: Parameter "LPM_TYPE" = "LPM_MUX"
+    Info: Parameter "LPM_WIDTH" = "1"
+    Info: Parameter "LPM_SIZE" = "26"
+    Info: Parameter "LPM_WIDTHS" = "5"
+Info: Found 1 design units, including 1 entities, in source file db/mux_foc.tdf
+    Info: Found entity 1: mux_foc
+Info: Elaborating entity "mux_foc" for hierarchy "M:inst3|lpm_mux3:inst15|lpm_mux:lpm_mux_component|mux_foc:auto_generated"
+Info: Elaborating entity "HighC" for hierarchy "M:inst3|HighC:inst43"
+Warning (10230): Verilog HDL assignment warning at HighC.v(11): truncated value with size 32 to match size of target (16)
+Info: Elaborating entity "B" for hierarchy "M:inst3|B:inst42"
+Warning (10230): Verilog HDL assignment warning at B.v(11): truncated value with size 32 to match size of target (16)
+Info: Elaborating entity "A_Sharp" for hierarchy "M:inst3|A_Sharp:inst18"
+Warning (10230): Verilog HDL assignment warning at A_Sharp.v(11): truncated value with size 32 to match size of target (17)
+Info: Elaborating entity "A" for hierarchy "M:inst3|A:inst41"
+Warning (10230): Verilog HDL assignment warning at A.v(11): truncated value with size 32 to match size of target (16)
+Info: Elaborating entity "G_Sharp" for hierarchy "M:inst3|G_Sharp:inst17"
+Warning (10230): Verilog HDL assignment warning at G_Sharp.v(11): truncated value with size 32 to match size of target (16)
+Info: Elaborating entity "G" for hierarchy "M:inst3|G:inst40"
+Warning (10230): Verilog HDL assignment warning at G.v(11): truncated value with size 32 to match size of target (16)
+Info: Elaborating entity "F_Sharp" for hierarchy "M:inst3|F_Sharp:inst16"
+Warning (10230): Verilog HDL assignment warning at F_Sharp.v(11): truncated value with size 32 to match size of target (16)
+Info: Elaborating entity "F" for hierarchy "M:inst3|F:inst39"
+Warning (10230): Verilog HDL assignment warning at F.v(11): truncated value with size 32 to match size of target (16)
+Info: Elaborating entity "E" for hierarchy "M:inst3|E:inst38"
+Warning (10230): Verilog HDL assignment warning at E.v(11): truncated value with size 32 to match size of target (16)
+Info: Elaborating entity "D_Sharp" for hierarchy "M:inst3|D_Sharp:inst14"
+Warning (10230): Verilog HDL assignment warning at D_Sharp.v(11): truncated value with size 32 to match size of target (16)
+Info: Elaborating entity "D" for hierarchy "M:inst3|D:inst37"
+Warning (10230): Verilog HDL assignment warning at D.v(11): truncated value with size 32 to match size of target (16)
+Info: Elaborating entity "C_Sharp" for hierarchy "M:inst3|C_Sharp:inst13"
+Warning (10230): Verilog HDL assignment warning at C_Sharp.v(11): truncated value with size 32 to match size of target (16)
+Warning: Using design file C.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: C
+Info: Elaborating entity "C" for hierarchy "M:inst3|C:inst"
+Warning (10230): Verilog HDL assignment warning at C.v(11): truncated value with size 32 to match size of target (16)
+Info: Elaborating entity "Low_B" for hierarchy "M:inst3|Low_B:inst12"
+Warning (10230): Verilog HDL assignment warning at Low_B.v(11): truncated value with size 32 to match size of target (17)
+Info: Elaborating entity "Low_A_Sharp" for hierarchy "M:inst3|Low_A_Sharp:inst11"
+Warning (10230): Verilog HDL assignment warning at Low_A_Sharp.v(11): truncated value with size 32 to match size of target (17)
+Info: Elaborating entity "Low_A" for hierarchy "M:inst3|Low_A:inst10"
+Warning (10230): Verilog HDL assignment warning at Low_A.v(11): truncated value with size 32 to match size of target (17)
+Info: Elaborating entity "Low_G_Sharp" for hierarchy "M:inst3|Low_G_Sharp:inst9"
+Warning (10230): Verilog HDL assignment warning at Low_G_Sharp.v(11): truncated value with size 32 to match size of target (17)
+Info: Elaborating entity "Low_G" for hierarchy "M:inst3|Low_G:inst8"
+Warning (10230): Verilog HDL assignment warning at Low_G.v(11): truncated value with size 32 to match size of target (17)
+Info: Elaborating entity "Low_F_Sharp" for hierarchy "M:inst3|Low_F_Sharp:inst7"
+Warning (10230): Verilog HDL assignment warning at Low_F_Sharp.v(11): truncated value with size 32 to match size of target (17)
+Info: Elaborating entity "Low_F" for hierarchy "M:inst3|Low_F:inst6"
+Warning (10230): Verilog HDL assignment warning at Low_F.v(11): truncated value with size 32 to match size of target (17)
+Info: Elaborating entity "Low_E" for hierarchy "M:inst3|Low_E:inst5"
+Warning (10230): Verilog HDL assignment warning at Low_E.v(11): truncated value with size 32 to match size of target (17)
+Info: Elaborating entity "Low_D_Sharp" for hierarchy "M:inst3|Low_D_Sharp:inst4"
+Warning (10230): Verilog HDL assignment warning at Low_D_Sharp.v(11): truncated value with size 32 to match size of target (17)
+Info: Elaborating entity "Low_D" for hierarchy "M:inst3|Low_D:inst3"
+Warning (10230): Verilog HDL assignment warning at Low_D.v(11): truncated value with size 32 to match size of target (17)
+Info: Elaborating entity "Low_C_Sharp" for hierarchy "M:inst3|Low_C_Sharp:inst2"
+Warning (10230): Verilog HDL assignment warning at Low_C_Sharp.v(11): truncated value with size 32 to match size of target (17)
+Info: Elaborating entity "Low_C" for hierarchy "M:inst3|Low_C:inst1"
+Warning (10230): Verilog HDL assignment warning at Low_C.v(11): truncated value with size 32 to match size of target (17)
+Warning: Using design file lpm_mux7.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: lpm_mux7
+Info: Elaborating entity "lpm_mux7" for hierarchy "lpm_mux7:inst24"
+Info: Elaborating entity "lpm_mux" for hierarchy "lpm_mux7:inst24|lpm_mux:lpm_mux_component"
+Info: Elaborated megafunction instantiation "lpm_mux7:inst24|lpm_mux:lpm_mux_component"
+Info: Instantiated megafunction "lpm_mux7:inst24|lpm_mux:lpm_mux_component" with the following parameter:
+    Info: Parameter "LPM_TYPE" = "LPM_MUX"
+    Info: Parameter "LPM_WIDTH" = "5"
+    Info: Parameter "LPM_SIZE" = "8"
+    Info: Parameter "LPM_WIDTHS" = "3"
+Info: Found 1 design units, including 1 entities, in source file db/mux_1nc.tdf
+    Info: Found entity 1: mux_1nc
+Info: Elaborating entity "mux_1nc" for hierarchy "lpm_mux7:inst24|lpm_mux:lpm_mux_component|mux_1nc:auto_generated"
+Info: Elaborating entity "FSM_Pause" for hierarchy "FSM_Pause:inst26"
+Warning (10230): Verilog HDL assignment warning at FSM_Pause.v(11): truncated value with size 32 to match size of target (25)
+Warning (10230): Verilog HDL assignment warning at FSM_Pause.v(17): truncated value with size 32 to match size of target (7)
+Info: Elaborating entity "FSM_Yesterday" for hierarchy "FSM_Yesterday:inst11"
+Warning (10230): Verilog HDL assignment warning at FSM_Yesterday.v(11): truncated value with size 32 to match size of target (25)
+Warning (10230): Verilog HDL assignment warning at FSM_Yesterday.v(17): truncated value with size 32 to match size of target (7)
+Info: Elaborating entity "FSM_Star_Wars" for hierarchy "FSM_Star_Wars:inst8"
+Warning (10230): Verilog HDL assignment warning at FSM_Star_Wars.v(11): truncated value with size 32 to match size of target (25)
+Warning (10230): Verilog HDL assignment warning at FSM_Star_Wars.v(17): truncated value with size 32 to match size of target (7)
+Info: Elaborating entity "FSM_Hallelujah" for hierarchy "FSM_Hallelujah:inst6"
+Warning (10230): Verilog HDL assignment warning at FSM_Hallelujah.v(11): truncated value with size 32 to match size of target (25)
+Warning (10230): Verilog HDL assignment warning at FSM_Hallelujah.v(17): truncated value with size 32 to match size of target (7)
+Info: Elaborating entity "FSM_Call_Me_Maybe" for hierarchy "FSM_Call_Me_Maybe:inst5"
+Warning (10230): Verilog HDL assignment warning at FSM_Call_Me_Maybe.v(11): truncated value with size 32 to match size of target (25)
+Warning (10230): Verilog HDL assignment warning at FSM_Call_Me_Maybe.v(17): truncated value with size 32 to match size of target (7)
+Info: Elaborating entity "FSM_Indiana_Jones" for hierarchy "FSM_Indiana_Jones:inst"
+Warning (10230): Verilog HDL assignment warning at FSM_Indiana_Jones.v(11): truncated value with size 32 to match size of target (25)
+Warning (10230): Verilog HDL assignment warning at FSM_Indiana_Jones.v(17): truncated value with size 32 to match size of target (7)
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[25]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[24]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[23]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[22]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[21]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[20]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[19]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[18]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[17]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[16]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[15]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[14]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[13]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[12]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[11]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[10]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[9]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[8]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[7]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[6]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[5]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[4]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[3]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[2]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[1]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "g00_audio_interface:inst4|LRDATA[0]" with stuck data_in port to stuck value GND
+Info: Duplicate registers merged to single register
+    Info (13360): Duplicate register "g00_audio_interface:inst4|AUD_MCLK" merged to single register "g00_audio_interface:inst4|Mcount", power-up level changed
+Info: Duplicate registers merged to single register
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[48]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[47]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[46]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[45]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[44]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[43]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[42]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[41]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[40]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[39]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[38]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[37]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[36]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[35]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[34]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[33]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[32]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[31]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[30]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[29]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[28]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[27]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+    Info (13350): Duplicate register "g00_audio_interface:inst4|LRDATA[26]" merged to single register "g00_audio_interface:inst4|LRDATA[49]"
+Info: Found 5 instances of uninferred RAM logic
+    Info: RAM logic "FSM_Yesterday:inst11|Ram0" is uninferred due to inappropriate RAM size
+    Info: RAM logic "FSM_Hallelujah:inst6|Ram0" is uninferred due to inappropriate RAM size
+    Info: RAM logic "FSM_Star_Wars:inst8|Ram0" is uninferred due to inappropriate RAM size
+    Info: RAM logic "FSM_Call_Me_Maybe:inst5|Ram0" is uninferred due to inappropriate RAM size
+    Info: RAM logic "FSM_Indiana_Jones:inst|Ram0" is uninferred due to inappropriate RAM size
+Info: State machine "|Final|g00_audio_interface:inst4|state" contains 24 states
+Info: State machine "|Final|g00_audio_interface:inst4|state2" contains 4 states
+Info: Selected Auto state machine encoding method for state machine "|Final|g00_audio_interface:inst4|state"
+Info: Encoding result for state machine "|Final|g00_audio_interface:inst4|state"
+    Info: Completed encoding using 24 state bits
+        Info: Encoded state bit "g00_audio_interface:inst4|state.send"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sw2b3"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sw2b2"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sw2b1"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sw1b3"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sw1b2"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sw1b1"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sack33"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sack32"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sack31"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sack23"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sack22"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sack21"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sack13"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sack12"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sack11"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sab3"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sab2"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sab1"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.s2"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.s1"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.s0"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sw_init1"
+        Info: Encoded state bit "g00_audio_interface:inst4|state.sw_init0"
+    Info: State "|Final|g00_audio_interface:inst4|state.sw_init0" uses code string "000000000000000000000000"
+    Info: State "|Final|g00_audio_interface:inst4|state.sw_init1" uses code string "000000000000000000000011"
+    Info: State "|Final|g00_audio_interface:inst4|state.s0" uses code string "000000000000000000000101"
+    Info: State "|Final|g00_audio_interface:inst4|state.s1" uses code string "000000000000000000001001"
+    Info: State "|Final|g00_audio_interface:inst4|state.s2" uses code string "000000000000000000010001"
+    Info: State "|Final|g00_audio_interface:inst4|state.sab1" uses code string "000000000000000000100001"
+    Info: State "|Final|g00_audio_interface:inst4|state.sab2" uses code string "000000000000000001000001"
+    Info: State "|Final|g00_audio_interface:inst4|state.sab3" uses code string "000000000000000010000001"
+    Info: State "|Final|g00_audio_interface:inst4|state.sack11" uses code string "000000000000000100000001"
+    Info: State "|Final|g00_audio_interface:inst4|state.sack12" uses code string "000000000000001000000001"
+    Info: State "|Final|g00_audio_interface:inst4|state.sack13" uses code string "000000000000010000000001"
+    Info: State "|Final|g00_audio_interface:inst4|state.sack21" uses code string "000000000000100000000001"
+    Info: State "|Final|g00_audio_interface:inst4|state.sack22" uses code string "000000000001000000000001"
+    Info: State "|Final|g00_audio_interface:inst4|state.sack23" uses code string "000000000010000000000001"
+    Info: State "|Final|g00_audio_interface:inst4|state.sack31" uses code string "000000000100000000000001"
+    Info: State "|Final|g00_audio_interface:inst4|state.sack32" uses code string "000000001000000000000001"
+    Info: State "|Final|g00_audio_interface:inst4|state.sack33" uses code string "000000010000000000000001"
+    Info: State "|Final|g00_audio_interface:inst4|state.sw1b1" uses code string "000000100000000000000001"
+    Info: State "|Final|g00_audio_interface:inst4|state.sw1b2" uses code string "000001000000000000000001"
+    Info: State "|Final|g00_audio_interface:inst4|state.sw1b3" uses code string "000010000000000000000001"
+    Info: State "|Final|g00_audio_interface:inst4|state.sw2b1" uses code string "000100000000000000000001"
+    Info: State "|Final|g00_audio_interface:inst4|state.sw2b2" uses code string "001000000000000000000001"
+    Info: State "|Final|g00_audio_interface:inst4|state.sw2b3" uses code string "010000000000000000000001"
+    Info: State "|Final|g00_audio_interface:inst4|state.send" uses code string "100000000000000000000001"
+Info: Selected Auto state machine encoding method for state machine "|Final|g00_audio_interface:inst4|state2"
+Info: Encoding result for state machine "|Final|g00_audio_interface:inst4|state2"
+    Info: Completed encoding using 4 state bits
+        Info: Encoded state bit "g00_audio_interface:inst4|state2.sw_write"
+        Info: Encoded state bit "g00_audio_interface:inst4|state2.sw_ready"
+        Info: Encoded state bit "g00_audio_interface:inst4|state2.sw_init1"
+        Info: Encoded state bit "g00_audio_interface:inst4|state2.sw_init0"
+    Info: State "|Final|g00_audio_interface:inst4|state2.sw_init0" uses code string "0000"
+    Info: State "|Final|g00_audio_interface:inst4|state2.sw_init1" uses code string "0011"
+    Info: State "|Final|g00_audio_interface:inst4|state2.sw_ready" uses code string "0101"
+    Info: State "|Final|g00_audio_interface:inst4|state2.sw_write" uses code string "1001"
+Info: Duplicate registers merged to single register
+    Info (13350): Duplicate register "FSM_Star_Wars:inst8|counter[0]" merged to single register "g00_audio_interface:inst4|Mcount"
+    Info (13350): Duplicate register "M:inst3|G_Sharp:inst17|counter[0]" merged to single register "g00_audio_interface:inst4|Mcount"
+    Info (13350): Duplicate register "M:inst3|C_Sharp:inst13|counter[0]" merged to single register "g00_audio_interface:inst4|Mcount"
+    Info (13350): Duplicate register "M:inst3|Low_D_Sharp:inst4|counter[0]" merged to single register "g00_audio_interface:inst4|Mcount"
+    Info (13350): Duplicate register "M:inst3|D_Sharp:inst14|counter[0]" merged to single register "g00_audio_interface:inst4|Mcount"
+    Info (13350): Duplicate register "M:inst3|Low_D:inst3|counter[0]" merged to single register "g00_audio_interface:inst4|Mcount"
+    Info (13350): Duplicate register "FSM_Hallelujah:inst6|counter[0]" merged to single register "g00_audio_interface:inst4|Mcount"
+    Info (13350): Duplicate register "FSM_Indiana_Jones:inst|counter[0]" merged to single register "g00_audio_interface:inst4|Mcount"
+    Info (13350): Duplicate register "M:inst3|C:inst|counter[0]" merged to single register "g00_audio_interface:inst4|Mcount"
+    Info (13350): Duplicate register "M:inst3|Low_A:inst10|counter[0]" merged to single register "g00_audio_interface:inst4|Mcount"
+    Info (13350): Duplicate register "FSM_Yesterday:inst11|counter[0]" merged to single register "g00_audio_interface:inst4|Mcount"
+    Info (13350): Duplicate register "M:inst3|Low_C_Sharp:inst2|counter[0]" merged to single register "g00_audio_interface:inst4|Mcount"
+    Info (13350): Duplicate register "M:inst3|Low_F:inst6|counter[0]" merged to single register "g00_audio_interface:inst4|Mcount"
+    Info (13350): Duplicate register "M:inst3|A_Sharp:inst18|counter[0]" merged to single register "g00_audio_interface:inst4|Mcount"
+    Info (13350): Duplicate register "M:inst3|F_Sharp:inst16|counter[0]" merged to single register "g00_audio_interface:inst4|Mcount"
+    Info (13350): Duplicate register "FSM_Call_Me_Maybe:inst5|counter[0]" merged to single register "g00_audio_interface:inst4|Mcount"
+    Info (13350): Duplicate register "M:inst3|Low_E:inst5|counter[0]" merged to single register "g00_audio_interface:inst4|Mcount"
+    Info (13350): Duplicate register "M:inst3|Low_C:inst1|counter[0]" merged to single register "g00_audio_interface:inst4|Mcount"
+    Info (13350): Duplicate register "M:inst3|G:inst40|counter[0]" merged to single register "g00_audio_interface:inst4|Mcount"
+    Info (13350): Duplicate register "FSM_Call_Me_Maybe:inst5|counter[1]" merged to single register "FSM_Yesterday:inst11|counter[1]"
+    Info (13350): Duplicate register "FSM_Hallelujah:inst6|counter[1]" merged to single register "FSM_Yesterday:inst11|counter[1]"
+    Info (13350): Duplicate register "M:inst3|D_Sharp:inst14|counter[1]" merged to single register "FSM_Star_Wars:inst8|counter[1]"
+    Info (13350): Duplicate register "M:inst3|C_Sharp:inst13|counter[1]" merged to single register "FSM_Star_Wars:inst8|counter[1]"
+    Info (13350): Duplicate register "FSM_Indiana_Jones:inst|counter[1]" merged to single register "FSM_Star_Wars:inst8|counter[1]"
+    Info (13350): Duplicate register "M:inst3|Low_D:inst3|counter[1]" merged to single register "FSM_Star_Wars:inst8|counter[1]"
+    Info (13350): Duplicate register "M:inst3|Low_D_Sharp:inst4|counter[1]" merged to single register "FSM_Star_Wars:inst8|counter[1]"
+    Info (13350): Duplicate register "M:inst3|F_Sharp:inst16|counter[1]" merged to single register "FSM_Star_Wars:inst8|counter[1]"
+    Info (13350): Duplicate register "M:inst3|G:inst40|counter[1]" merged to single register "FSM_Star_Wars:inst8|counter[1]"
+    Info (13350): Duplicate register "FSM_Star_Wars:inst8|counter[1]" merged to single register "FSM_Yesterday:inst11|counter[1]"
+    Info (13350): Duplicate register "FSM_Indiana_Jones:inst|counter[2]" merged to single register "FSM_Star_Wars:inst8|counter[2]"
+    Info (13350): Duplicate register "M:inst3|C_Sharp:inst13|counter[2]" merged to single register "FSM_Star_Wars:inst8|counter[2]"
+    Info (13350): Duplicate register "M:inst3|Low_D_Sharp:inst4|counter[2]" merged to single register "FSM_Star_Wars:inst8|counter[2]"
+    Info (13350): Duplicate register "FSM_Hallelujah:inst6|counter[2]" merged to single register "FSM_Call_Me_Maybe:inst5|counter[2]"
+    Info (13350): Duplicate register "M:inst3|F_Sharp:inst16|counter[2]" merged to single register "M:inst3|D_Sharp:inst14|counter[2]"
+    Info (13350): Duplicate register "M:inst3|G:inst40|counter[2]" merged to single register "M:inst3|D_Sharp:inst14|counter[2]"
+    Info (13350): Duplicate register "M:inst3|D_Sharp:inst14|counter[2]" merged to single register "FSM_Yesterday:inst11|counter[2]"
+    Info (13350): Duplicate register "FSM_Call_Me_Maybe:inst5|counter[2]" merged to single register "FSM_Star_Wars:inst8|counter[2]"
+    Info (13350): Duplicate register "M:inst3|Low_D_Sharp:inst4|counter[3]" merged to single register "FSM_Star_Wars:inst8|counter[3]"
+    Info (13350): Duplicate register "FSM_Hallelujah:inst6|counter[3]" merged to single register "FSM_Call_Me_Maybe:inst5|counter[3]"
+    Info (13350): Duplicate register "M:inst3|G:inst40|counter[3]" merged to single register "M:inst3|D_Sharp:inst14|counter[3]"
+    Info (13350): Duplicate register "FSM_Star_Wars:inst8|counter[2]" merged to single register "FSM_Yesterday:inst11|counter[2]"
+    Info (13350): Duplicate register "FSM_Indiana_Jones:inst|counter[3]" merged to single register "FSM_Star_Wars:inst8|counter[3]"
+    Info (13350): Duplicate register "M:inst3|Low_D_Sharp:inst4|counter[4]" merged to single register "FSM_Star_Wars:inst8|counter[4]"
+    Info (13350): Duplicate register "FSM_Star_Wars:inst8|counter[3]" merged to single register "FSM_Yesterday:inst11|counter[3]"
+    Info (13350): Duplicate register "FSM_Call_Me_Maybe:inst5|counter[3]" merged to single register "FSM_Yesterday:inst11|counter[3]"
+    Info (13350): Duplicate register "FSM_Indiana_Jones:inst|counter[4]" merged to single register "FSM_Star_Wars:inst8|counter[4]"
+    Info (13350): Duplicate register "M:inst3|D_Sharp:inst14|counter[3]" merged to single register "FSM_Yesterday:inst11|counter[3]"
+    Info (13350): Duplicate register "FSM_Call_Me_Maybe:inst5|counter[4]" merged to single register "FSM_Yesterday:inst11|counter[4]"
+    Info (13350): Duplicate register "FSM_Hallelujah:inst6|counter[4]" merged to single register "FSM_Star_Wars:inst8|counter[4]"
+    Info (13350): Duplicate register "FSM_Indiana_Jones:inst|counter[5]" merged to single register "FSM_Star_Wars:inst8|counter[5]"
+    Info (13350): Duplicate register "FSM_Call_Me_Maybe:inst5|counter[5]" merged to single register "FSM_Yesterday:inst11|counter[5]"
+    Info (13350): Duplicate register "FSM_Hallelujah:inst6|counter[5]" merged to single register "FSM_Star_Wars:inst8|counter[5]"
+    Info (13350): Duplicate register "FSM_Call_Me_Maybe:inst5|counter[6]" merged to single register "FSM_Yesterday:inst11|counter[6]"
+    Info (13350): Duplicate register "FSM_Indiana_Jones:inst|counter[6]" merged to single register "FSM_Star_Wars:inst8|counter[6]"
+Info: 43 registers lost all their fanouts during netlist optimizations. The first 43 are displayed below.
+    Info: Register "g00_audio_interface:inst4|SCI_WRITE" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|clk_count[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|clk_count[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|clk_count[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|clk_count[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|clk_count[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|clk_count[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|bit_count[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|bit_count[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|bit_count[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|word_count[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|SCI_READY" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|word_count[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|word_count[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|word_count[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sw_init0" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sw_init1" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.s0" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.s1" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.s2" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sab1" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sab2" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sab3" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sack11" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sack12" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sack13" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sack21" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sack22" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sack23" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sack31" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sack32" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sack33" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sw1b1" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sw1b2" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sw1b3" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sw2b1" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sw2b2" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.sw2b3" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state.send" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state2.sw_init0" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state2.sw_init1" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state2.sw_ready" lost all its fanouts during netlist optimizations.
+    Info: Register "g00_audio_interface:inst4|state2.sw_write" lost all its fanouts during netlist optimizations.
+Info: Implemented 1337 device resources after synthesis - the final resource count might be different
+    Info: Implemented 4 input pins
+    Info: Implemented 4 output pins
+    Info: Implemented 1329 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 78 warnings
+    Info: Peak virtual memory: 238 megabytes
+    Info: Processing ended: Mon Mar 18 15:59:50 2013
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:11
+
+

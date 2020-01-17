@@ -1,0 +1,154 @@
+module FSM_Hallelujah (clk, out);
+	input clk;
+	output[4:0] out;
+
+reg[24:0] counter;
+reg[24:0] clkDivider = 10000000;
+
+always @(posedge clk)
+	if(counter == clkDivider)
+		counter <= 1;
+	else counter <= counter + 1;
+
+reg[6:0] state;
+
+always @(posedge clk)
+	if(counter == 1)
+		state <= state + 1;
+
+reg[4:0] out;
+
+always @(state)
+	case(state)
+		0: out = 0;
+		1: out = 0;
+		2: out = 4;
+		3: out = 4;
+		4: out = 7;
+		5: out = 7;
+		6: out = 12;
+		7: out = 12;
+		8: out = 7;
+		9: out = 7;
+		10: out = 4;
+		11: out = 4;
+		12: out = 0;
+		13: out = 0;
+		14: out = 4;
+		15: out = 4;
+		16: out = 9;
+		17: out = 9;
+		18: out = 12;
+		19: out = 12;
+		20: out = 9;
+		21: out = 9;
+		22: out = 4;
+		23: out = 4;
+		24: out = 7;
+		25: out = 7;
+		26: out = 7;
+		27: out = 7;
+		28: out = 7;
+		29: out = 25;
+		30: out = 7;
+		31: out = 25;
+		32: out = 7;
+		33: out = 25;
+		34: out = 7;
+		35: out = 7;
+		36: out = 9;
+		37: out = 25;
+		38: out = 9;
+		39: out = 25;
+		40: out = 9;
+		41: out = 9;
+		42: out = 9;
+		43: out = 9;
+		44: out = 9;
+		45: out = 9;
+		46: out = 4;
+		47: out = 4;
+		48: out = 7;
+		49: out = 25;
+		50: out = 7;
+		51: out = 25;
+		52: out = 7;
+		53: out = 7;
+		54: out = 7;
+		55: out = 25;
+		56: out = 7;
+		57: out = 25;
+		58: out = 7;
+		59: out = 7;
+		60: out = 9;
+		61: out = 9;
+		62: out = 9;
+		63: out = 9;
+		64: out = 4;
+		65: out = 25;
+		66: out = 4;
+		67: out = 4;
+		68: out = 4;
+		69: out = 4;
+		70: out = 9;
+		71: out = 25;
+		72: out = 9;
+		73: out = 25;
+		74: out = 9;
+		75: out = 9;
+		76: out = 9;
+		77: out = 25;
+		78: out = 9;
+		79: out = 25;
+		80: out = 9;
+		81: out = 9;
+		82: out = 9;
+		83: out = 25;
+		84: out = 9;
+		85: out = 9;
+		86: out = 9;
+		87: out = 9;
+		88: out = 7;
+		89: out = 25;
+		90: out = 7;
+		91: out = 7;
+		92: out = 5;
+		93: out = 5;
+		94: out = 5;
+		95: out = 5;
+		96: out = 7;
+		97: out = 7;
+		98: out = 4;
+		99: out = 4;
+		100: out = 4;
+		101: out = 4;
+		102: out = 25;
+		103: out = 25;
+		104: out = 1;
+		105: out = 2;
+		106: out = 3;
+		107: out = 4;
+		108: out = 5;
+		109: out = 6;
+		110: out = 7;
+		111: out = 8;
+		112: out = 9;
+		113: out = 10;
+		114: out = 11;
+		115: out = 12;
+		116: out = 13;
+		117: out = 14;
+		118: out = 15;
+		119: out = 16;
+		120: out = 17;
+		121: out = 18;
+		122: out = 19;
+		123: out = 20;
+		124: out = 21;
+		125: out = 22;
+		126: out = 23;
+		127: out = 24;
+		default: out = 25;
+	endcase
+
+endmodule

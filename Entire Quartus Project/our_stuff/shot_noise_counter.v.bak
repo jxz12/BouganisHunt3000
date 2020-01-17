@@ -1,0 +1,17 @@
+module shot_noise_counter (shot_fired, clk, out);
+	input clk;
+	input shot_fired;
+	output out;
+
+reg out;
+reg[16:0] counter;
+
+always @(posedge shot_fired)
+	counter <= 
+	
+reg out;
+always @(posedge clk)
+	if(counter == 1)
+		out <= ~out;
+
+endmodule

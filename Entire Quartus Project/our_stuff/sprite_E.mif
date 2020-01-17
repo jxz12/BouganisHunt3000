@@ -1,0 +1,85 @@
+-- Copyright (C) 1991-2012 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+
+-- Quartus II generated Memory Initialization File (.mif)
+
+WIDTH=1;
+DEPTH=1024;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=UNS;
+
+CONTENT BEGIN
+	[0..33]  :   0;
+	[34..61]  :   1;
+	[62..64]  :   0;
+	[65..94]  :   1;
+	[95..96]  :   0;
+	[97..126]  :   1;
+	[127..128]  :   0;
+	[129..158]  :   1;
+	[159..160]  :   0;
+	[161..190]  :   1;
+	[191..192]  :   0;
+	[193..221]  :   1;
+	[222..224]  :   0;
+	[225..231]  :   1;
+	[232..256]  :   0;
+	[257..262]  :   1;
+	[263..288]  :   0;
+	[289..294]  :   1;
+	[295..320]  :   0;
+	[321..326]  :   1;
+	[327..352]  :   0;
+	[353..358]  :   1;
+	[359..384]  :   0;
+	[385..391]  :   1;
+	[392..416]  :   0;
+	[417..445]  :   1;
+	[446..448]  :   0;
+	[449..478]  :   1;
+	[479..480]  :   0;
+	[481..510]  :   1;
+	[511..512]  :   0;
+	[513..542]  :   1;
+	[543..544]  :   0;
+	[545..574]  :   1;
+	[575..576]  :   0;
+	[577..605]  :   1;
+	[606..608]  :   0;
+	[609..615]  :   1;
+	[616..640]  :   0;
+	[641..646]  :   1;
+	[647..672]  :   0;
+	[673..678]  :   1;
+	[679..704]  :   0;
+	[705..710]  :   1;
+	[711..736]  :   0;
+	[737..742]  :   1;
+	[743..768]  :   0;
+	[769..775]  :   1;
+	[776..800]  :   0;
+	[801..829]  :   1;
+	[830..832]  :   0;
+	[833..862]  :   1;
+	[863..864]  :   0;
+	[865..894]  :   1;
+	[895..896]  :   0;
+	[897..926]  :   1;
+	[927..928]  :   0;
+	[929..958]  :   1;
+	[959..961]  :   0;
+	[962..989]  :   1;
+	[990..1023]  :   0;
+END;

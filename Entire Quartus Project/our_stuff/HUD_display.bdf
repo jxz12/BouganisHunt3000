@@ -1,0 +1,576 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect 128 128 296 144)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "life[1..0]" (rect 5 0 46 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 120 144 296 160)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "shot_timer[1..0]" (rect 5 0 82 12)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 56 64 296 80)
+	(text "INPUT" (rect 197 0 225 10)(font "Arial" (font_size 6)))
+	(text "INBLOCK_COORD_IN[9..0]" (rect 5 0 144 12)(font "Arial" ))
+	(pt 240 8)
+	(drawing
+		(line (pt 156 12)(pt 181 12))
+		(line (pt 156 4)(pt 181 4))
+		(line (pt 185 8)(pt 240 8))
+		(line (pt 156 12)(pt 156 4))
+		(line (pt 181 4)(pt 185 8))
+		(line (pt 181 12)(pt 185 8))
+	)
+	(text "VCC" (rect 200 7 220 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 104 80 296 96)
+	(text "INPUT" (rect 149 0 177 10)(font "Arial" (font_size 6)))
+	(text "FRAME_X_IN[9..0]" (rect 5 0 98 12)(font "Arial" ))
+	(pt 192 8)
+	(drawing
+		(line (pt 108 12)(pt 133 12))
+		(line (pt 108 4)(pt 133 4))
+		(line (pt 137 8)(pt 192 8))
+		(line (pt 108 12)(pt 108 4))
+		(line (pt 133 4)(pt 137 8))
+		(line (pt 133 12)(pt 137 8))
+	)
+	(text "VCC" (rect 152 7 172 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 104 96 296 112)
+	(text "INPUT" (rect 149 0 177 10)(font "Arial" (font_size 6)))
+	(text "FRAME_Y_IN[9..0]" (rect 5 0 100 12)(font "Arial" ))
+	(pt 192 8)
+	(drawing
+		(line (pt 108 12)(pt 133 12))
+		(line (pt 108 4)(pt 133 4))
+		(line (pt 137 8)(pt 192 8))
+		(line (pt 108 12)(pt 108 4))
+		(line (pt 133 4)(pt 137 8))
+		(line (pt 133 12)(pt 137 8))
+	)
+	(text "VCC" (rect 152 7 172 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 128 112 296 128)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "CLK" (rect 5 0 27 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(output)
+	(rect 496 440 675 456)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "heart_pixel_there" (rect 90 0 173 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 496 456 678 472)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "heart_colour[5..0]" (rect 90 0 176 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 480 584 656 600)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "frb_pixel_there" (rect 90 0 163 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(symbol
+	(rect 192 176 336 280)
+	(text "ALTSHIFT_TAPS" (rect 23 1 141 17)(font "Arial" (font_size 10)))
+	(text "inst11" (rect 8 88 37 100)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "shiftin[WIDTH-1..0]" (rect 0 0 96 12)(font "Arial" ))
+		(text "shiftin[]" (rect 21 25 62 39)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clken" (rect 0 0 25 12)(font "Arial" ))
+		(text "clken" (rect 21 57 50 71)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clock" (rect 0 0 25 12)(font "Arial" ))
+		(text "clock" (rect 21 41 50 55)(font "Arial" (font_size 8))(invisible))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "aclr" (rect 24 72 45 86)(font "Arial" (font_size 8)))
+		(text "aclr" (rect 24 72 45 86)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 144 32)
+		(output)
+		(text "shiftout[WIDTH-1..0]" (rect -208 0 -105 12)(font "Arial" ))
+		(text "shiftout[]" (rect 82 25 131 39)(font "Arial" (font_size 8)))
+		(line (pt 144 32)(pt 128 32)(line_width 3))
+	)
+	(port
+		(pt 144 48)
+		(output)
+		(text "taps[(WIDTH*NUMBER_OF_TAPS) -1..0]" (rect -208 0 -4 12)(font "Arial" ))
+		(text "taps[]" (rect 97 41 128 55)(font "Arial" (font_size 8)))
+		(line (pt 144 48)(pt 128 48)(line_width 3))
+	)
+	(parameter
+		"NUMBER_OF_TAPS"
+		"1"
+		"Number of output taps, each separated by TAP_DISTANCE clock cycles"
+	)
+	(parameter
+		"TAP_DISTANCE"
+		"856"
+		"Number of shift positions between output taps"
+	)
+	(parameter
+		"WIDTH"
+		"20"
+		"Number of bits for the shiftin input"
+	)
+	(drawing
+		(line (pt 16 56)(pt 24 48))
+		(line (pt 16 40)(pt 24 48))
+		(rectangle (rect 16 16 128 88))
+	)
+	(annotation_block (parameter)(rect 352 120 521 176))
+)
+(symbol
+	(rect 192 296 336 400)
+	(text "ALTSHIFT_TAPS" (rect 23 1 141 17)(font "Arial" (font_size 10)))
+	(text "inst12" (rect 8 88 37 100)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "shiftin[WIDTH-1..0]" (rect 0 0 96 12)(font "Arial" ))
+		(text "shiftin[]" (rect 21 25 62 39)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clken" (rect 0 0 25 12)(font "Arial" ))
+		(text "clken" (rect 21 57 50 71)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clock" (rect 0 0 25 12)(font "Arial" ))
+		(text "clock" (rect 21 41 50 55)(font "Arial" (font_size 8))(invisible))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "aclr" (rect 24 72 45 86)(font "Arial" (font_size 8)))
+		(text "aclr" (rect 24 72 45 86)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 144 32)
+		(output)
+		(text "shiftout[WIDTH-1..0]" (rect -208 0 -105 12)(font "Arial" ))
+		(text "shiftout[]" (rect 82 25 131 39)(font "Arial" (font_size 8)))
+		(line (pt 144 32)(pt 128 32)(line_width 3))
+	)
+	(port
+		(pt 144 48)
+		(output)
+		(text "taps[(WIDTH*NUMBER_OF_TAPS) -1..0]" (rect -208 0 -4 12)(font "Arial" ))
+		(text "taps[]" (rect 97 41 128 55)(font "Arial" (font_size 8)))
+		(line (pt 144 48)(pt 128 48)(line_width 3))
+	)
+	(parameter
+		"NUMBER_OF_TAPS"
+		"1"
+		"Number of output taps, each separated by TAP_DISTANCE clock cycles"
+	)
+	(parameter
+		"TAP_DISTANCE"
+		"855"
+		"Number of shift positions between output taps"
+	)
+	(parameter
+		"WIDTH"
+		"10"
+		"Number of bits for the shiftin input"
+	)
+	(drawing
+		(line (pt 16 56)(pt 24 48))
+		(line (pt 16 40)(pt 24 48))
+		(rectangle (rect 16 16 128 88))
+	)
+	(annotation_block (parameter)(rect 352 240 521 296))
+)
+(symbol
+	(rect 192 416 480 544)
+	(text "heart_display" (rect 5 0 81 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 112 25 124)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "INBLOCK_COORD[9..0]" (rect 0 0 130 14)(font "Arial" (font_size 8)))
+		(text "INBLOCK_COORD[9..0]" (rect 21 27 151 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "FRAME_X[9..0]" (rect 0 0 84 14)(font "Arial" (font_size 8)))
+		(text "FRAME_X[9..0]" (rect 21 43 105 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "FRAME_Y[9..0]" (rect 0 0 86 14)(font "Arial" (font_size 8)))
+		(text "FRAME_Y[9..0]" (rect 21 59 107 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "CLK" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 21 75 44 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "life[1..0]" (rect 0 0 44 14)(font "Arial" (font_size 8)))
+		(text "life[1..0]" (rect 21 91 65 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 288 32)
+		(output)
+		(text "heart_pixel_there" (rect 0 0 99 14)(font "Arial" (font_size 8)))
+		(text "heart_pixel_there" (rect 168 27 267 41)(font "Arial" (font_size 8)))
+		(line (pt 288 32)(pt 272 32))
+	)
+	(port
+		(pt 288 48)
+		(output)
+		(text "heart_colour[5..0]" (rect 0 0 100 14)(font "Arial" (font_size 8)))
+		(text "heart_colour[5..0]" (rect 167 43 267 57)(font "Arial" (font_size 8)))
+		(line (pt 288 48)(pt 272 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 272 112))
+	)
+)
+(symbol
+	(rect 192 560 464 688)
+	(text "frb_display" (rect 5 0 68 14)(font "Arial" (font_size 8)))
+	(text "inst1" (rect 8 112 31 124)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "INBLOCK_COORD[9..0]" (rect 0 0 130 14)(font "Arial" (font_size 8)))
+		(text "INBLOCK_COORD[9..0]" (rect 21 27 151 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "FRAME_X[9..0]" (rect 0 0 84 14)(font "Arial" (font_size 8)))
+		(text "FRAME_X[9..0]" (rect 21 43 105 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "FRAME_Y[9..0]" (rect 0 0 86 14)(font "Arial" (font_size 8)))
+		(text "FRAME_Y[9..0]" (rect 21 59 107 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "CLK" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 21 75 44 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "shot_timer[1..0]" (rect 0 0 87 14)(font "Arial" (font_size 8)))
+		(text "shot_timer[1..0]" (rect 21 91 108 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 272 32)
+		(output)
+		(text "frb_pixel_there" (rect 0 0 86 14)(font "Arial" (font_size 8)))
+		(text "frb_pixel_there" (rect 165 27 251 41)(font "Arial" (font_size 8)))
+		(line (pt 272 32)(pt 256 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 256 112))
+	)
+)
+(symbol
+	(rect 600 240 632 272)
+	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
+	(text "inst23" (rect 3 21 32 33)(font "Arial" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(line (pt 16 8)(pt 16 0))
+	)
+	(drawing
+		(line (pt 8 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 8))
+		(line (pt 8 8)(pt 24 8))
+	)
+)
+(symbol
+	(rect 640 240 672 256)
+	(text "VCC" (rect 5 6 25 16)(font "Arial" (font_size 6)))
+	(text "inst24" (rect 0 -1 29 11)(font "Arial" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 8 -3 13 9)(font "Courier New" (bold))(invisible))
+		(line (pt 16 0)(pt 16 8))
+	)
+	(drawing
+		(line (pt 24 8)(pt 8 8))
+	)
+	(rotate180)
+)
+(connector
+	(text "INBLOCK_COORD[9..0]" (rect 346 328 467 340)(font "Arial" ))
+	(pt 336 344)
+	(pt 528 344)
+	(bus)
+)
+(connector
+	(text "FRAME_X[9..0], FRAME_Y[9..0]" (rect 346 208 506 220)(font "Arial" ))
+	(pt 336 224)
+	(pt 512 224)
+	(bus)
+)
+(connector
+	(text "FRAME_X_IN[9..0],FRAME_Y_IN[9..0]" (rect 24 192 216 204)(font "Arial" ))
+	(pt 24 208)
+	(pt 192 208)
+	(bus)
+)
+(connector
+	(text "h" (rect 136 224 141 236)(font "Arial" ))
+	(pt 128 240)
+	(pt 192 240)
+)
+(connector
+	(text "CLK" (rect 138 208 159 220)(font "Arial" ))
+	(pt 128 224)
+	(pt 192 224)
+)
+(connector
+	(text "l" (rect 136 240 138 252)(font "Arial" ))
+	(pt 128 256)
+	(pt 192 256)
+)
+(connector
+	(text "INBLOCK_COORD_IN[9..0]" (rect 66 312 205 324)(font "Arial" ))
+	(pt 56 328)
+	(pt 192 328)
+	(bus)
+)
+(connector
+	(text "h" (rect 136 344 141 356)(font "Arial" ))
+	(pt 128 360)
+	(pt 192 360)
+)
+(connector
+	(text "CLK" (rect 138 328 159 340)(font "Arial" ))
+	(pt 128 344)
+	(pt 192 344)
+)
+(connector
+	(text "l" (rect 136 360 138 372)(font "Arial" ))
+	(pt 128 376)
+	(pt 192 376)
+)
+(connector
+	(text "INBLOCK_COORD[9..0]" (rect 80 432 201 444)(font "Arial" ))
+	(pt 192 448)
+	(pt 72 448)
+	(bus)
+)
+(connector
+	(text "life[1..0]" (rect 79 496 120 508)(font "Arial" ))
+	(pt 192 512)
+	(pt 72 512)
+	(bus)
+)
+(connector
+	(text "INBLOCK_COORD[9..0]" (rect 80 576 201 588)(font "Arial" ))
+	(pt 192 592)
+	(pt 72 592)
+	(bus)
+)
+(connector
+	(text "shot_timer[1..0]" (rect 80 640 157 652)(font "Arial" ))
+	(pt 192 656)
+	(pt 72 656)
+	(bus)
+)
+(connector
+	(text "FRAME_X[9..0]" (rect 82 448 157 460)(font "Arial" ))
+	(pt 192 464)
+	(pt 72 464)
+	(bus)
+)
+(connector
+	(text "FRAME_Y[9..0]" (rect 82 464 159 476)(font "Arial" ))
+	(pt 192 480)
+	(pt 72 480)
+	(bus)
+)
+(connector
+	(text "FRAME_X[9..0]" (rect 82 592 157 604)(font "Arial" ))
+	(pt 192 608)
+	(pt 72 608)
+	(bus)
+)
+(connector
+	(text "FRAME_Y[9..0]" (rect 82 608 159 620)(font "Arial" ))
+	(pt 192 624)
+	(pt 72 624)
+	(bus)
+)
+(connector
+	(pt 496 448)
+	(pt 480 448)
+)
+(connector
+	(pt 496 464)
+	(pt 480 464)
+	(bus)
+)
+(connector
+	(pt 464 592)
+	(pt 480 592)
+)
+(connector
+	(text "h" (rect 640 225 652 230)(font "Arial" )(vertical))
+	(pt 656 208)
+	(pt 656 240)
+)
+(connector
+	(text "l" (rect 600 228 612 230)(font "Arial" )(vertical))
+	(pt 616 208)
+	(pt 616 240)
+)
+(connector
+	(text "CLK" (rect 80 480 101 492)(font "Arial" ))
+	(pt 192 496)
+	(pt 72 496)
+)
+(connector
+	(text "CLK" (rect 80 624 101 636)(font "Arial" ))
+	(pt 192 640)
+	(pt 72 640)
+)

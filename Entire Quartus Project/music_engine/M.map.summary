@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Mar 18 15:59:50 2013
+Quartus II Version : 8.0 Build 215 05/29/2008 SJ Full Version
+Revision Name : M
+Top-level Entity Name : Final
+Family : Cyclone II
+Total logic elements : 1,328
+    Total combinational functions : 1,328
+    Dedicated logic registers : 558
+Total registers : 558
+Total pins : 8
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

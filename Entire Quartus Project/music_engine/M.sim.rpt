@@ -1,0 +1,710 @@
+Simulator report for M
+Fri Feb 22 21:09:06 2013
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 518 nodes    ;
+; Simulation Coverage         ;      92.94 % ;
+; Total Number of Transitions ; 6998667      ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; VWF        ;               ;
+; Vector input source                                                                        ; M.vwf      ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      92.94 % ;
+; Total nodes checked                                 ; 518          ;
+; Total output ports checked                          ; 510          ;
+; Total output ports with complete 1/0-value coverage ; 474          ;
+; Total output ports with no 1/0-value coverage       ; 36           ;
+; Total output ports with no 1-value coverage         ; 36           ;
+; Total output ports with no 0-value coverage         ; 36           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                    ;
++--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                            ; Output Port Name                                                                     ; Output Port Type ;
++--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+------------------+
+; |M|Speaker                                                                           ; |M|Speaker                                                                           ; pin_out          ;
+; |M|clk                                                                               ; |M|clk                                                                               ; out              ;
+; |M|select[2]                                                                         ; |M|select[2]                                                                         ; out              ;
+; |M|select[1]                                                                         ; |M|select[1]                                                                         ; out              ;
+; |M|select[0]                                                                         ; |M|select[0]                                                                         ; out              ;
+; |M|C:inst|counter~1                                                                  ; |M|C:inst|counter~1                                                                  ; out              ;
+; |M|C:inst|counter~2                                                                  ; |M|C:inst|counter~2                                                                  ; out              ;
+; |M|C:inst|counter~3                                                                  ; |M|C:inst|counter~3                                                                  ; out              ;
+; |M|C:inst|counter~4                                                                  ; |M|C:inst|counter~4                                                                  ; out              ;
+; |M|C:inst|counter~5                                                                  ; |M|C:inst|counter~5                                                                  ; out              ;
+; |M|C:inst|counter~6                                                                  ; |M|C:inst|counter~6                                                                  ; out              ;
+; |M|C:inst|counter~7                                                                  ; |M|C:inst|counter~7                                                                  ; out              ;
+; |M|C:inst|counter~8                                                                  ; |M|C:inst|counter~8                                                                  ; out              ;
+; |M|C:inst|counter~9                                                                  ; |M|C:inst|counter~9                                                                  ; out              ;
+; |M|C:inst|counter~10                                                                 ; |M|C:inst|counter~10                                                                 ; out              ;
+; |M|C:inst|counter~11                                                                 ; |M|C:inst|counter~11                                                                 ; out              ;
+; |M|C:inst|counter~12                                                                 ; |M|C:inst|counter~12                                                                 ; out              ;
+; |M|C:inst|counter~13                                                                 ; |M|C:inst|counter~13                                                                 ; out              ;
+; |M|C:inst|counter~14                                                                 ; |M|C:inst|counter~14                                                                 ; out              ;
+; |M|C:inst|counter[0]                                                                 ; |M|C:inst|counter[0]                                                                 ; regout           ;
+; |M|C:inst|counter[1]                                                                 ; |M|C:inst|counter[1]                                                                 ; regout           ;
+; |M|C:inst|counter[2]                                                                 ; |M|C:inst|counter[2]                                                                 ; regout           ;
+; |M|C:inst|counter[3]                                                                 ; |M|C:inst|counter[3]                                                                 ; regout           ;
+; |M|C:inst|counter[4]                                                                 ; |M|C:inst|counter[4]                                                                 ; regout           ;
+; |M|C:inst|counter[5]                                                                 ; |M|C:inst|counter[5]                                                                 ; regout           ;
+; |M|C:inst|counter[6]                                                                 ; |M|C:inst|counter[6]                                                                 ; regout           ;
+; |M|C:inst|counter[7]                                                                 ; |M|C:inst|counter[7]                                                                 ; regout           ;
+; |M|C:inst|counter[8]                                                                 ; |M|C:inst|counter[8]                                                                 ; regout           ;
+; |M|C:inst|counter[9]                                                                 ; |M|C:inst|counter[9]                                                                 ; regout           ;
+; |M|C:inst|counter[10]                                                                ; |M|C:inst|counter[10]                                                                ; regout           ;
+; |M|C:inst|counter[11]                                                                ; |M|C:inst|counter[11]                                                                ; regout           ;
+; |M|C:inst|counter[12]                                                                ; |M|C:inst|counter[12]                                                                ; regout           ;
+; |M|C:inst|counter[13]                                                                ; |M|C:inst|counter[13]                                                                ; regout           ;
+; |M|D:inst37|counter~1                                                                ; |M|D:inst37|counter~1                                                                ; out              ;
+; |M|D:inst37|counter~2                                                                ; |M|D:inst37|counter~2                                                                ; out              ;
+; |M|D:inst37|counter~3                                                                ; |M|D:inst37|counter~3                                                                ; out              ;
+; |M|D:inst37|counter~4                                                                ; |M|D:inst37|counter~4                                                                ; out              ;
+; |M|D:inst37|counter~5                                                                ; |M|D:inst37|counter~5                                                                ; out              ;
+; |M|D:inst37|counter~6                                                                ; |M|D:inst37|counter~6                                                                ; out              ;
+; |M|D:inst37|counter~7                                                                ; |M|D:inst37|counter~7                                                                ; out              ;
+; |M|D:inst37|counter~8                                                                ; |M|D:inst37|counter~8                                                                ; out              ;
+; |M|D:inst37|counter~9                                                                ; |M|D:inst37|counter~9                                                                ; out              ;
+; |M|D:inst37|counter~10                                                               ; |M|D:inst37|counter~10                                                               ; out              ;
+; |M|D:inst37|counter~11                                                               ; |M|D:inst37|counter~11                                                               ; out              ;
+; |M|D:inst37|counter~12                                                               ; |M|D:inst37|counter~12                                                               ; out              ;
+; |M|D:inst37|counter~13                                                               ; |M|D:inst37|counter~13                                                               ; out              ;
+; |M|D:inst37|counter~14                                                               ; |M|D:inst37|counter~14                                                               ; out              ;
+; |M|D:inst37|counter[0]                                                               ; |M|D:inst37|counter[0]                                                               ; regout           ;
+; |M|D:inst37|counter[1]                                                               ; |M|D:inst37|counter[1]                                                               ; regout           ;
+; |M|D:inst37|counter[2]                                                               ; |M|D:inst37|counter[2]                                                               ; regout           ;
+; |M|D:inst37|counter[3]                                                               ; |M|D:inst37|counter[3]                                                               ; regout           ;
+; |M|D:inst37|counter[4]                                                               ; |M|D:inst37|counter[4]                                                               ; regout           ;
+; |M|D:inst37|counter[5]                                                               ; |M|D:inst37|counter[5]                                                               ; regout           ;
+; |M|D:inst37|counter[6]                                                               ; |M|D:inst37|counter[6]                                                               ; regout           ;
+; |M|D:inst37|counter[7]                                                               ; |M|D:inst37|counter[7]                                                               ; regout           ;
+; |M|D:inst37|counter[8]                                                               ; |M|D:inst37|counter[8]                                                               ; regout           ;
+; |M|D:inst37|counter[9]                                                               ; |M|D:inst37|counter[9]                                                               ; regout           ;
+; |M|D:inst37|counter[10]                                                              ; |M|D:inst37|counter[10]                                                              ; regout           ;
+; |M|D:inst37|counter[11]                                                              ; |M|D:inst37|counter[11]                                                              ; regout           ;
+; |M|D:inst37|counter[12]                                                              ; |M|D:inst37|counter[12]                                                              ; regout           ;
+; |M|D:inst37|counter[13]                                                              ; |M|D:inst37|counter[13]                                                              ; regout           ;
+; |M|E:inst38|counter~2                                                                ; |M|E:inst38|counter~2                                                                ; out              ;
+; |M|E:inst38|counter~3                                                                ; |M|E:inst38|counter~3                                                                ; out              ;
+; |M|E:inst38|counter~4                                                                ; |M|E:inst38|counter~4                                                                ; out              ;
+; |M|E:inst38|counter~5                                                                ; |M|E:inst38|counter~5                                                                ; out              ;
+; |M|E:inst38|counter~6                                                                ; |M|E:inst38|counter~6                                                                ; out              ;
+; |M|E:inst38|counter~7                                                                ; |M|E:inst38|counter~7                                                                ; out              ;
+; |M|E:inst38|counter~8                                                                ; |M|E:inst38|counter~8                                                                ; out              ;
+; |M|E:inst38|counter~9                                                                ; |M|E:inst38|counter~9                                                                ; out              ;
+; |M|E:inst38|counter~10                                                               ; |M|E:inst38|counter~10                                                               ; out              ;
+; |M|E:inst38|counter~11                                                               ; |M|E:inst38|counter~11                                                               ; out              ;
+; |M|E:inst38|counter~12                                                               ; |M|E:inst38|counter~12                                                               ; out              ;
+; |M|E:inst38|counter~13                                                               ; |M|E:inst38|counter~13                                                               ; out              ;
+; |M|E:inst38|counter~14                                                               ; |M|E:inst38|counter~14                                                               ; out              ;
+; |M|E:inst38|counter[0]                                                               ; |M|E:inst38|counter[0]                                                               ; regout           ;
+; |M|E:inst38|counter[1]                                                               ; |M|E:inst38|counter[1]                                                               ; regout           ;
+; |M|E:inst38|counter[2]                                                               ; |M|E:inst38|counter[2]                                                               ; regout           ;
+; |M|E:inst38|counter[3]                                                               ; |M|E:inst38|counter[3]                                                               ; regout           ;
+; |M|E:inst38|counter[4]                                                               ; |M|E:inst38|counter[4]                                                               ; regout           ;
+; |M|E:inst38|counter[5]                                                               ; |M|E:inst38|counter[5]                                                               ; regout           ;
+; |M|E:inst38|counter[6]                                                               ; |M|E:inst38|counter[6]                                                               ; regout           ;
+; |M|E:inst38|counter[7]                                                               ; |M|E:inst38|counter[7]                                                               ; regout           ;
+; |M|E:inst38|counter[8]                                                               ; |M|E:inst38|counter[8]                                                               ; regout           ;
+; |M|E:inst38|counter[9]                                                               ; |M|E:inst38|counter[9]                                                               ; regout           ;
+; |M|E:inst38|counter[10]                                                              ; |M|E:inst38|counter[10]                                                              ; regout           ;
+; |M|E:inst38|counter[11]                                                              ; |M|E:inst38|counter[11]                                                              ; regout           ;
+; |M|E:inst38|counter[12]                                                              ; |M|E:inst38|counter[12]                                                              ; regout           ;
+; |M|F:inst39|counter~5                                                                ; |M|F:inst39|counter~5                                                                ; out              ;
+; |M|F:inst39|counter~6                                                                ; |M|F:inst39|counter~6                                                                ; out              ;
+; |M|F:inst39|counter~7                                                                ; |M|F:inst39|counter~7                                                                ; out              ;
+; |M|F:inst39|counter~8                                                                ; |M|F:inst39|counter~8                                                                ; out              ;
+; |M|F:inst39|counter~9                                                                ; |M|F:inst39|counter~9                                                                ; out              ;
+; |M|F:inst39|counter~10                                                               ; |M|F:inst39|counter~10                                                               ; out              ;
+; |M|F:inst39|counter~11                                                               ; |M|F:inst39|counter~11                                                               ; out              ;
+; |M|F:inst39|counter~12                                                               ; |M|F:inst39|counter~12                                                               ; out              ;
+; |M|F:inst39|counter~13                                                               ; |M|F:inst39|counter~13                                                               ; out              ;
+; |M|F:inst39|counter~14                                                               ; |M|F:inst39|counter~14                                                               ; out              ;
+; |M|F:inst39|counter[0]                                                               ; |M|F:inst39|counter[0]                                                               ; regout           ;
+; |M|F:inst39|counter[1]                                                               ; |M|F:inst39|counter[1]                                                               ; regout           ;
+; |M|F:inst39|counter[2]                                                               ; |M|F:inst39|counter[2]                                                               ; regout           ;
+; |M|F:inst39|counter[3]                                                               ; |M|F:inst39|counter[3]                                                               ; regout           ;
+; |M|F:inst39|counter[4]                                                               ; |M|F:inst39|counter[4]                                                               ; regout           ;
+; |M|F:inst39|counter[5]                                                               ; |M|F:inst39|counter[5]                                                               ; regout           ;
+; |M|F:inst39|counter[6]                                                               ; |M|F:inst39|counter[6]                                                               ; regout           ;
+; |M|F:inst39|counter[7]                                                               ; |M|F:inst39|counter[7]                                                               ; regout           ;
+; |M|F:inst39|counter[8]                                                               ; |M|F:inst39|counter[8]                                                               ; regout           ;
+; |M|F:inst39|counter[9]                                                               ; |M|F:inst39|counter[9]                                                               ; regout           ;
+; |M|G:inst40|counter~0                                                                ; |M|G:inst40|counter~0                                                                ; out              ;
+; |M|G:inst40|counter~1                                                                ; |M|G:inst40|counter~1                                                                ; out              ;
+; |M|G:inst40|counter~2                                                                ; |M|G:inst40|counter~2                                                                ; out              ;
+; |M|G:inst40|counter~3                                                                ; |M|G:inst40|counter~3                                                                ; out              ;
+; |M|G:inst40|counter~4                                                                ; |M|G:inst40|counter~4                                                                ; out              ;
+; |M|G:inst40|counter~5                                                                ; |M|G:inst40|counter~5                                                                ; out              ;
+; |M|G:inst40|counter~6                                                                ; |M|G:inst40|counter~6                                                                ; out              ;
+; |M|G:inst40|counter~7                                                                ; |M|G:inst40|counter~7                                                                ; out              ;
+; |M|G:inst40|counter~8                                                                ; |M|G:inst40|counter~8                                                                ; out              ;
+; |M|G:inst40|counter~9                                                                ; |M|G:inst40|counter~9                                                                ; out              ;
+; |M|G:inst40|counter~10                                                               ; |M|G:inst40|counter~10                                                               ; out              ;
+; |M|G:inst40|counter~11                                                               ; |M|G:inst40|counter~11                                                               ; out              ;
+; |M|G:inst40|counter~12                                                               ; |M|G:inst40|counter~12                                                               ; out              ;
+; |M|G:inst40|counter~13                                                               ; |M|G:inst40|counter~13                                                               ; out              ;
+; |M|G:inst40|counter~14                                                               ; |M|G:inst40|counter~14                                                               ; out              ;
+; |M|G:inst40|counter[0]                                                               ; |M|G:inst40|counter[0]                                                               ; regout           ;
+; |M|G:inst40|counter[1]                                                               ; |M|G:inst40|counter[1]                                                               ; regout           ;
+; |M|G:inst40|counter[2]                                                               ; |M|G:inst40|counter[2]                                                               ; regout           ;
+; |M|G:inst40|counter[3]                                                               ; |M|G:inst40|counter[3]                                                               ; regout           ;
+; |M|G:inst40|counter[4]                                                               ; |M|G:inst40|counter[4]                                                               ; regout           ;
+; |M|G:inst40|counter[5]                                                               ; |M|G:inst40|counter[5]                                                               ; regout           ;
+; |M|G:inst40|counter[6]                                                               ; |M|G:inst40|counter[6]                                                               ; regout           ;
+; |M|G:inst40|counter[7]                                                               ; |M|G:inst40|counter[7]                                                               ; regout           ;
+; |M|G:inst40|counter[8]                                                               ; |M|G:inst40|counter[8]                                                               ; regout           ;
+; |M|G:inst40|counter[9]                                                               ; |M|G:inst40|counter[9]                                                               ; regout           ;
+; |M|G:inst40|counter[10]                                                              ; |M|G:inst40|counter[10]                                                              ; regout           ;
+; |M|G:inst40|counter[11]                                                              ; |M|G:inst40|counter[11]                                                              ; regout           ;
+; |M|G:inst40|counter[12]                                                              ; |M|G:inst40|counter[12]                                                              ; regout           ;
+; |M|G:inst40|counter[13]                                                              ; |M|G:inst40|counter[13]                                                              ; regout           ;
+; |M|G:inst40|counter[14]                                                              ; |M|G:inst40|counter[14]                                                              ; regout           ;
+; |M|A:inst41|counter~0                                                                ; |M|A:inst41|counter~0                                                                ; out              ;
+; |M|A:inst41|counter~1                                                                ; |M|A:inst41|counter~1                                                                ; out              ;
+; |M|A:inst41|counter~2                                                                ; |M|A:inst41|counter~2                                                                ; out              ;
+; |M|A:inst41|counter~3                                                                ; |M|A:inst41|counter~3                                                                ; out              ;
+; |M|A:inst41|counter~4                                                                ; |M|A:inst41|counter~4                                                                ; out              ;
+; |M|A:inst41|counter~5                                                                ; |M|A:inst41|counter~5                                                                ; out              ;
+; |M|A:inst41|counter~6                                                                ; |M|A:inst41|counter~6                                                                ; out              ;
+; |M|A:inst41|counter~7                                                                ; |M|A:inst41|counter~7                                                                ; out              ;
+; |M|A:inst41|counter~8                                                                ; |M|A:inst41|counter~8                                                                ; out              ;
+; |M|A:inst41|counter~9                                                                ; |M|A:inst41|counter~9                                                                ; out              ;
+; |M|A:inst41|counter~10                                                               ; |M|A:inst41|counter~10                                                               ; out              ;
+; |M|A:inst41|counter~11                                                               ; |M|A:inst41|counter~11                                                               ; out              ;
+; |M|A:inst41|counter~12                                                               ; |M|A:inst41|counter~12                                                               ; out              ;
+; |M|A:inst41|counter~13                                                               ; |M|A:inst41|counter~13                                                               ; out              ;
+; |M|A:inst41|counter~14                                                               ; |M|A:inst41|counter~14                                                               ; out              ;
+; |M|A:inst41|counter[0]                                                               ; |M|A:inst41|counter[0]                                                               ; regout           ;
+; |M|A:inst41|counter[1]                                                               ; |M|A:inst41|counter[1]                                                               ; regout           ;
+; |M|A:inst41|counter[2]                                                               ; |M|A:inst41|counter[2]                                                               ; regout           ;
+; |M|A:inst41|counter[3]                                                               ; |M|A:inst41|counter[3]                                                               ; regout           ;
+; |M|A:inst41|counter[4]                                                               ; |M|A:inst41|counter[4]                                                               ; regout           ;
+; |M|A:inst41|counter[5]                                                               ; |M|A:inst41|counter[5]                                                               ; regout           ;
+; |M|A:inst41|counter[6]                                                               ; |M|A:inst41|counter[6]                                                               ; regout           ;
+; |M|A:inst41|counter[7]                                                               ; |M|A:inst41|counter[7]                                                               ; regout           ;
+; |M|A:inst41|counter[8]                                                               ; |M|A:inst41|counter[8]                                                               ; regout           ;
+; |M|A:inst41|counter[9]                                                               ; |M|A:inst41|counter[9]                                                               ; regout           ;
+; |M|A:inst41|counter[10]                                                              ; |M|A:inst41|counter[10]                                                              ; regout           ;
+; |M|A:inst41|counter[11]                                                              ; |M|A:inst41|counter[11]                                                              ; regout           ;
+; |M|A:inst41|counter[12]                                                              ; |M|A:inst41|counter[12]                                                              ; regout           ;
+; |M|A:inst41|counter[13]                                                              ; |M|A:inst41|counter[13]                                                              ; regout           ;
+; |M|A:inst41|counter[14]                                                              ; |M|A:inst41|counter[14]                                                              ; regout           ;
+; |M|B:inst42|counter~0                                                                ; |M|B:inst42|counter~0                                                                ; out              ;
+; |M|B:inst42|counter~1                                                                ; |M|B:inst42|counter~1                                                                ; out              ;
+; |M|B:inst42|counter~2                                                                ; |M|B:inst42|counter~2                                                                ; out              ;
+; |M|B:inst42|counter~3                                                                ; |M|B:inst42|counter~3                                                                ; out              ;
+; |M|B:inst42|counter~4                                                                ; |M|B:inst42|counter~4                                                                ; out              ;
+; |M|B:inst42|counter~5                                                                ; |M|B:inst42|counter~5                                                                ; out              ;
+; |M|B:inst42|counter~6                                                                ; |M|B:inst42|counter~6                                                                ; out              ;
+; |M|B:inst42|counter~7                                                                ; |M|B:inst42|counter~7                                                                ; out              ;
+; |M|B:inst42|counter~8                                                                ; |M|B:inst42|counter~8                                                                ; out              ;
+; |M|B:inst42|counter~9                                                                ; |M|B:inst42|counter~9                                                                ; out              ;
+; |M|B:inst42|counter~10                                                               ; |M|B:inst42|counter~10                                                               ; out              ;
+; |M|B:inst42|counter~11                                                               ; |M|B:inst42|counter~11                                                               ; out              ;
+; |M|B:inst42|counter~12                                                               ; |M|B:inst42|counter~12                                                               ; out              ;
+; |M|B:inst42|counter~13                                                               ; |M|B:inst42|counter~13                                                               ; out              ;
+; |M|B:inst42|counter~14                                                               ; |M|B:inst42|counter~14                                                               ; out              ;
+; |M|B:inst42|counter[0]                                                               ; |M|B:inst42|counter[0]                                                               ; regout           ;
+; |M|B:inst42|counter[1]                                                               ; |M|B:inst42|counter[1]                                                               ; regout           ;
+; |M|B:inst42|counter[2]                                                               ; |M|B:inst42|counter[2]                                                               ; regout           ;
+; |M|B:inst42|counter[3]                                                               ; |M|B:inst42|counter[3]                                                               ; regout           ;
+; |M|B:inst42|counter[4]                                                               ; |M|B:inst42|counter[4]                                                               ; regout           ;
+; |M|B:inst42|counter[5]                                                               ; |M|B:inst42|counter[5]                                                               ; regout           ;
+; |M|B:inst42|counter[6]                                                               ; |M|B:inst42|counter[6]                                                               ; regout           ;
+; |M|B:inst42|counter[7]                                                               ; |M|B:inst42|counter[7]                                                               ; regout           ;
+; |M|B:inst42|counter[8]                                                               ; |M|B:inst42|counter[8]                                                               ; regout           ;
+; |M|B:inst42|counter[9]                                                               ; |M|B:inst42|counter[9]                                                               ; regout           ;
+; |M|B:inst42|counter[10]                                                              ; |M|B:inst42|counter[10]                                                              ; regout           ;
+; |M|B:inst42|counter[11]                                                              ; |M|B:inst42|counter[11]                                                              ; regout           ;
+; |M|B:inst42|counter[12]                                                              ; |M|B:inst42|counter[12]                                                              ; regout           ;
+; |M|B:inst42|counter[13]                                                              ; |M|B:inst42|counter[13]                                                              ; regout           ;
+; |M|B:inst42|counter[14]                                                              ; |M|B:inst42|counter[14]                                                              ; regout           ;
+; |M|HighC:inst43|counter~0                                                            ; |M|HighC:inst43|counter~0                                                            ; out              ;
+; |M|HighC:inst43|counter~1                                                            ; |M|HighC:inst43|counter~1                                                            ; out              ;
+; |M|HighC:inst43|counter~2                                                            ; |M|HighC:inst43|counter~2                                                            ; out              ;
+; |M|HighC:inst43|counter~3                                                            ; |M|HighC:inst43|counter~3                                                            ; out              ;
+; |M|HighC:inst43|counter~4                                                            ; |M|HighC:inst43|counter~4                                                            ; out              ;
+; |M|HighC:inst43|counter~5                                                            ; |M|HighC:inst43|counter~5                                                            ; out              ;
+; |M|HighC:inst43|counter~6                                                            ; |M|HighC:inst43|counter~6                                                            ; out              ;
+; |M|HighC:inst43|counter~7                                                            ; |M|HighC:inst43|counter~7                                                            ; out              ;
+; |M|HighC:inst43|counter~8                                                            ; |M|HighC:inst43|counter~8                                                            ; out              ;
+; |M|HighC:inst43|counter~9                                                            ; |M|HighC:inst43|counter~9                                                            ; out              ;
+; |M|HighC:inst43|counter~10                                                           ; |M|HighC:inst43|counter~10                                                           ; out              ;
+; |M|HighC:inst43|counter~11                                                           ; |M|HighC:inst43|counter~11                                                           ; out              ;
+; |M|HighC:inst43|counter~12                                                           ; |M|HighC:inst43|counter~12                                                           ; out              ;
+; |M|HighC:inst43|counter~13                                                           ; |M|HighC:inst43|counter~13                                                           ; out              ;
+; |M|HighC:inst43|counter~14                                                           ; |M|HighC:inst43|counter~14                                                           ; out              ;
+; |M|HighC:inst43|counter[0]                                                           ; |M|HighC:inst43|counter[0]                                                           ; regout           ;
+; |M|HighC:inst43|counter[1]                                                           ; |M|HighC:inst43|counter[1]                                                           ; regout           ;
+; |M|HighC:inst43|counter[2]                                                           ; |M|HighC:inst43|counter[2]                                                           ; regout           ;
+; |M|HighC:inst43|counter[3]                                                           ; |M|HighC:inst43|counter[3]                                                           ; regout           ;
+; |M|HighC:inst43|counter[4]                                                           ; |M|HighC:inst43|counter[4]                                                           ; regout           ;
+; |M|HighC:inst43|counter[5]                                                           ; |M|HighC:inst43|counter[5]                                                           ; regout           ;
+; |M|HighC:inst43|counter[6]                                                           ; |M|HighC:inst43|counter[6]                                                           ; regout           ;
+; |M|HighC:inst43|counter[7]                                                           ; |M|HighC:inst43|counter[7]                                                           ; regout           ;
+; |M|HighC:inst43|counter[8]                                                           ; |M|HighC:inst43|counter[8]                                                           ; regout           ;
+; |M|HighC:inst43|counter[9]                                                           ; |M|HighC:inst43|counter[9]                                                           ; regout           ;
+; |M|HighC:inst43|counter[10]                                                          ; |M|HighC:inst43|counter[10]                                                          ; regout           ;
+; |M|HighC:inst43|counter[11]                                                          ; |M|HighC:inst43|counter[11]                                                          ; regout           ;
+; |M|HighC:inst43|counter[12]                                                          ; |M|HighC:inst43|counter[12]                                                          ; regout           ;
+; |M|HighC:inst43|counter[13]                                                          ; |M|HighC:inst43|counter[13]                                                          ; regout           ;
+; |M|HighC:inst43|counter[14]                                                          ; |M|HighC:inst43|counter[14]                                                          ; regout           ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~0              ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~0              ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~2              ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~2              ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~4              ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~4              ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~5              ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~5              ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~6              ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~6              ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~7              ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~7              ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~9              ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~9              ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~11             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~11             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~13             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~13             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~14             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~14             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~15             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~15             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~16             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~16             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~18             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~18             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~19             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~19             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~20             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~20             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|result_node[0]~0 ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|result_node[0]~0 ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~22             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~22             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~24             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~24             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~26             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~26             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~27             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~27             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~28             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~28             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~29             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~29             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~31             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~31             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~33             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~33             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~35             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~35             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~36             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~36             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~37             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~37             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~38             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~38             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~40             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~40             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~41             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~41             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~42             ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|_~42             ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|result_node[0]~1 ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|result_node[0]~1 ; out0             ;
+; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|result_node[0]   ; |M|lpm_mux0:inst36|lpm_mux:lpm_mux_component|mux_tmc:auto_generated|result_node[0]   ; out0             ;
+; |M|C:inst|Add0~75                                                                    ; |M|C:inst|Add0~75                                                                    ; out0             ;
+; |M|C:inst|Add0~76                                                                    ; |M|C:inst|Add0~76                                                                    ; out0             ;
+; |M|C:inst|Add0~77                                                                    ; |M|C:inst|Add0~77                                                                    ; out0             ;
+; |M|C:inst|Add0~78                                                                    ; |M|C:inst|Add0~78                                                                    ; out0             ;
+; |M|C:inst|Add0~79                                                                    ; |M|C:inst|Add0~79                                                                    ; out0             ;
+; |M|C:inst|Add0~80                                                                    ; |M|C:inst|Add0~80                                                                    ; out0             ;
+; |M|C:inst|Add0~81                                                                    ; |M|C:inst|Add0~81                                                                    ; out0             ;
+; |M|C:inst|Add0~82                                                                    ; |M|C:inst|Add0~82                                                                    ; out0             ;
+; |M|C:inst|Add0~83                                                                    ; |M|C:inst|Add0~83                                                                    ; out0             ;
+; |M|C:inst|Add0~84                                                                    ; |M|C:inst|Add0~84                                                                    ; out0             ;
+; |M|C:inst|Add0~85                                                                    ; |M|C:inst|Add0~85                                                                    ; out0             ;
+; |M|C:inst|Add0~86                                                                    ; |M|C:inst|Add0~86                                                                    ; out0             ;
+; |M|C:inst|Add0~87                                                                    ; |M|C:inst|Add0~87                                                                    ; out0             ;
+; |M|C:inst|Add0~88                                                                    ; |M|C:inst|Add0~88                                                                    ; out0             ;
+; |M|C:inst|Add0~89                                                                    ; |M|C:inst|Add0~89                                                                    ; out0             ;
+; |M|C:inst|Add0~90                                                                    ; |M|C:inst|Add0~90                                                                    ; out0             ;
+; |M|C:inst|Add0~91                                                                    ; |M|C:inst|Add0~91                                                                    ; out0             ;
+; |M|C:inst|Add0~92                                                                    ; |M|C:inst|Add0~92                                                                    ; out0             ;
+; |M|C:inst|Add0~93                                                                    ; |M|C:inst|Add0~93                                                                    ; out0             ;
+; |M|C:inst|Add0~94                                                                    ; |M|C:inst|Add0~94                                                                    ; out0             ;
+; |M|C:inst|Add0~95                                                                    ; |M|C:inst|Add0~95                                                                    ; out0             ;
+; |M|C:inst|Add0~96                                                                    ; |M|C:inst|Add0~96                                                                    ; out0             ;
+; |M|C:inst|Add0~97                                                                    ; |M|C:inst|Add0~97                                                                    ; out0             ;
+; |M|C:inst|Add0~98                                                                    ; |M|C:inst|Add0~98                                                                    ; out0             ;
+; |M|C:inst|Add0~99                                                                    ; |M|C:inst|Add0~99                                                                    ; out0             ;
+; |M|D:inst37|Add0~75                                                                  ; |M|D:inst37|Add0~75                                                                  ; out0             ;
+; |M|D:inst37|Add0~76                                                                  ; |M|D:inst37|Add0~76                                                                  ; out0             ;
+; |M|D:inst37|Add0~77                                                                  ; |M|D:inst37|Add0~77                                                                  ; out0             ;
+; |M|D:inst37|Add0~78                                                                  ; |M|D:inst37|Add0~78                                                                  ; out0             ;
+; |M|D:inst37|Add0~79                                                                  ; |M|D:inst37|Add0~79                                                                  ; out0             ;
+; |M|D:inst37|Add0~80                                                                  ; |M|D:inst37|Add0~80                                                                  ; out0             ;
+; |M|D:inst37|Add0~81                                                                  ; |M|D:inst37|Add0~81                                                                  ; out0             ;
+; |M|D:inst37|Add0~82                                                                  ; |M|D:inst37|Add0~82                                                                  ; out0             ;
+; |M|D:inst37|Add0~83                                                                  ; |M|D:inst37|Add0~83                                                                  ; out0             ;
+; |M|D:inst37|Add0~84                                                                  ; |M|D:inst37|Add0~84                                                                  ; out0             ;
+; |M|D:inst37|Add0~85                                                                  ; |M|D:inst37|Add0~85                                                                  ; out0             ;
+; |M|D:inst37|Add0~86                                                                  ; |M|D:inst37|Add0~86                                                                  ; out0             ;
+; |M|D:inst37|Add0~87                                                                  ; |M|D:inst37|Add0~87                                                                  ; out0             ;
+; |M|D:inst37|Add0~88                                                                  ; |M|D:inst37|Add0~88                                                                  ; out0             ;
+; |M|D:inst37|Add0~89                                                                  ; |M|D:inst37|Add0~89                                                                  ; out0             ;
+; |M|D:inst37|Add0~90                                                                  ; |M|D:inst37|Add0~90                                                                  ; out0             ;
+; |M|D:inst37|Add0~91                                                                  ; |M|D:inst37|Add0~91                                                                  ; out0             ;
+; |M|D:inst37|Add0~92                                                                  ; |M|D:inst37|Add0~92                                                                  ; out0             ;
+; |M|D:inst37|Add0~93                                                                  ; |M|D:inst37|Add0~93                                                                  ; out0             ;
+; |M|D:inst37|Add0~94                                                                  ; |M|D:inst37|Add0~94                                                                  ; out0             ;
+; |M|D:inst37|Add0~95                                                                  ; |M|D:inst37|Add0~95                                                                  ; out0             ;
+; |M|D:inst37|Add0~96                                                                  ; |M|D:inst37|Add0~96                                                                  ; out0             ;
+; |M|D:inst37|Add0~97                                                                  ; |M|D:inst37|Add0~97                                                                  ; out0             ;
+; |M|D:inst37|Add0~98                                                                  ; |M|D:inst37|Add0~98                                                                  ; out0             ;
+; |M|D:inst37|Add0~99                                                                  ; |M|D:inst37|Add0~99                                                                  ; out0             ;
+; |M|E:inst38|Add0~75                                                                  ; |M|E:inst38|Add0~75                                                                  ; out0             ;
+; |M|E:inst38|Add0~76                                                                  ; |M|E:inst38|Add0~76                                                                  ; out0             ;
+; |M|E:inst38|Add0~77                                                                  ; |M|E:inst38|Add0~77                                                                  ; out0             ;
+; |M|E:inst38|Add0~78                                                                  ; |M|E:inst38|Add0~78                                                                  ; out0             ;
+; |M|E:inst38|Add0~79                                                                  ; |M|E:inst38|Add0~79                                                                  ; out0             ;
+; |M|E:inst38|Add0~80                                                                  ; |M|E:inst38|Add0~80                                                                  ; out0             ;
+; |M|E:inst38|Add0~81                                                                  ; |M|E:inst38|Add0~81                                                                  ; out0             ;
+; |M|E:inst38|Add0~82                                                                  ; |M|E:inst38|Add0~82                                                                  ; out0             ;
+; |M|E:inst38|Add0~83                                                                  ; |M|E:inst38|Add0~83                                                                  ; out0             ;
+; |M|E:inst38|Add0~84                                                                  ; |M|E:inst38|Add0~84                                                                  ; out0             ;
+; |M|E:inst38|Add0~85                                                                  ; |M|E:inst38|Add0~85                                                                  ; out0             ;
+; |M|E:inst38|Add0~86                                                                  ; |M|E:inst38|Add0~86                                                                  ; out0             ;
+; |M|E:inst38|Add0~87                                                                  ; |M|E:inst38|Add0~87                                                                  ; out0             ;
+; |M|E:inst38|Add0~88                                                                  ; |M|E:inst38|Add0~88                                                                  ; out0             ;
+; |M|E:inst38|Add0~89                                                                  ; |M|E:inst38|Add0~89                                                                  ; out0             ;
+; |M|E:inst38|Add0~90                                                                  ; |M|E:inst38|Add0~90                                                                  ; out0             ;
+; |M|E:inst38|Add0~91                                                                  ; |M|E:inst38|Add0~91                                                                  ; out0             ;
+; |M|E:inst38|Add0~92                                                                  ; |M|E:inst38|Add0~92                                                                  ; out0             ;
+; |M|E:inst38|Add0~93                                                                  ; |M|E:inst38|Add0~93                                                                  ; out0             ;
+; |M|E:inst38|Add0~94                                                                  ; |M|E:inst38|Add0~94                                                                  ; out0             ;
+; |M|E:inst38|Add0~95                                                                  ; |M|E:inst38|Add0~95                                                                  ; out0             ;
+; |M|E:inst38|Add0~96                                                                  ; |M|E:inst38|Add0~96                                                                  ; out0             ;
+; |M|E:inst38|Add0~97                                                                  ; |M|E:inst38|Add0~97                                                                  ; out0             ;
+; |M|F:inst39|Add0~75                                                                  ; |M|F:inst39|Add0~75                                                                  ; out0             ;
+; |M|F:inst39|Add0~76                                                                  ; |M|F:inst39|Add0~76                                                                  ; out0             ;
+; |M|F:inst39|Add0~77                                                                  ; |M|F:inst39|Add0~77                                                                  ; out0             ;
+; |M|F:inst39|Add0~78                                                                  ; |M|F:inst39|Add0~78                                                                  ; out0             ;
+; |M|F:inst39|Add0~79                                                                  ; |M|F:inst39|Add0~79                                                                  ; out0             ;
+; |M|F:inst39|Add0~80                                                                  ; |M|F:inst39|Add0~80                                                                  ; out0             ;
+; |M|F:inst39|Add0~81                                                                  ; |M|F:inst39|Add0~81                                                                  ; out0             ;
+; |M|F:inst39|Add0~82                                                                  ; |M|F:inst39|Add0~82                                                                  ; out0             ;
+; |M|F:inst39|Add0~83                                                                  ; |M|F:inst39|Add0~83                                                                  ; out0             ;
+; |M|F:inst39|Add0~84                                                                  ; |M|F:inst39|Add0~84                                                                  ; out0             ;
+; |M|F:inst39|Add0~85                                                                  ; |M|F:inst39|Add0~85                                                                  ; out0             ;
+; |M|F:inst39|Add0~86                                                                  ; |M|F:inst39|Add0~86                                                                  ; out0             ;
+; |M|F:inst39|Add0~87                                                                  ; |M|F:inst39|Add0~87                                                                  ; out0             ;
+; |M|F:inst39|Add0~88                                                                  ; |M|F:inst39|Add0~88                                                                  ; out0             ;
+; |M|F:inst39|Add0~89                                                                  ; |M|F:inst39|Add0~89                                                                  ; out0             ;
+; |M|F:inst39|Add0~90                                                                  ; |M|F:inst39|Add0~90                                                                  ; out0             ;
+; |M|F:inst39|Add0~91                                                                  ; |M|F:inst39|Add0~91                                                                  ; out0             ;
+; |M|G:inst40|Add0~75                                                                  ; |M|G:inst40|Add0~75                                                                  ; out0             ;
+; |M|G:inst40|Add0~76                                                                  ; |M|G:inst40|Add0~76                                                                  ; out0             ;
+; |M|G:inst40|Add0~77                                                                  ; |M|G:inst40|Add0~77                                                                  ; out0             ;
+; |M|G:inst40|Add0~78                                                                  ; |M|G:inst40|Add0~78                                                                  ; out0             ;
+; |M|G:inst40|Add0~79                                                                  ; |M|G:inst40|Add0~79                                                                  ; out0             ;
+; |M|G:inst40|Add0~80                                                                  ; |M|G:inst40|Add0~80                                                                  ; out0             ;
+; |M|G:inst40|Add0~81                                                                  ; |M|G:inst40|Add0~81                                                                  ; out0             ;
+; |M|G:inst40|Add0~82                                                                  ; |M|G:inst40|Add0~82                                                                  ; out0             ;
+; |M|G:inst40|Add0~83                                                                  ; |M|G:inst40|Add0~83                                                                  ; out0             ;
+; |M|G:inst40|Add0~84                                                                  ; |M|G:inst40|Add0~84                                                                  ; out0             ;
+; |M|G:inst40|Add0~85                                                                  ; |M|G:inst40|Add0~85                                                                  ; out0             ;
+; |M|G:inst40|Add0~86                                                                  ; |M|G:inst40|Add0~86                                                                  ; out0             ;
+; |M|G:inst40|Add0~87                                                                  ; |M|G:inst40|Add0~87                                                                  ; out0             ;
+; |M|G:inst40|Add0~88                                                                  ; |M|G:inst40|Add0~88                                                                  ; out0             ;
+; |M|G:inst40|Add0~89                                                                  ; |M|G:inst40|Add0~89                                                                  ; out0             ;
+; |M|G:inst40|Add0~90                                                                  ; |M|G:inst40|Add0~90                                                                  ; out0             ;
+; |M|G:inst40|Add0~91                                                                  ; |M|G:inst40|Add0~91                                                                  ; out0             ;
+; |M|G:inst40|Add0~92                                                                  ; |M|G:inst40|Add0~92                                                                  ; out0             ;
+; |M|G:inst40|Add0~93                                                                  ; |M|G:inst40|Add0~93                                                                  ; out0             ;
+; |M|G:inst40|Add0~94                                                                  ; |M|G:inst40|Add0~94                                                                  ; out0             ;
+; |M|G:inst40|Add0~95                                                                  ; |M|G:inst40|Add0~95                                                                  ; out0             ;
+; |M|G:inst40|Add0~96                                                                  ; |M|G:inst40|Add0~96                                                                  ; out0             ;
+; |M|G:inst40|Add0~97                                                                  ; |M|G:inst40|Add0~97                                                                  ; out0             ;
+; |M|G:inst40|Add0~98                                                                  ; |M|G:inst40|Add0~98                                                                  ; out0             ;
+; |M|G:inst40|Add0~99                                                                  ; |M|G:inst40|Add0~99                                                                  ; out0             ;
+; |M|G:inst40|Add0~100                                                                 ; |M|G:inst40|Add0~100                                                                 ; out0             ;
+; |M|G:inst40|Add0~101                                                                 ; |M|G:inst40|Add0~101                                                                 ; out0             ;
+; |M|A:inst41|Add0~75                                                                  ; |M|A:inst41|Add0~75                                                                  ; out0             ;
+; |M|A:inst41|Add0~76                                                                  ; |M|A:inst41|Add0~76                                                                  ; out0             ;
+; |M|A:inst41|Add0~77                                                                  ; |M|A:inst41|Add0~77                                                                  ; out0             ;
+; |M|A:inst41|Add0~78                                                                  ; |M|A:inst41|Add0~78                                                                  ; out0             ;
+; |M|A:inst41|Add0~79                                                                  ; |M|A:inst41|Add0~79                                                                  ; out0             ;
+; |M|A:inst41|Add0~80                                                                  ; |M|A:inst41|Add0~80                                                                  ; out0             ;
+; |M|A:inst41|Add0~81                                                                  ; |M|A:inst41|Add0~81                                                                  ; out0             ;
+; |M|A:inst41|Add0~82                                                                  ; |M|A:inst41|Add0~82                                                                  ; out0             ;
+; |M|A:inst41|Add0~83                                                                  ; |M|A:inst41|Add0~83                                                                  ; out0             ;
+; |M|A:inst41|Add0~84                                                                  ; |M|A:inst41|Add0~84                                                                  ; out0             ;
+; |M|A:inst41|Add0~85                                                                  ; |M|A:inst41|Add0~85                                                                  ; out0             ;
+; |M|A:inst41|Add0~86                                                                  ; |M|A:inst41|Add0~86                                                                  ; out0             ;
+; |M|A:inst41|Add0~87                                                                  ; |M|A:inst41|Add0~87                                                                  ; out0             ;
+; |M|A:inst41|Add0~88                                                                  ; |M|A:inst41|Add0~88                                                                  ; out0             ;
+; |M|A:inst41|Add0~89                                                                  ; |M|A:inst41|Add0~89                                                                  ; out0             ;
+; |M|A:inst41|Add0~90                                                                  ; |M|A:inst41|Add0~90                                                                  ; out0             ;
+; |M|A:inst41|Add0~91                                                                  ; |M|A:inst41|Add0~91                                                                  ; out0             ;
+; |M|A:inst41|Add0~92                                                                  ; |M|A:inst41|Add0~92                                                                  ; out0             ;
+; |M|A:inst41|Add0~93                                                                  ; |M|A:inst41|Add0~93                                                                  ; out0             ;
+; |M|A:inst41|Add0~94                                                                  ; |M|A:inst41|Add0~94                                                                  ; out0             ;
+; |M|A:inst41|Add0~95                                                                  ; |M|A:inst41|Add0~95                                                                  ; out0             ;
+; |M|A:inst41|Add0~96                                                                  ; |M|A:inst41|Add0~96                                                                  ; out0             ;
+; |M|A:inst41|Add0~97                                                                  ; |M|A:inst41|Add0~97                                                                  ; out0             ;
+; |M|A:inst41|Add0~98                                                                  ; |M|A:inst41|Add0~98                                                                  ; out0             ;
+; |M|A:inst41|Add0~99                                                                  ; |M|A:inst41|Add0~99                                                                  ; out0             ;
+; |M|A:inst41|Add0~100                                                                 ; |M|A:inst41|Add0~100                                                                 ; out0             ;
+; |M|A:inst41|Add0~101                                                                 ; |M|A:inst41|Add0~101                                                                 ; out0             ;
+; |M|B:inst42|Add0~75                                                                  ; |M|B:inst42|Add0~75                                                                  ; out0             ;
+; |M|B:inst42|Add0~76                                                                  ; |M|B:inst42|Add0~76                                                                  ; out0             ;
+; |M|B:inst42|Add0~77                                                                  ; |M|B:inst42|Add0~77                                                                  ; out0             ;
+; |M|B:inst42|Add0~78                                                                  ; |M|B:inst42|Add0~78                                                                  ; out0             ;
+; |M|B:inst42|Add0~79                                                                  ; |M|B:inst42|Add0~79                                                                  ; out0             ;
+; |M|B:inst42|Add0~80                                                                  ; |M|B:inst42|Add0~80                                                                  ; out0             ;
+; |M|B:inst42|Add0~81                                                                  ; |M|B:inst42|Add0~81                                                                  ; out0             ;
+; |M|B:inst42|Add0~82                                                                  ; |M|B:inst42|Add0~82                                                                  ; out0             ;
+; |M|B:inst42|Add0~83                                                                  ; |M|B:inst42|Add0~83                                                                  ; out0             ;
+; |M|B:inst42|Add0~84                                                                  ; |M|B:inst42|Add0~84                                                                  ; out0             ;
+; |M|B:inst42|Add0~85                                                                  ; |M|B:inst42|Add0~85                                                                  ; out0             ;
+; |M|B:inst42|Add0~86                                                                  ; |M|B:inst42|Add0~86                                                                  ; out0             ;
+; |M|B:inst42|Add0~87                                                                  ; |M|B:inst42|Add0~87                                                                  ; out0             ;
+; |M|B:inst42|Add0~88                                                                  ; |M|B:inst42|Add0~88                                                                  ; out0             ;
+; |M|B:inst42|Add0~89                                                                  ; |M|B:inst42|Add0~89                                                                  ; out0             ;
+; |M|B:inst42|Add0~90                                                                  ; |M|B:inst42|Add0~90                                                                  ; out0             ;
+; |M|B:inst42|Add0~91                                                                  ; |M|B:inst42|Add0~91                                                                  ; out0             ;
+; |M|B:inst42|Add0~92                                                                  ; |M|B:inst42|Add0~92                                                                  ; out0             ;
+; |M|B:inst42|Add0~93                                                                  ; |M|B:inst42|Add0~93                                                                  ; out0             ;
+; |M|B:inst42|Add0~94                                                                  ; |M|B:inst42|Add0~94                                                                  ; out0             ;
+; |M|B:inst42|Add0~95                                                                  ; |M|B:inst42|Add0~95                                                                  ; out0             ;
+; |M|B:inst42|Add0~96                                                                  ; |M|B:inst42|Add0~96                                                                  ; out0             ;
+; |M|B:inst42|Add0~97                                                                  ; |M|B:inst42|Add0~97                                                                  ; out0             ;
+; |M|B:inst42|Add0~98                                                                  ; |M|B:inst42|Add0~98                                                                  ; out0             ;
+; |M|B:inst42|Add0~99                                                                  ; |M|B:inst42|Add0~99                                                                  ; out0             ;
+; |M|B:inst42|Add0~100                                                                 ; |M|B:inst42|Add0~100                                                                 ; out0             ;
+; |M|B:inst42|Add0~101                                                                 ; |M|B:inst42|Add0~101                                                                 ; out0             ;
+; |M|HighC:inst43|Add0~75                                                              ; |M|HighC:inst43|Add0~75                                                              ; out0             ;
+; |M|HighC:inst43|Add0~76                                                              ; |M|HighC:inst43|Add0~76                                                              ; out0             ;
+; |M|HighC:inst43|Add0~77                                                              ; |M|HighC:inst43|Add0~77                                                              ; out0             ;
+; |M|HighC:inst43|Add0~78                                                              ; |M|HighC:inst43|Add0~78                                                              ; out0             ;
+; |M|HighC:inst43|Add0~79                                                              ; |M|HighC:inst43|Add0~79                                                              ; out0             ;
+; |M|HighC:inst43|Add0~80                                                              ; |M|HighC:inst43|Add0~80                                                              ; out0             ;
+; |M|HighC:inst43|Add0~81                                                              ; |M|HighC:inst43|Add0~81                                                              ; out0             ;
+; |M|HighC:inst43|Add0~82                                                              ; |M|HighC:inst43|Add0~82                                                              ; out0             ;
+; |M|HighC:inst43|Add0~83                                                              ; |M|HighC:inst43|Add0~83                                                              ; out0             ;
+; |M|HighC:inst43|Add0~84                                                              ; |M|HighC:inst43|Add0~84                                                              ; out0             ;
+; |M|HighC:inst43|Add0~85                                                              ; |M|HighC:inst43|Add0~85                                                              ; out0             ;
+; |M|HighC:inst43|Add0~86                                                              ; |M|HighC:inst43|Add0~86                                                              ; out0             ;
+; |M|HighC:inst43|Add0~87                                                              ; |M|HighC:inst43|Add0~87                                                              ; out0             ;
+; |M|HighC:inst43|Add0~88                                                              ; |M|HighC:inst43|Add0~88                                                              ; out0             ;
+; |M|HighC:inst43|Add0~89                                                              ; |M|HighC:inst43|Add0~89                                                              ; out0             ;
+; |M|HighC:inst43|Add0~90                                                              ; |M|HighC:inst43|Add0~90                                                              ; out0             ;
+; |M|HighC:inst43|Add0~91                                                              ; |M|HighC:inst43|Add0~91                                                              ; out0             ;
+; |M|HighC:inst43|Add0~92                                                              ; |M|HighC:inst43|Add0~92                                                              ; out0             ;
+; |M|HighC:inst43|Add0~93                                                              ; |M|HighC:inst43|Add0~93                                                              ; out0             ;
+; |M|HighC:inst43|Add0~94                                                              ; |M|HighC:inst43|Add0~94                                                              ; out0             ;
+; |M|HighC:inst43|Add0~95                                                              ; |M|HighC:inst43|Add0~95                                                              ; out0             ;
+; |M|HighC:inst43|Add0~96                                                              ; |M|HighC:inst43|Add0~96                                                              ; out0             ;
+; |M|HighC:inst43|Add0~97                                                              ; |M|HighC:inst43|Add0~97                                                              ; out0             ;
+; |M|HighC:inst43|Add0~98                                                              ; |M|HighC:inst43|Add0~98                                                              ; out0             ;
+; |M|HighC:inst43|Add0~99                                                              ; |M|HighC:inst43|Add0~99                                                              ; out0             ;
+; |M|HighC:inst43|Add0~100                                                             ; |M|HighC:inst43|Add0~100                                                             ; out0             ;
+; |M|HighC:inst43|Add0~101                                                             ; |M|HighC:inst43|Add0~101                                                             ; out0             ;
+; |M|C:inst|Equal0~16                                                                  ; |M|C:inst|Equal0~16                                                                  ; out0             ;
+; |M|C:inst|Equal1~33                                                                  ; |M|C:inst|Equal1~33                                                                  ; out0             ;
+; |M|D:inst37|Equal0~16                                                                ; |M|D:inst37|Equal0~16                                                                ; out0             ;
+; |M|D:inst37|Equal1~33                                                                ; |M|D:inst37|Equal1~33                                                                ; out0             ;
+; |M|E:inst38|Equal0~16                                                                ; |M|E:inst38|Equal0~16                                                                ; out0             ;
+; |M|E:inst38|Equal1~33                                                                ; |M|E:inst38|Equal1~33                                                                ; out0             ;
+; |M|F:inst39|Equal0~16                                                                ; |M|F:inst39|Equal0~16                                                                ; out0             ;
+; |M|F:inst39|Equal1~33                                                                ; |M|F:inst39|Equal1~33                                                                ; out0             ;
+; |M|G:inst40|Equal0~16                                                                ; |M|G:inst40|Equal0~16                                                                ; out0             ;
+; |M|G:inst40|Equal1~33                                                                ; |M|G:inst40|Equal1~33                                                                ; out0             ;
+; |M|A:inst41|Equal0~16                                                                ; |M|A:inst41|Equal0~16                                                                ; out0             ;
+; |M|A:inst41|Equal1~33                                                                ; |M|A:inst41|Equal1~33                                                                ; out0             ;
+; |M|B:inst42|Equal0~16                                                                ; |M|B:inst42|Equal0~16                                                                ; out0             ;
+; |M|B:inst42|Equal1~33                                                                ; |M|B:inst42|Equal1~33                                                                ; out0             ;
+; |M|HighC:inst43|Equal0~16                                                            ; |M|HighC:inst43|Equal0~16                                                            ; out0             ;
+; |M|HighC:inst43|Equal1~33                                                            ; |M|HighC:inst43|Equal1~33                                                            ; out0             ;
++--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------+
+; Missing 1-Value Coverage                                             ;
++-------------------------+-------------------------+------------------+
+; Node Name               ; Output Port Name        ; Output Port Type ;
++-------------------------+-------------------------+------------------+
+; |M|C:inst|counter~0     ; |M|C:inst|counter~0     ; out              ;
+; |M|C:inst|counter[14]   ; |M|C:inst|counter[14]   ; regout           ;
+; |M|D:inst37|counter~0   ; |M|D:inst37|counter~0   ; out              ;
+; |M|D:inst37|counter[14] ; |M|D:inst37|counter[14] ; regout           ;
+; |M|E:inst38|counter~0   ; |M|E:inst38|counter~0   ; out              ;
+; |M|E:inst38|counter~1   ; |M|E:inst38|counter~1   ; out              ;
+; |M|E:inst38|counter[13] ; |M|E:inst38|counter[13] ; regout           ;
+; |M|E:inst38|counter[14] ; |M|E:inst38|counter[14] ; regout           ;
+; |M|F:inst39|counter~0   ; |M|F:inst39|counter~0   ; out              ;
+; |M|F:inst39|counter~1   ; |M|F:inst39|counter~1   ; out              ;
+; |M|F:inst39|counter~2   ; |M|F:inst39|counter~2   ; out              ;
+; |M|F:inst39|counter~3   ; |M|F:inst39|counter~3   ; out              ;
+; |M|F:inst39|counter~4   ; |M|F:inst39|counter~4   ; out              ;
+; |M|F:inst39|counter[10] ; |M|F:inst39|counter[10] ; regout           ;
+; |M|F:inst39|counter[11] ; |M|F:inst39|counter[11] ; regout           ;
+; |M|F:inst39|counter[12] ; |M|F:inst39|counter[12] ; regout           ;
+; |M|F:inst39|counter[13] ; |M|F:inst39|counter[13] ; regout           ;
+; |M|F:inst39|counter[14] ; |M|F:inst39|counter[14] ; regout           ;
+; |M|C:inst|Add0~100      ; |M|C:inst|Add0~100      ; out0             ;
+; |M|C:inst|Add0~101      ; |M|C:inst|Add0~101      ; out0             ;
+; |M|D:inst37|Add0~100    ; |M|D:inst37|Add0~100    ; out0             ;
+; |M|D:inst37|Add0~101    ; |M|D:inst37|Add0~101    ; out0             ;
+; |M|E:inst38|Add0~98     ; |M|E:inst38|Add0~98     ; out0             ;
+; |M|E:inst38|Add0~99     ; |M|E:inst38|Add0~99     ; out0             ;
+; |M|E:inst38|Add0~100    ; |M|E:inst38|Add0~100    ; out0             ;
+; |M|E:inst38|Add0~101    ; |M|E:inst38|Add0~101    ; out0             ;
+; |M|F:inst39|Add0~92     ; |M|F:inst39|Add0~92     ; out0             ;
+; |M|F:inst39|Add0~93     ; |M|F:inst39|Add0~93     ; out0             ;
+; |M|F:inst39|Add0~94     ; |M|F:inst39|Add0~94     ; out0             ;
+; |M|F:inst39|Add0~95     ; |M|F:inst39|Add0~95     ; out0             ;
+; |M|F:inst39|Add0~96     ; |M|F:inst39|Add0~96     ; out0             ;
+; |M|F:inst39|Add0~97     ; |M|F:inst39|Add0~97     ; out0             ;
+; |M|F:inst39|Add0~98     ; |M|F:inst39|Add0~98     ; out0             ;
+; |M|F:inst39|Add0~99     ; |M|F:inst39|Add0~99     ; out0             ;
+; |M|F:inst39|Add0~100    ; |M|F:inst39|Add0~100    ; out0             ;
+; |M|F:inst39|Add0~101    ; |M|F:inst39|Add0~101    ; out0             ;
++-------------------------+-------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------+
+; Missing 0-Value Coverage                                             ;
++-------------------------+-------------------------+------------------+
+; Node Name               ; Output Port Name        ; Output Port Type ;
++-------------------------+-------------------------+------------------+
+; |M|C:inst|counter~0     ; |M|C:inst|counter~0     ; out              ;
+; |M|C:inst|counter[14]   ; |M|C:inst|counter[14]   ; regout           ;
+; |M|D:inst37|counter~0   ; |M|D:inst37|counter~0   ; out              ;
+; |M|D:inst37|counter[14] ; |M|D:inst37|counter[14] ; regout           ;
+; |M|E:inst38|counter~0   ; |M|E:inst38|counter~0   ; out              ;
+; |M|E:inst38|counter~1   ; |M|E:inst38|counter~1   ; out              ;
+; |M|E:inst38|counter[13] ; |M|E:inst38|counter[13] ; regout           ;
+; |M|E:inst38|counter[14] ; |M|E:inst38|counter[14] ; regout           ;
+; |M|F:inst39|counter~0   ; |M|F:inst39|counter~0   ; out              ;
+; |M|F:inst39|counter~1   ; |M|F:inst39|counter~1   ; out              ;
+; |M|F:inst39|counter~2   ; |M|F:inst39|counter~2   ; out              ;
+; |M|F:inst39|counter~3   ; |M|F:inst39|counter~3   ; out              ;
+; |M|F:inst39|counter~4   ; |M|F:inst39|counter~4   ; out              ;
+; |M|F:inst39|counter[10] ; |M|F:inst39|counter[10] ; regout           ;
+; |M|F:inst39|counter[11] ; |M|F:inst39|counter[11] ; regout           ;
+; |M|F:inst39|counter[12] ; |M|F:inst39|counter[12] ; regout           ;
+; |M|F:inst39|counter[13] ; |M|F:inst39|counter[13] ; regout           ;
+; |M|F:inst39|counter[14] ; |M|F:inst39|counter[14] ; regout           ;
+; |M|C:inst|Add0~100      ; |M|C:inst|Add0~100      ; out0             ;
+; |M|C:inst|Add0~101      ; |M|C:inst|Add0~101      ; out0             ;
+; |M|D:inst37|Add0~100    ; |M|D:inst37|Add0~100    ; out0             ;
+; |M|D:inst37|Add0~101    ; |M|D:inst37|Add0~101    ; out0             ;
+; |M|E:inst38|Add0~98     ; |M|E:inst38|Add0~98     ; out0             ;
+; |M|E:inst38|Add0~99     ; |M|E:inst38|Add0~99     ; out0             ;
+; |M|E:inst38|Add0~100    ; |M|E:inst38|Add0~100    ; out0             ;
+; |M|E:inst38|Add0~101    ; |M|E:inst38|Add0~101    ; out0             ;
+; |M|F:inst39|Add0~92     ; |M|F:inst39|Add0~92     ; out0             ;
+; |M|F:inst39|Add0~93     ; |M|F:inst39|Add0~93     ; out0             ;
+; |M|F:inst39|Add0~94     ; |M|F:inst39|Add0~94     ; out0             ;
+; |M|F:inst39|Add0~95     ; |M|F:inst39|Add0~95     ; out0             ;
+; |M|F:inst39|Add0~96     ; |M|F:inst39|Add0~96     ; out0             ;
+; |M|F:inst39|Add0~97     ; |M|F:inst39|Add0~97     ; out0             ;
+; |M|F:inst39|Add0~98     ; |M|F:inst39|Add0~98     ; out0             ;
+; |M|F:inst39|Add0~99     ; |M|F:inst39|Add0~99     ; out0             ;
+; |M|F:inst39|Add0~100    ; |M|F:inst39|Add0~100    ; out0             ;
+; |M|F:inst39|Add0~101    ; |M|F:inst39|Add0~101    ; out0             ;
++-------------------------+-------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Fri Feb 22 21:08:51 2013
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off M -c M
+Info: Using vector source file "H:/Work/M.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of M.vwf called M.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      92.94 %
+Info: Number of transitions in simulation is 6998667
+Info: Vector file M.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 155 megabytes
+    Info: Processing ended: Fri Feb 22 21:09:07 2013
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:15
+
+

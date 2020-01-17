@@ -1,0 +1,24 @@
+module blueornot (red_in, green_in, blue_in, greencheck, clk);
+	input clk; 
+	input[9:0] red_in;
+	input[9:0] green_in;
+	input[9:0] blue_in;
+	output greencheck;
+	
+wire[9:0] red_in;
+wire[9:0] green_in;
+wire[9:0] blue_in;
+reg greencheck;
+
+always @(posedge clk)
+
+	//if the current pixel is inside the a 100 pixel buffer, its coordinates inside the frame are calculated
+	if(red_in < 450 && green_in < 450 && blue_in > 600) begin
+		greencheck <= 1;
+	end
+	else begin
+		greencheck <= 0;
+	end
+
+
+endmodule

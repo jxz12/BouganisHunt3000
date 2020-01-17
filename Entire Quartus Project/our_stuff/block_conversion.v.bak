@@ -1,0 +1,21 @@
+module block_conversion (frame_x_in, frame_y_in, clk, block_coord, inblock_coord);
+	input[9:0] frame_x_in;
+	input[9:0] frame_y_in;
+	input clk;
+	output[9:0] block_coord;
+	output[9:0] inblock_coord;
+	output frame_there;
+
+
+wire [9:0] frame_x_in;
+wire [9:0] frame_y_in;
+reg[9:0] block_coord;
+reg[9:0] inblock_coord;
+
+	
+always @(posedge clk)
+	block_coord <= (frame_x_in / 20);
+	inblock_coord <= 1;	
+
+
+endmodule

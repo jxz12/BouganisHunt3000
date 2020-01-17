@@ -1,0 +1,61 @@
+--alt_mac_mult CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DATAA_CLEAR="A_3" DATAA_CLOCK="A_0" DATAA_WIDTH=8 DATAB_CLEAR="A_3" DATAB_CLOCK="A_0" DATAB_WIDTH=18 MULT_REPRESENTATION_A="UNSIGNED" MULT_REPRESENTATION_B="SIGNED" OUTPUT_CLEAR="NONE" OUTPUT_CLOCK="NONE" OUTPUT_WIDTH=26 SIGNA_CLEAR="NONE" SIGNA_CLOCK="NONE" SIGNB_CLEAR="NONE" SIGNB_CLOCK="NONE" aclr clk dataa datab dataout ena signa signb
+--VERSION_BEGIN 12.0 cbx_alt_mac_mult 2012:05:31:20:08:01:SJ cbx_mgl 2012:05:31:20:10:16:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2012 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION mult_lep (dataa[8..0], datab[17..0])
+RETURNS ( result[26..0]);
+
+--synthesis_resources = lut 205 reg 26 
+SUBDESIGN mac_mult_vj31
+( 
+	aclr[3..0]	:	input;
+	clk[3..0]	:	input;
+	dataa[7..0]	:	input;
+	datab[17..0]	:	input;
+	dataout[25..0]	:	output;
+	ena[3..0]	:	input;
+	signa	:	input;
+	signb	:	input;
+) 
+VARIABLE 
+	dataa_reg[7..0] : dffe;
+	datab_reg[17..0] : dffe;
+	mult11 : mult_lep;
+	tmp_dataout[25..0]	: WIRE;
+	x_dataa[8..0]	: WIRE;
+	x_datab[17..0]	: WIRE;
+	x_output[25..0]	: WIRE;
+
+BEGIN 
+	dataa_reg[].clk = clk[0..0];
+	dataa_reg[].clrn = (! aclr[3..3]);
+	dataa_reg[].d = dataa[];
+	dataa_reg[].ena = ena[0..0];
+	datab_reg[].clk = clk[0..0];
+	datab_reg[].clrn = (! aclr[3..3]);
+	datab_reg[].d = datab[];
+	datab_reg[].ena = ena[0..0];
+	mult11.dataa[] = x_dataa[];
+	mult11.datab[] = x_datab[];
+	dataout[] = tmp_dataout[];
+	tmp_dataout[] = (x_output[] & (((signa # (! signa)) # signb) # (! signb)));
+	x_dataa[] = ( GND, dataa_reg[].q);
+	x_datab[] = ( datab_reg[].q);
+	x_output[25..0] = mult11.result[25..0];
+END;
+--VALID FILE

@@ -1,0 +1,19 @@
+module (target_block_coord, target_inblock_coord, target_x, target_y, frame_x, frame_y, clk);
+	input clk;
+	input [9:0] frame_x;
+	input [9:0] frame_y;
+	input [9:0] target_x;
+	input [9:0] target_y;
+
+	output [3:0] target_block_coord;
+	output [9:0] target_inblock_coord;
+	
+wire [9:0] frame_x;	
+wire [9:0] frame_y;
+wire [9:0] target_x;
+wire [9:0] target_y;
+
+reg [3:0] target_block_coord;
+reg [9:0] target_inblock_coord;
+	
+endmodule

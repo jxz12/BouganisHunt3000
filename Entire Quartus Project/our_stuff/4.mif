@@ -1,0 +1,103 @@
+-- Copyright (C) 1991-2012 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+
+-- Quartus II generated Memory Initialization File (.mif)
+
+WIDTH=1;
+DEPTH=1024;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	[0..50]  :   0;
+	[51..54]  :   1;
+	[55..81]  :   0;
+	[82..86]  :   1;
+	[87..112]  :   0;
+	[113..118]  :   1;
+	[119..143]  :   0;
+	[144..150]  :   1;
+	[151..174]  :   0;
+	[175..182]  :   1;
+	[183..205]  :   0;
+	[206..214]  :   1;
+	[215..236]  :   0;
+	[237..246]  :   1;
+	[247..267]  :   0;
+	[268..278]  :   1;
+	[279..298]  :   0;
+	[299..310]  :   1;
+	[311..329]  :   0;
+	[330..337]  :   1;
+	338   :   0;
+	[339..342]  :   1;
+	[343..360]  :   0;
+	[361..368]  :   1;
+	[369..370]  :   0;
+	[371..374]  :   1;
+	[375..391]  :   0;
+	[392..399]  :   1;
+	[400..402]  :   0;
+	[403..406]  :   1;
+	[407..422]  :   0;
+	[423..430]  :   1;
+	[431..434]  :   0;
+	[435..438]  :   1;
+	[439..453]  :   0;
+	[454..461]  :   1;
+	[462..466]  :   0;
+	[467..470]  :   1;
+	[471..484]  :   0;
+	[485..492]  :   1;
+	[493..498]  :   0;
+	[499..502]  :   1;
+	[503..515]  :   0;
+	[516..523]  :   1;
+	[524..530]  :   0;
+	[531..534]  :   1;
+	[535..546]  :   0;
+	[547..554]  :   1;
+	[555..562]  :   0;
+	[563..566]  :   1;
+	[567..577]  :   0;
+	[578..585]  :   1;
+	[586..594]  :   0;
+	[595..598]  :   1;
+	[599..608]  :   0;
+	[609..638]  :   1;
+	[639..640]  :   0;
+	[641..670]  :   1;
+	[671..672]  :   0;
+	[673..702]  :   1;
+	[703..704]  :   0;
+	[705..734]  :   1;
+	[735..754]  :   0;
+	[755..758]  :   1;
+	[759..786]  :   0;
+	[787..790]  :   1;
+	[791..818]  :   0;
+	[819..822]  :   1;
+	[823..850]  :   0;
+	[851..854]  :   1;
+	[855..882]  :   0;
+	[883..886]  :   1;
+	[887..914]  :   0;
+	[915..918]  :   1;
+	[919..946]  :   0;
+	[947..950]  :   1;
+	[951..978]  :   0;
+	[979..982]  :   1;
+	[983..1023]  :   0;
+END;
