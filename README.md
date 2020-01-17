@@ -1,2 +1,3 @@
 # Bouganis Hunt 3000
-EIE 1st year group project
+![image](Screenshot.png)
+EIE 1st year group project - inspired by Duck Hunt.
